@@ -12,6 +12,8 @@
 /[Aa]ssets/Plugins/Editor/ScriptInspector*
 /[Aa]ssets/BNG Framework/*
 !/[Aa]ssets/BNG Framework/Scripts/BNG Core.asmdef
+!/Assets/BNG Framework/HandPoser/Scripts/BNG.HandPose.asmdef
+!/Assets/BNG Framework/Scripts/BNG Core.asmdef
 !/[Aa]ssets/BNG Framework/HandPoser/Scripts/BNG.HandPose.asmdef
 /[Aa]ssets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset
 /[Aa]ssets/BrennanHatton/Webhooks/*.txt
