@@ -20,6 +20,7 @@ https://discord.gg/bd8KrVhd8u
  - Open in Unity (Enter safe mode)
  - Import VRIF (without project settings, yes to updating scripts)
  - Get private keys ([open ai](https://beta.openai.com/account/api-keys), [ms cog](https://azure.microsoft.com/en-us/products/cognitive-services/text-to-speech/), [PUN](https://www.photonengine.com/pun))
+ - Import [Synty Polygon Horror Mansion](https://assetstore.unity.com/packages/3d/environments/fantasy/polygon-horror-mansion-low-poly-3d-art-by-synty-213346)
  
 1 - Import VRIF
 After cloning the project and opening in Unity, you may be asked to 'enter safe mode'. Do this.
