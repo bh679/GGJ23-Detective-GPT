@@ -1,4 +1,10 @@
-# Mutliplayer VR Game Jam Template 2023
+# GGJ: Detective GPT
+GGJ Project Detective GPT with Team Pet Vacuum  <br />
+- Brennan Hatton  <br />
+- Wilson Taylor  <br />
+- Tim Christie  <br />
+- Clemant Chan  <br />
+- Tim Randall  <br />
 
 Join the discord for the latest  <br />
 https://discord.gg/bd8KrVhd8u
@@ -8,12 +14,11 @@ https://discord.gg/bd8KrVhd8u
 [BNG VRIF 1.82](https://assetstore.unity.com/packages/templates/systems/vr-interaction-framework-161066) (paid - import yourself)   <br />
 
 ## Setup Guide <br />
- - Create new repo from Template
  - Clone
  - Rename ``BNG Framework1`` to ``BNG Framework``
  - Open in Unity (Enter safe mode)
  - Import VRIF (without project settings, yes to updating scripts)
- - Get private keys (open ai, ms cog, PUN)
+ - Get private keys ([open ai](https://beta.openai.com/account/api-keys), [ms cog](https://azure.microsoft.com/en-us/products/cognitive-services/text-to-speech/), [PUN](https://www.photonengine.com/pun))
  
 1 - Import VRIF
 After cloning the project and opening in Unity, you may be asked to 'enter safe mode'. Do this.
@@ -39,7 +44,8 @@ Setup Discord Webhooks. Either contact Brennan to download private Unity Package
 [BrennanHattons Unity Toools](https://github.com/bh679/Unity-Tools) <br />
 [BrennanHatton PUN Discord Webhook](https://github.com/bh679/Unity-Discord-Webhook-Tools) <br />
 [BrennanHatton VRIF PUN Assets](https://github.com/bh679/VRIF-PUN-Assets) <br />
-[Parallel Sync 1.5.1](https://github.com/VeriorPies/ParrelSync) 
+[Parallel Sync 1.5.1](https://github.com/VeriorPies/ParrelSync)  <br />
+This is was made from [VR MMO AI Tempalte](https://github.com/bh679/VR-MMO-AI-Template)
 
 ## License
 [Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)
