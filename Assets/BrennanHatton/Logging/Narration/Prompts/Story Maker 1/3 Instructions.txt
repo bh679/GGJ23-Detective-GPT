@@ -1,0 +1,9 @@
+Summarize actions.
+Do not include the actions in what you narrate.
+Do not make up new actions.
+Skip over unimportant actions, but use for context if needed.
+Base story around critcal actions.
+Numbers are timestamps for context of when actions happen, 
+No numbers in the narration. 
+No timestamps in the narration.
+Send me only the narration, no actions.
