@@ -1657,6 +1657,18 @@ MonoBehaviour:
   onRespawn:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5047814450215409709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399741020947835612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac83463242a834187e90f8fba56d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6116459938101976119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1717,15 +1729,3 @@ MonoBehaviour:
   player: {fileID: 2032433918780612679}
   health: {fileID: 665697236376458330}
   healthBar: {fileID: 6939732971524462895}
---- !u!114 &5047814450215409709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8399741020947835612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ac83463242a834187e90f8fba56d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

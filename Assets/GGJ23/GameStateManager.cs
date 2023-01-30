@@ -7,29 +7,46 @@ using BNG;
 using BrennanHatton.Networking;
 using BrennanHatton.Networking.Events;
 using ExitGames.Client.Photon;
+using UnityEngine.Events;
 
 namespace DetectiveGPT
 {
 
 	public enum GameState
 	{
-		PreMurder,
-		WelcomeGPT,
-		Investigation,
-		Story,
-		End
+		PreMurder = 0,
+		Murder = 1,
+		Investigation = 2,
+		Story = 3,
+		End = 4
 	}
 
-	public class GameStateManager : MonoBehaviour, IOnEventCallback
+	public class GameStateManager : MonoBehaviourPunCallbacks, IOnEventCallback
 	{
 		public PlayerSpawnPosition spawner;
 		public int purpetatorId;
+		const string state_PlayerProp = "GameState";
+		
+		public UnityEvent onPreMuder, onMurder, onInvestigate, onStory, onEnd;
 		
 		public GameState gameState = GameState.PreMurder;
 		
 		void Reset()
 		{
 			spawner = GameObject.FindObjectOfType<PlayerSpawnPosition>();
+		}
+		
+		
+		public override void OnJoinedRoom()
+		{
+			
+			base.OnJoinedRoom();
+			
+			//check state of other players
+			if(PhotonNetwork.PlayerList.Length >1 && (int)PhotonNetwork.PlayerList[0].CustomProperties[state_PlayerProp] >= 1)
+				SetState((GameState)((int)PhotonNetwork.PlayerList[0].CustomProperties[state_PlayerProp]));
+			else
+				SetState(GameState.PreMurder);
 		}
 		
 		private void OnEnable()
@@ -58,11 +75,34 @@ namespace DetectiveGPT
 				
 			}
 		}
+		
+		public void SetState(GameState newState)
+		{
+			Debug.LogError(gameState);
+			gameState = newState;
+			PlayerCustomProperties.SetCustomProp<int>(state_PlayerProp,(int)gameState);
+			
+			switch(newState)
+			{
+			case GameState.PreMurder:
+				onPreMuder.Invoke();
+				break;
+			case GameState.Murder:
+				onMurder.Invoke();
+				break;
+			case GameState.Story:
+				onStory.Invoke();
+				break;
+			case GameState.End:
+				onEnd.Invoke();
+				break;
+			}
+		}
 	    
 		public void PlayerKilled(int id)
 		{
 			purpetatorId = id;
-			gameState = GameState.WelcomeGPT;
+			SetState(GameState.Murder);
 			
 			Damageable[] damagables;
 			
