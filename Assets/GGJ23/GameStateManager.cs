@@ -82,18 +82,18 @@ namespace DetectiveGPT
 			Debug.LogError(gameState);
 			PlayerCustomProperties.SetCustomProp<int>(state_PlayerProp,(int)gameState);
 			
-			switch(newState)
+			switch((int)newState)
 			{
-			case GameState.PreMurder:
+			case (int)GameState.PreMurder:
 				onPreMuder.Invoke();
 				break;
-			case GameState.Murder:
+			case (int)GameState.Murder:
 				onMurder.Invoke();
 				break;
-			case GameState.Story:
+			case (int)GameState.Story:
 				onStory.Invoke();
 				break;
-			case GameState.End:
+			case (int)GameState.End:
 				onEnd.Invoke();
 				break;
 			}

@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Pet Vacuum
-  productName: Mutliplayer VR Template
+  productName: Dectective GPT
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -193,6 +193,8 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 11400000, guid: 4d5b56fd0ac3b34459b0647152db4df1, type: 2}
+  - {fileID: -7226302703103678099, guid: ee8257e8149a17a44bb10d2715d538d8, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -212,7 +214,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.PetVacuum.MutliplayerVRTemplate
+    Android: com.PetVacuum.DectectiveGPT
     Standalone: com.Pet-Vacuum.Mutliplayer-VR-Template
   buildNumber:
     Standalone: 0
@@ -793,7 +795,7 @@ PlayerSettings:
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 0
+  selectedPlatform: 2
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 0
