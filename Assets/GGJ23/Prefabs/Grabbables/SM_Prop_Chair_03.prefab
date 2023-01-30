@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 100
   ColliderRigidbody: {fileID: 4449177853343544161}
-  MinForce: 0.5
+  MinForce: 0.1
   LastRelativeVelocity: 0
   LastDamageForce: 0
   TakeCollisionDamage: 0
