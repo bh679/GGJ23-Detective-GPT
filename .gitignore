@@ -10,9 +10,6 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
-# Asset meta data should only be ignored when the corresponding asset is also ignored
-!/[Aa]ssets/**/*.meta
-
 #Asset Store & PLugins
 /[Aa]ssets/Plugins/Editor/ScriptInspector*
 /[Aa]ssets/BNG Framework/*
@@ -24,6 +21,9 @@
 #Private Keys & Webhooks
 /[Aa]ssets/BrennanHatton/Webhooks/*.txt
 /[Aa]ssets/BrennanHatton/Private Keys/*.txt
+
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+!/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
