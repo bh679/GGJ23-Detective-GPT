@@ -145,6 +145,11 @@ namespace DetectiveGPT
 		{
 			SetState(GameState.DrawConclusion);
 		}
+		
+		public void DoneReadingStory()
+		{
+			SetState(GameState.End);
+		}
 	}
 		
 }
