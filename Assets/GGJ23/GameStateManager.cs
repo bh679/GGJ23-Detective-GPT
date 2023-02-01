@@ -17,7 +17,7 @@ namespace DetectiveGPT
 		PreMurder = 0,
 		Murder = 1,
 		Investigation = 2,
-		Story = 3,
+		DrawConclusion = 3,
 		End = 4
 	}
 
@@ -27,9 +27,25 @@ namespace DetectiveGPT
 		public int purpetatorId;
 		const string state_PlayerProp = "GameState";
 		
-		public UnityEvent onPreMuder, onMurder, onInvestigate, onStory, onEnd;
+		public UnityEvent onPreMuder, onMurder, onInvestigate, onDrawConclusion, onEnd;
 		
 		public GameState gameState = GameState.PreMurder;
+		
+		//Singlton
+		public static GameStateManager Instance { get; private set; }
+		private void Awake() 
+		{ 
+			// If there is an instance, and it's not me, delete myself.
+		    
+			if (Instance != null && Instance != this) 
+			{ 
+				Destroy(this); 
+			} 
+			else 
+			{ 
+				Instance = this; 
+			} 
+		}
 		
 		void Reset()
 		{
@@ -90,8 +106,11 @@ namespace DetectiveGPT
 			case (int)GameState.Murder:
 				onMurder.Invoke();
 				break;
-			case (int)GameState.Story:
-				onStory.Invoke();
+			case (int)GameState.Investigation:
+				onInvestigate.Invoke();
+				break;
+			case (int)GameState.DrawConclusion:
+				onDrawConclusion.Invoke();
 				break;
 			case (int)GameState.End:
 				onEnd.Invoke();
@@ -114,6 +133,16 @@ namespace DetectiveGPT
 					damagables[d].enabled = false;
 				}
 			}
+		}
+		
+		public void StartInvestigation()
+		{
+			SetState(GameState.Investigation);
+		}
+		
+		public void DrawConclusion()
+		{
+			SetState(GameState.DrawConclusion);
 		}
 	}
 		

@@ -31,7 +31,8 @@ namespace BrennanHatton.Logging
 	[System.Serializable]
 	public class LogAction
 	{
-		public string who = "Player", did, what, with, when;
+		public const string defaultName = "Player";
+		public string who = defaultName, did, what, with, when;
 		public Importance importance = Importance.SlightlyImportant;
 		
 		public LogAction()
@@ -95,6 +96,12 @@ namespace BrennanHatton.Logging
 			for(int i = 0; i < actions.Count; i++)
 				returnVal += actions[i].GetString() + "\n then ";
 			return returnVal;*/
+		}
+		
+		public void Clear()
+		{
+			output = "";
+			actions = new List<LogAction>();
 		}
 	}
 }
