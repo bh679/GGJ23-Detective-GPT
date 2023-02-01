@@ -34,6 +34,7 @@ namespace BrennanHatton.Networking.Events
 				//if new story is avalible
 				if(gpt.interactions.Count != interactionsNumber)
 				{
+					Debug.Log("Preparing to send narration");
 					SendNarrationEventPlz(gpt.interactions[gpt.interactions.Count-1].generatedText);
 			    	
 					interactionsNumber = gpt.interactions.Count;
