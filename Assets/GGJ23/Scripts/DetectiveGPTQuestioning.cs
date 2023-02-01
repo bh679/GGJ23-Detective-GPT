@@ -141,22 +141,30 @@ namespace DetectiveGPT
 		
 		public void SubmitAnswer(string answerData,string player)
 		{
+			float delay = 0;
+			
 			Debug.Log(answerData);
 			if(questions[id].concludeQuestoinClip)
 				source.PlayOneShot(questions[id].concludeQuestoinClip);
 			else
+			{
 				speechManager.SpeakWithSDKPlugin(questions[id].concludeDescriptioon);
-			
+				
+				delay = 4f;
+			}
+				
 			
 			answers.Add(new AnswerData(questions[id],player, answerData));
 			
 			DectectiveGPTSendEventManager.SendQuestionAnswerString(answers.Count-1,answerData);
 			
-			StartCoroutine(nextQuestion());
+			StartCoroutine(nextQuestion(delay));
 		}
 		
-		IEnumerator nextQuestion()
+		IEnumerator nextQuestion(float delay)
 		{
+			yield return new WaitForSeconds(delay);
+			
 			while(source.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForFixedUpdate();
 			

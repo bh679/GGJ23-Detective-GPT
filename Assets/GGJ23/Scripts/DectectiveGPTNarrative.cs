@@ -29,8 +29,10 @@ namespace DetectiveGPT
 	    
 		public void CreateNarrative()
 		{
-			if(PhotonNetwork.PlayerList[0].ActorNumber != PhotonNetwork.LocalPlayer.ActorNumber)
+			Debug.Log(PhotonNetwork.IsMasterClient);
+			if(!PhotonNetwork.IsMasterClient)
 				return;
+			Debug.Log("CreateNarrative");
 			
 			string promptStr = "";
 			
@@ -49,6 +51,7 @@ namespace DetectiveGPT
 			promptStr += FixesPrompt.text + "\n\n";
 			promptStr += AcionItemPrompt.text + "\n\n";
 			
+			Debug.Log(promptStr);
 			
 			gpt.Execute(promptStr);
 		}
