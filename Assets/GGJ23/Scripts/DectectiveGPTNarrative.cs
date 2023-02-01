@@ -33,7 +33,7 @@ namespace DetectiveGPT
 			
 			promptStr += PersonalityPrompt.text + "\n\n";
 			promptStr += "The victim is " + Victim() + "\n\n";
-			promptStr += "The suspects are:\n"+ListOfSuspects() + "\n\n";
+			promptStr += "The " + PhotonNetwork.PlayerList.Length + " suspects are:\n"+ListOfSuspects() + "\n\n";
 			promptStr += FormatingPrompt.text + "\n\n";
 			promptStr += PreNotesPrompt.text + '\n';
 			
@@ -61,8 +61,10 @@ namespace DetectiveGPT
 			
 			for(int i = 0 ; i < PhotonNetwork.PlayerList.Length; i++)
 			{
-				if(PhotonNetwork.PlayerList[i].ActorNumber != GameStateManager.Instance.victimId)
-					output += PhotonNetwork.PlayerList[i].NickName + "\n";
+				if(PhotonNetwork.PlayerList[i].ActorNumber == GameStateManager.Instance.victimId)
+					output += "The late ";
+				output += PhotonNetwork.PlayerList[i].NickName + "\n";
+				
 			}
 			
 			return output;
