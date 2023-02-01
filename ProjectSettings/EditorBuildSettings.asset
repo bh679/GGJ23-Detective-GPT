@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/BNG Framework/Scenes/Quest Demo.unity
     guid: eac0312c32df12949a47d07747a9d1cd
   - enabled: 1
-    path: Assets/GGJ23/Detective GPT.unity
+    path: Assets/GGJ23  Detective GPT/Detective GPT.unity
     guid: efa800cbeb8286a47b3a744cfa569641
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4d5b56fd0ac3b34459b0647152db4df1,
