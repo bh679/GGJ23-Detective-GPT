@@ -135,6 +135,8 @@ namespace DetectiveGPT
 			source.Stop();
 			
 			SubmitAnswer(logger.output,PhotonNetwork.LocalPlayer.NickName);
+				
+			yield return null;
 		}
 		
 		public void SubmitAnswer(string answerData,string player)
@@ -150,12 +152,22 @@ namespace DetectiveGPT
 			
 			DectectiveGPTSendEventManager.SendQuestionAnswerString(answers.Count-1,answerData);
 			
+			StartCoroutine(nextQuestion());
+		}
+		
+		IEnumerator nextQuestion()
+		{
+			while(source.isPlaying || speechManager.audioSource.isPlaying)
+				yield return new WaitForFixedUpdate();
+			
 			id++;
 			
 			if(id >= questionsToAsk)
 				GameStateManager.Instance.DrawConclusion();
 			else
 				AskNextQuestion();
+				
+			yield return null;
 		}
 	
 		public void OnEvent(EventData photonEvent)
