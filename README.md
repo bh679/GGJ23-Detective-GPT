@@ -13,6 +13,7 @@ https://discord.gg/bd8KrVhd8u
 [Unity 2021.3.16/f1](https://unity3d.com/unity/whats-new/2021.3.15) (free)   <br />
 [BNG VRIF 1.82](https://assetstore.unity.com/packages/templates/systems/vr-interaction-framework-161066) (paid - import yourself)   <br />
 [Synty Polygon Horror Mansion](https://assetstore.unity.com/packages/3d/environments/fantasy/polygon-horror-mansion-low-poly-3d-art-by-synty-213346) (paid) <br />
+[RPG Character Mecanim Animation Pack](https://assetstore.unity.com/packages/3d/animations/rpg-character-mecanim-animation-pack-63772) (paid) <br />
 
 ## Setup Guide <br />
  - Clone
