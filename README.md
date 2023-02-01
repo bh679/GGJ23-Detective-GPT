@@ -1,13 +1,33 @@
 # GGJ: Detective GPT
-GGJ Project Detective GPT with Team Pet Vacuum  <br />
+
+This year for the global game jam, we are building a Social AI-VR  Game called Detective GPT. 
+
+A VR murder mystery party game where players must interact with an AI detective in order to influence them closer to, or further away from, the truth of who committed a dastardly crime! 
+
+Players are placed in a room together with lots of objects to play with, and the game starts when one player killers another.
+
+In comes, Detective Gerald Patrick Thompson!
+
+Without text or speech but by handing the detective items. It's not whether you know who's innocent, it's whether it does!
+
+The Detective GPT uses its AI detective work to create a story based on the information it has collected, to deduce who it thinks the murder is, and how it all unfolded.
+
+"Yours are human brains, and thus prone to human error! I am only capable of hilarious robot error!"
+
+Can you get it to the right conclusion? Can you get away with murder? How will the story unfold? Detective GPT will get to the "root" of it!
+
+https://globalgamejam.org/2023/games/detective-gpt-3
+
+Join the discord for the latest  <br />
+https://discord.gg/bd8KrVhd8u
+
+
+#### Team Pet Vacuum 
 - Brennan Hatton  <br />
 - Wilson Taylor  <br />
 - Tim Christie  <br />
 - Clemant Chan  <br />
 - Tim Randall  <br />
-
-Join the discord for the latest  <br />
-https://discord.gg/bd8KrVhd8u
 
 ## Requirements:
 [Unity 2021.3.16/f1](https://unity3d.com/unity/whats-new/2021.3.15) (free)   <br />
