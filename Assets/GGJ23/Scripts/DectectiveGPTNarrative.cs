@@ -29,6 +29,9 @@ namespace DetectiveGPT
 	    
 		public void CreateNarrative()
 		{
+			if(PhotonNetwork.PlayerList[0].ActorNumber != PhotonNetwork.LocalPlayer.ActorNumber)
+				return;
+			
 			string promptStr = "";
 			
 			promptStr += PersonalityPrompt.text + "\n\n";

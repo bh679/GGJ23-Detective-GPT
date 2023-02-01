@@ -12,7 +12,8 @@ namespace DetectiveGPT
 	public class DectectiveGPTSendEventManager : MonoBehaviourPunCallbacks
 	{
 		// If you have multiple custom events, it is recommended to define them in the used class
-		public const byte SendQuestionAnswerStringEventCode = 201;
+		public const byte SendQuestionAnswerStringEventCode = 201,
+		SendGPTResponseEventCode = 202;
 		
 		
 		public static void SendQuestionAnswerString(int answerId, string data)

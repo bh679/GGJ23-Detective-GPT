@@ -14,18 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 3}
-  - {fileID: 14}
-  - {fileID: 23}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
     width: 1920
-    height: 987
-  m_MinSize: {x: 400, y: 200}
-  m_MaxSize: {x: 32384, y: 16192}
+    height: 939
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 76997
+  controlID: 1263
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -47,10 +46,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1648
+    x: 224
     y: 73
-    width: 487
-    height: 647
+    width: 690
+    height: 547
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -61,7 +60,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 487, y: 626}
+  m_TargetSize: {x: 690, y: 526}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -76,10 +75,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -243.5
-    m_HBaseRangeMax: 243.5
-    m_VBaseRangeMin: -313
-    m_VBaseRangeMax: 313
+    m_HBaseRangeMin: -345
+    m_HBaseRangeMax: 345
+    m_VBaseRangeMin: -263
+    m_VBaseRangeMax: 263
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -97,23 +96,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 487
-      height: 626
+      width: 690
+      height: 526
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 243.5, y: 313}
+    m_Translation: {x: 345, y: 263}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -243.5
-      y: -313
-      width: 487
-      height: 626
+      x: -345
+      y: -263
+      width: 690
+      height: 526
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 487, y: 647}
+  m_LastWindowPixelSize: {x: 690, y: 547}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -138,12 +137,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 761
-    height: 987
+    width: 916
+    height: 939
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 76998
+  controlID: 1264
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,12 +162,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 761
-    height: 668
+    width: 916
+    height: 568
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 76999
+  controlID: 1265
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,8 +185,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 272
-    height: 668
+    width: 224
+    height: 568
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
@@ -216,10 +215,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1920
+    x: 0
     y: 73
-    width: 271
-    height: 647
+    width: 223
+    height: 547
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -229,7 +228,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b457f8ff4ae8f8ffa2e8f8ffc027faff1cd7faff547bfcffc491fcff1095fcffa8adfcfff4b0fcff3c12feff5c12feffaa13feff7e72ffffacfafffff4ffffff20640000f2770000ca8f00009eac00002ebd0000e8bf00000ccf480090e248005cf24800cef24800a2f948008e0049003c1449008a3949001e6b490004934900a8c9490088d64900e8d949008c0e4a00da1a4a0008454a0090514a00fa584a0022624a00
+      m_ExpandedIDs: 1404fffff604ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -268,19 +267,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 272
+    x: 224
     y: 0
-    width: 489
-    height: 668
+    width: 692
+    height: 568
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
   m_Panes:
-  - {fileID: 2}
   - {fileID: 8}
+  - {fileID: 2}
   - {fileID: 9}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,10 +301,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1648
+    x: 224
     y: 73
-    width: 487
-    height: 647
+    width: 690
+    height: 547
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -337,7 +336,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 25}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -359,7 +358,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 25}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -381,9 +380,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -111, y: -214}
+      snapOffset: {x: 67.5, y: 86}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 3
+      snapCorner: 0
       id: Orientation
       index: 0
       layout: 4
@@ -531,7 +530,7 @@ MonoBehaviour:
       index: 12
       layout: 4
   m_WindowGUID: 6a63b530fc5c1da4894532eb70462978
-  m_Gizmos: 1
+  m_Gizmos: 0
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -540,9 +539,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.5572405, y: 2.605, z: -22.13}
+    m_Target: {x: -2.1584563, y: -13.2705145, z: -43.317215}
     speed: 2
-    m_Value: {x: -8.5572405, y: 2.605, z: -22.13}
+    m_Value: {x: -2.1584563, y: -13.2705145, z: -43.317215}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -589,13 +588,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.061509952, y: -0.9383535, z: 0.24706137, w: -0.23443976}
+    m_Target: {x: -0.034118205, y: -0.9545161, z: 0.27066574, w: -0.12032129}
     speed: 2
-    m_Value: {x: -0.06150097, y: -0.93821645, z: 0.2470253, w: -0.23440553}
+    m_Value: {x: -0.034118168, y: -0.9545151, z: 0.27066544, w: -0.12032116}
   m_Size:
-    m_Target: 0.4440735
+    m_Target: 17.296082
     speed: 2
-    m_Value: 0.4440735
+    m_Value: 17.296082
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -665,16 +664,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 668
-    width: 761
-    height: 319
+    y: 568
+    width: 916
+    height: 371
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
   - {fileID: 12}
-  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &11
@@ -698,16 +696,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1920
-    y: 741
-    width: 760
-    height: 298
+    x: 0
+    y: 641
+    width: 915
+    height: 350
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: play ne
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -719,22 +717,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/GGJ23/Scripts
+    - Assets/GGJ23/Materials
     m_Globs: []
-    m_OriginalText: 
+    m_OriginalText: play ne
   m_ViewMode: 1
-  m_StartGridSize: 16
+  m_StartGridSize: 64
   m_LastFolders:
-  - Assets/GGJ23/Scripts
-  m_LastFoldersGridSize: 16
-  m_LastProjectPath: D:\Projects\GGJ\GGJ23 Detective GPT
+  - Assets/GGJ23/Materials
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: D:\Unity Projects\GGJ23 - Detective GPT
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 138}
-    m_SelectedIDs: 2a777600
-    m_LastClickedID: 7763754
-    m_ExpandedIDs: 00000000a8560000ac560000ae560000b8560000c0560000c2560000c4560000c0660100c2660100ce660100fee80c0006e90c0010e90c00ce1b1900669b1900c4374c0000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 44}
+    m_SelectedIDs: fa130200
+    m_LastClickedID: 136186
+    m_ExpandedIDs: 000000004c5500005255000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -750,7 +748,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 0}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -762,7 +760,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ac560000ae560000b8560000c0560000c2560000c4560000c0660100c2660100ce660100fee80c0006e90c0010e90c00ce1b1900669b1900c4374c0000ca9a3bffffff7f
+    m_ExpandedIDs: 000000004c55000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -790,21 +788,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000076cc2900
+    m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: NewBehaviourScript
-      m_OriginalName: NewBehaviourScript
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 7826908
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 4
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -815,7 +813,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 16
+    m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 273
 --- !u!114 &12
@@ -839,43 +837,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1920
-    y: 741
-    width: 760
-    height: 298
+    x: 0
+    y: 641
+    width: 915
+    height: 350
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
 --- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45294caac1977dd4c92766360eb688c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: SI Console
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: -1920
-    y: 814
-    width: 840
-    height: 225
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -890,25 +860,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 761
+    x: 916
     y: 0
-    width: 581
-    height: 987
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+    width: 1004
+    height: 939
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 16}
-  - {fileID: 17}
-  - {fileID: 18}
-  - {fileID: 19}
-  - {fileID: 20}
-  - {fileID: 21}
-  - {fileID: 22}
+  - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 2
---- !u!114 &15
+  m_LastSelected: 0
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -929,10 +892,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1159
+    x: 916
     y: 73
-    width: 579
-    height: 966
+    width: 1003
+    height: 918
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -940,7 +903,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 230
+    m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -950,1458 +913,3 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: DetectiveGPTQuestioning.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/Scripts/
-  m_Pos:
-    serializedVersion: 2
-    x: -1104
-    y: 73
-    width: 667
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 11500000, guid: 669da827a2e2186408c6db47208d333a, type: 3}
-  targetAssetGuid: 669da827a2e2186408c6db47208d333a
-  textEditor:
-    scrollPosition: {x: 0, y: 570}
-    scrollPositionLine: 29
-    scrollPositionOffset: 0
-    searchString: pubic
-    caretPosition:
-      virtualColumn: 26
-      column: 26
-      characterIndex: 17
-      line: 56
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    - 76
-    - 95
-    - 114
-    - 133
-    - 152
-    - 171
-    - 190
-    - 209
-    - 228
-    - 247
-    - 266
-    - 285
-    - 304
-    - 323
-    - 342
-    - 361
-    - 380
-    - 399
-    - 418
-    - 437
-    - 456
-    - 475
-    - 494
-    - 532
-    - 551
-    - 570
-    - 589
-    - 608
-    - 627
-    - 646
-    - 665
-    - 684
-    - 703
-    - 722
-    - 741
-    - 760
-    - 779
-    - 798
-    - 817
-    - 836
-    - 855
-    - 874
-    - 893
-    - 912
-    - 931
-    - 950
-    - 969
-    - 988
-    - 1007
-    - 1026
-    - 1045
-    - 1064
-    - 1083
-    - 1102
-    - 1121
-    - 1140
-    - 1178
-    - 1197
-    - 1216
-    - 1235
-    - 1254
-    - 1273
-    - 1311
-    - 1330
-    - 1349
-    - 1368
-    - 1387
-    - 1406
-    - 1425
-    - 1463
-    - 1482
-    - 1501
-    - 1520
-    - 1539
-    - 1558
-    - 1577
-    - 1615
-    - 1634
-    - 1653
-    - 1672
-    - 1691
-    - 1710
-    - 1729
-    - 1748
-    - 1767
-    - 1805
-    - 1843
-    - 1862
-    - 1881
-    - 1900
-    - 1919
-    - 1938
-    - 1957
-    - 1976
-    - 1995
-    - 2014
-    - 2033
-    - 2052
-    - 2071
-    - 2090
-    - 2109
-    - 2128
-    - 2147
-    - 2166
-    - 2185
-    - 2223
-    - 2242
-    - 2280
-    - 2299
-    - 2318
-    - 2337
-    - 2356
-    - 2375
-    - 2394
-    - 2413
-    - 2432
-    - 2451
-    - 2489
-    - 2508
-    - 2527
-    - 2546
-    - 2565
-    - 2584
-    - 2603
-    - 2641
-    - 2660
-    - 2679
-    - 2698
-    - 2717
-    - 2736
-    - 2755
-    - 2774
-    - 2793
-    - 2831
-    - 2850
-    - 2869
-    - 2907
-    - 2926
-    - 2945
-    - 2964
-    - 3002
-    - 3021
-    - 3059
-    - 3078
-    - 3097
-    - 3135
-    - 3154
-    - 3192
-    - 3211
-    - 3230
-    - 3249
-    - 3268
-    - 3287
-    - 3306
-    - 3325
-    - 3344
-    - 3363
-    - 3382
-    - 3401
-    - 3420
-    - 3439
-    - 3477
-    - 3496
-    - 3534
-    - 3553
-    - 3572
-    - 3591
-    - 3629
-    - 3667
-    - 3705
-    - 3724
-    - 3743
-    - 3781
-    - 3800
-    - 3819
-    - 3838
-    - 3857
-    - 3876
-    - 3895
-    codeViewRect:
-      serializedVersion: 2
-      x: 46
-      y: 570
-      width: 601
-      height: 905
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: DectectiveGPTNarrative.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/Scripts/
-  m_Pos:
-    serializedVersion: 2
-    x: -1159
-    y: 73
-    width: 579
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 11500000, guid: e56a54d14e4fc1349be6eabe07b327cb, type: 3}
-  targetAssetGuid: e56a54d14e4fc1349be6eabe07b327cb
-  textEditor:
-    scrollPosition: {x: 0, y: 243}
-    scrollPositionLine: 11
-    scrollPositionOffset: 15
-    searchString: 
-    caretPosition:
-      virtualColumn: 8
-      column: 8
-      characterIndex: 2
-      line: 34
-    _selectionStartPosition:
-      virtualColumn: 39
-      column: 39
-      characterIndex: 30
-      line: 38
-    hasSelection: 1
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    - 76
-    - 95
-    - 114
-    - 133
-    - 152
-    - 190
-    - 209
-    - 228
-    - 247
-    - 266
-    - 323
-    - 342
-    - 380
-    - 399
-    - 418
-    - 437
-    - 456
-    - 494
-    - 513
-    - 532
-    - 551
-    - 570
-    - 589
-    - 608
-    - 627
-    - 646
-    - 665
-    - 684
-    - 703
-    - 722
-    - 741
-    - 760
-    - 779
-    - 798
-    - 817
-    - 836
-    - 855
-    - 874
-    - 912
-    - 931
-    - 969
-    - 988
-    - 1007
-    - 1026
-    - 1045
-    - 1064
-    - 1083
-    - 1102
-    - 1121
-    - 1140
-    - 1159
-    - 1178
-    codeViewRect:
-      serializedVersion: 2
-      x: 36
-      y: 243
-      width: 523
-      height: 905
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: GameStateManager.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/
-  m_Pos:
-    serializedVersion: 2
-    x: -1079
-    y: 73
-    width: 1078
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 11500000, guid: a88fde5f7072c874882d5d64ce8ff8ab, type: 3}
-  targetAssetGuid: a88fde5f7072c874882d5d64ce8ff8ab
-  textEditor:
-    scrollPosition: {x: 0, y: 1991}
-    scrollPositionLine: 102
-    scrollPositionOffset: 15
-    searchString: 
-    caretPosition:
-      virtualColumn: 31
-      column: 31
-      characterIndex: 22
-      line: 144
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    - 76
-    - 95
-    - 114
-    - 133
-    - 152
-    - 171
-    - 190
-    - 209
-    - 228
-    - 247
-    - 266
-    - 285
-    - 304
-    - 323
-    - 342
-    - 361
-    - 380
-    - 399
-    - 418
-    - 437
-    - 456
-    - 475
-    - 494
-    - 513
-    - 532
-    - 551
-    - 570
-    - 589
-    - 608
-    - 627
-    - 646
-    - 665
-    - 684
-    - 703
-    - 722
-    - 741
-    - 760
-    - 779
-    - 798
-    - 817
-    - 836
-    - 855
-    - 874
-    - 893
-    - 912
-    - 931
-    - 950
-    - 969
-    - 988
-    - 1007
-    - 1026
-    - 1045
-    - 1064
-    - 1083
-    - 1102
-    - 1121
-    - 1140
-    - 1159
-    - 1197
-    - 1235
-    - 1254
-    - 1273
-    - 1292
-    - 1311
-    - 1330
-    - 1349
-    - 1368
-    - 1387
-    - 1406
-    - 1425
-    - 1444
-    - 1463
-    - 1482
-    - 1501
-    - 1520
-    - 1539
-    - 1558
-    - 1577
-    - 1596
-    - 1615
-    - 1634
-    - 1653
-    - 1672
-    - 1691
-    - 1710
-    - 1729
-    - 1748
-    - 1767
-    - 1786
-    - 1805
-    - 1824
-    - 1843
-    - 1862
-    - 1881
-    - 1900
-    - 1919
-    - 1938
-    - 1957
-    - 1976
-    - 1995
-    - 2014
-    - 2033
-    - 2052
-    - 2071
-    - 2090
-    - 2109
-    - 2128
-    - 2147
-    - 2166
-    - 2185
-    - 2204
-    - 2223
-    - 2242
-    - 2261
-    - 2280
-    - 2299
-    - 2318
-    - 2337
-    - 2356
-    - 2375
-    - 2394
-    - 2413
-    - 2432
-    - 2451
-    - 2470
-    - 2489
-    - 2527
-    - 2546
-    - 2565
-    - 2584
-    - 2603
-    - 2622
-    - 2641
-    - 2660
-    - 2679
-    - 2698
-    - 2717
-    - 2736
-    - 2755
-    - 2774
-    - 2793
-    - 2812
-    - 2831
-    - 2850
-    - 2869
-    - 2888
-    - 2907
-    - 2926
-    codeViewRect:
-      serializedVersion: 2
-      x: 46
-      y: 1991
-      width: 1012
-      height: 905
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: DectectiveGPTSendEventManager.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/Scripts/
-  m_Pos:
-    serializedVersion: 2
-    x: -1189
-    y: 73
-    width: 1188
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 11500000, guid: 3fb605a05bc860f4686c4084c5061708, type: 3}
-  targetAssetGuid: 3fb605a05bc860f4686c4084c5061708
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 22
-      column: 22
-      characterIndex: 22
-      line: 8
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    - 76
-    - 95
-    - 114
-    - 133
-    - 152
-    - 171
-    - 190
-    - 209
-    - 228
-    - 247
-    - 266
-    - 285
-    - 304
-    - 323
-    - 342
-    - 361
-    - 380
-    - 399
-    - 418
-    - 437
-    - 456
-    - 494
-    - 513
-    - 532
-    - 570
-    - 589
-    - 608
-    - 627
-    - 646
-    - 665
-    - 684
-    - 703
-    codeViewRect:
-      serializedVersion: 2
-      x: 36
-      y: 0
-      width: 1147
-      height: 920
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &20
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: EventAfterTime.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: -1053
-    y: 73
-    width: 1052
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 11500000, guid: 66563b6a4e0c2b74b90057612789d8a4, type: 3}
-  targetAssetGuid: 66563b6a4e0c2b74b90057612789d8a4
-  textEditor:
-    scrollPosition: {x: 0, y: 376}
-    scrollPositionLine: 19
-    scrollPositionOffset: 15
-    searchString: 
-    caretPosition:
-      virtualColumn: 16
-      column: 16
-      characterIndex: 4
-      line: 52
-    _selectionStartPosition:
-      virtualColumn: 36
-      column: 36
-      characterIndex: 24
-      line: 52
-    hasSelection: 1
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    - 76
-    - 95
-    - 114
-    - 133
-    - 152
-    - 171
-    - 190
-    - 209
-    - 228
-    - 247
-    - 266
-    - 285
-    - 304
-    - 323
-    - 342
-    - 361
-    - 380
-    - 399
-    - 418
-    - 437
-    - 456
-    - 475
-    - 494
-    - 513
-    - 532
-    - 551
-    - 570
-    - 589
-    - 608
-    - 627
-    - 646
-    - 665
-    - 684
-    - 703
-    - 722
-    - 741
-    - 760
-    - 779
-    - 798
-    - 817
-    - 836
-    - 855
-    - 874
-    - 893
-    - 912
-    - 931
-    - 950
-    - 969
-    - 988
-    - 1007
-    - 1026
-    - 1045
-    - 1064
-    - 1083
-    - 1102
-    - 1121
-    - 1140
-    - 1159
-    - 1178
-    - 1197
-    - 1216
-    - 1235
-    - 1254
-    - 1273
-    - 1292
-    - 1311
-    - 1330
-    - 1349
-    - 1368
-    - 1387
-    - 1406
-    codeViewRect:
-      serializedVersion: 2
-      x: 36
-      y: 376
-      width: 996
-      height: 920
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: ActionLogger.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in BrennanHatton/Logging/
-  m_Pos:
-    serializedVersion: 2
-    x: -1053
-    y: 73
-    width: 1052
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 11500000, guid: ea9da498734b8a243b33de79897b7fab, type: 3}
-  targetAssetGuid: ea9da498734b8a243b33de79897b7fab
-  textEditor:
-    scrollPosition: {x: 0, y: 969}
-    scrollPositionLine: 51
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 36
-      column: 36
-      characterIndex: 2
-      line: 62
-    _selectionStartPosition:
-      virtualColumn: 13
-      column: 13
-      characterIndex: 3
-      line: 77
-    hasSelection: 1
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    - 76
-    - 95
-    - 114
-    - 133
-    - 152
-    - 171
-    - 190
-    - 209
-    - 228
-    - 247
-    - 266
-    - 285
-    - 304
-    - 323
-    - 342
-    - 361
-    - 380
-    - 399
-    - 418
-    - 437
-    - 456
-    - 475
-    - 494
-    - 513
-    - 532
-    - 551
-    - 570
-    - 589
-    - 608
-    - 627
-    - 646
-    - 665
-    - 684
-    - 703
-    - 722
-    - 741
-    - 760
-    - 779
-    - 798
-    - 817
-    - 836
-    - 855
-    - 874
-    - 893
-    - 912
-    - 931
-    - 950
-    - 969
-    - 988
-    - 1007
-    - 1026
-    - 1064
-    - 1083
-    - 1102
-    - 1121
-    - 1140
-    - 1159
-    - 1178
-    - 1197
-    - 1216
-    - 1235
-    - 1254
-    - 1273
-    - 1292
-    - 1311
-    - 1330
-    - 1349
-    - 1368
-    - 1387
-    - 1406
-    - 1425
-    - 1444
-    - 1463
-    - 1482
-    - 1501
-    - 1520
-    - 1539
-    - 1558
-    - 1577
-    - 1596
-    - 1615
-    - 1634
-    - 1653
-    - 1672
-    - 1691
-    - 1710
-    - 1729
-    - 1748
-    - 1767
-    - 1786
-    - 1805
-    - 1824
-    - 1843
-    - 1862
-    - 1881
-    - 1900
-    - 1919
-    - 1938
-    - 1957
-    - 1976
-    - 1995
-    - 2014
-    - 2033
-    - 2052
-    codeViewRect:
-      serializedVersion: 2
-      x: 46
-      y: 969
-      width: 986
-      height: 905
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &22
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: NetworkNameToLogs.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in BrennanHatton/Logging/
-  m_Pos:
-    serializedVersion: 2
-    x: -1053
-    y: 73
-    width: 1052
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 11500000, guid: e8276577e5dcb12468b4e69928d1adcf, type: 3}
-  targetAssetGuid: e8276577e5dcb12468b4e69928d1adcf
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 51
-      column: 51
-      characterIndex: 39
-      line: 27
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    - 76
-    - 95
-    - 114
-    - 133
-    - 152
-    - 171
-    - 190
-    - 209
-    - 228
-    - 247
-    - 266
-    - 285
-    - 304
-    - 323
-    - 342
-    - 361
-    - 380
-    - 399
-    - 418
-    - 437
-    - 475
-    - 494
-    - 532
-    - 551
-    - 589
-    - 608
-    - 627
-    - 646
-    - 665
-    - 684
-    - 703
-    codeViewRect:
-      serializedVersion: 2
-      x: 36
-      y: 0
-      width: 1011
-      height: 920
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &23
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: FGCodeWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1342
-    y: 0
-    width: 578
-    height: 987
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 29}
-  m_Panes:
-  - {fileID: 24}
-  - {fileID: 25}
-  - {fileID: 26}
-  - {fileID: 27}
-  - {fileID: 28}
-  - {fileID: 29}
-  m_Selected: 5
-  m_LastSelected: 0
---- !u!114 &24
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Q1 - 'AllInPosition Question Prompt.txt
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/Prompts/
-  m_Pos:
-    serializedVersion: 2
-    x: -435
-    y: 73
-    width: 434
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 4900000, guid: d01551e19d3a9d3489234bb748211e74, type: 3}
-  targetAssetGuid: d01551e19d3a9d3489234bb748211e74
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 18
-      column: 18
-      characterIndex: 100
-      line: 2
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 57
-    - 76
-    - 133
-    codeViewRect:
-      serializedVersion: 2
-      x: 12
-      y: 0
-      width: 417
-      height: 941
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &25
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: 1 - Personality Prompt.txt
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/Prompts/
-  m_Pos:
-    serializedVersion: 2
-    x: -946
-    y: 73
-    width: 945
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 4900000, guid: 3fbdaf8f0dbf9de418ba4bdb0727d411, type: 3}
-  targetAssetGuid: 3fbdaf8f0dbf9de418ba4bdb0727d411
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 22
-      column: 22
-      characterIndex: 112
-      line: 1
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 57
-    codeViewRect:
-      serializedVersion: 2
-      x: 12
-      y: 0
-      width: 928
-      height: 941
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &26
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: 3 - Fixes.txt
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/Prompts/
-  m_Pos:
-    serializedVersion: 2
-    x: -946
-    y: 73
-    width: 945
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 4900000, guid: 684385d294b3ab94dacc582d6a2c4f4a, type: 3}
-  targetAssetGuid: 684385d294b3ab94dacc582d6a2c4f4a
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 22
-      column: 22
-      characterIndex: 22
-      line: 5
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    - 76
-    - 95
-    - 114
-    codeViewRect:
-      serializedVersion: 2
-      x: 12
-      y: 0
-      width: 928
-      height: 941
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &27
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: 4 - Action Item.txt
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/Prompts/
-  m_Pos:
-    serializedVersion: 2
-    x: -946
-    y: 73
-    width: 945
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 4900000, guid: 791db345c02f5a3448ed3bcdb936fe28, type: 3}
-  targetAssetGuid: 791db345c02f5a3448ed3bcdb936fe28
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 50
-      column: 50
-      characterIndex: 50
-      line: 1
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    codeViewRect:
-      serializedVersion: 2
-      x: 12
-      y: 0
-      width: 928
-      height: 941
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &28
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: 2 - Pre Notes Prompt.txt
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/Prompts/
-  m_Pos:
-    serializedVersion: 2
-    x: -946
-    y: 73
-    width: 945
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 4900000, guid: c544b1849a1c9ba4785f44b57d1f4659, type: 3}
-  targetAssetGuid: c544b1849a1c9ba4785f44b57d1f4659
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    codeViewRect:
-      serializedVersion: 2
-      x: 12
-      y: 0
-      width: 928
-      height: 941
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &29
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: '- Formatting.txt'
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23/Prompts/
-  m_Pos:
-    serializedVersion: 2
-    x: -578
-    y: 73
-    width: 577
-    height: 966
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 4900000, guid: 58f6e1c46d3074b41b93c45c6b2e2325, type: 3}
-  targetAssetGuid: 58f6e1c46d3074b41b93c45c6b2e2325
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 55
-      column: 55
-      characterIndex: 55
-      line: 3
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 38
-    - 76
-    - 133
-    - 152
-    codeViewRect:
-      serializedVersion: 2
-      x: 12
-      y: 0
-      width: 560
-      height: 941
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
