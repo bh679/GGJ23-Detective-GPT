@@ -49,6 +49,14 @@ namespace DetectiveGPT
 			answerData.Add(a);
 		}
 		
+		public string GetPromptData()
+		{
+			string output = question.prompt.text;
+			output += GetData("","","");
+			
+			return output;
+		}
+		
 		public string GetData(string start, string end, string mid)
 		{
 			string output = "";

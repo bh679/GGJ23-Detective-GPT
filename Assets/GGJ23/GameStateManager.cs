@@ -24,7 +24,7 @@ namespace DetectiveGPT
 	public class GameStateManager : MonoBehaviourPunCallbacks, IOnEventCallback
 	{
 		public PlayerSpawnPosition spawner;
-		public int purpetatorId;
+		public int purpetatorId, victimId;
 		const string state_PlayerProp = "GameState";
 		
 		public UnityEvent onPreMuder, onMurder, onInvestigate, onDrawConclusion, onEnd;
@@ -118,9 +118,10 @@ namespace DetectiveGPT
 			}
 		}
 	    
-		public void PlayerKilled(int id)
+		public void PlayerKilled(int victum)
 		{
-			purpetatorId = id;
+			//purpetatorId = murderer;
+			victimId = victum;
 			SetState(GameState.Murder);
 			
 			Damageable[] damagables;

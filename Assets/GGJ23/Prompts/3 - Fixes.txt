@@ -1,0 +1,6 @@
+Summarize actions.
+Do not include the actions in what you narrate.
+Numbers are timestamps for context of when actions happen, 
+No numbers in your repsonse. 
+No timestamps in your repsonse.
+Send me only the story, no actions.

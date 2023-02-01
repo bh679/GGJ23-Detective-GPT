@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BrennanHatton.AI;
+using BrennanHatton.Networking;
+using Photon.Pun;
 
 namespace DetectiveGPT
 {
@@ -11,7 +13,7 @@ namespace DetectiveGPT
 		public DetectiveGPTQuestioning questions;
 		public SpeechManager speechManager;
 		public GPT3 gpt;
-		public TextAsset prompt;
+		public TextAsset PersonalityPrompt, PreNotesPrompt, FixesPrompt, FormatingPrompt, AcionItemPrompt;
 		
 	    // Start is called before the first frame update
 	    void Start()
@@ -24,28 +26,46 @@ namespace DetectiveGPT
 			    }
 		    );
 	    }
-	
-	    // Update is called once per frame
-	    void Update()
-	    {
-	        
-	    }
 	    
 		public void CreateNarrative()
 		{
 			string promptStr = "";
 			
-			if(prompt != null)
-				promptStr += prompt.text;
+			promptStr += PersonalityPrompt.text + "\n\n";
+			promptStr += "The victim is " + Victim() + "\n\n";
+			promptStr += "The suspects are:\n"+ListOfSuspects() + "\n\n";
+			promptStr += FormatingPrompt.text + "\n\n";
+			promptStr += PreNotesPrompt.text + '\n';
 			
 			for(int i = 0; i < questions.answers.Count; i++)
 			{
-				promptStr += questions.answers[i].GetData("{","}","");
+				promptStr += questions.answers[i].GetPromptData();
 			}
 			
+			promptStr += "\n\n";
+			promptStr += FixesPrompt.text + "\n\n";
+			promptStr += AcionItemPrompt.text + "\n\n";
 			
 			
 			gpt.Execute(promptStr);
+		}
+		
+		public string Victim()
+		{
+			return PhotonCalls.GetPlayerName(GameStateManager.Instance.victimId);
+		}
+		
+		public string ListOfSuspects()
+		{
+			string output = "";
+			
+			for(int i = 0 ; i < PhotonNetwork.PlayerList.Length; i++)
+			{
+				if(PhotonNetwork.PlayerList[i].ActorNumber != GameStateManager.Instance.victimId)
+					output += PhotonNetwork.PlayerList[i].NickName + "\n";
+			}
+			
+			return output;
 		}
 	}
 

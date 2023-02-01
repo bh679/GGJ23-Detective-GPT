@@ -1,0 +1,3 @@
+Decide who among the suspects is the real murderer.
+Create a story, describing how the murder occurred.
+Speak as if presenting to those in the room.
