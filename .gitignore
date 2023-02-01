@@ -16,7 +16,8 @@
 !/[Aa]ssets/BNG Framework/Scripts/BNG Core.asmdef
 !/[Aa]ssets/BNG Framework/HandPoser/Scripts/BNG.HandPose.asmdef
 /[Aa]ssets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset
-/[Aa]ssets/PolygonHorrorMansion*
+/[Aa]ssets/PolygonHorrorMansion/*
+/[Aa]ssets/ExplosiveLLC/*
 
 #Private Keys & Webhooks
 /[Aa]ssets/BrennanHatton/Webhooks/*.txt
