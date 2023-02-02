@@ -14,6 +14,7 @@ public class DGPTAnimationController : MonoBehaviour
     void Start()
     {
 	    animator.SetTrigger("Spawn");
+	    animator.SetInteger("Random",(int)Random.Range(0,3));
     }
 
     // Update is called once per frame

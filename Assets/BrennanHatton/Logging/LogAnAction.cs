@@ -19,7 +19,8 @@ namespace BrennanHatton.Logging
 	    
 		public void Log()
 		{
-			ActionLogger.Instance.Add(log);
+			if(this.enabled)
+				ActionLogger.Instance.Add(log);
 		}
 	}
 }

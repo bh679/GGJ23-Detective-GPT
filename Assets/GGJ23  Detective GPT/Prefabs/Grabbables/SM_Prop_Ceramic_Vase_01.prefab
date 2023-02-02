@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3924352620225579575}
   - component: {fileID: 3894661748819089681}
   - component: {fileID: 3903012814560337493}
-  - component: {fileID: 3935519092354960887}
   - component: {fileID: 4016265716665127577}
   - component: {fileID: 3925224909671074914}
   - component: {fileID: 3925224909671074913}
@@ -19,6 +18,9 @@ GameObject:
   - component: {fileID: 4596162577007299957}
   - component: {fileID: 1524312768185411267}
   - component: {fileID: 843718805719483566}
+  - component: {fileID: 4810607721748391713}
+  - component: {fileID: 7806708694214539504}
+  - component: {fileID: 1724307073824447163}
   m_Layer: 0
   m_Name: SM_Prop_Ceramic_Vase_01
   m_TagString: Untagged
@@ -91,20 +93,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3935519092354960887
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3926429882593137913}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43960694387731974, guid: 41cff0e04a00652498b0b17265100789, type: 2}
 --- !u!114 &4016265716665127577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,3 +366,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbableEvents: {fileID: 1524312768185411267}
   rb: {fileID: 3925224909671074914}
+--- !u!114 &4810607721748391713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3926429882593137913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821cfb7c3eab3764bbb57d764c6e26d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 50
+  ColliderRigidbody: {fileID: 3925224909671074914}
+  MinForce: 0.1
+  LastRelativeVelocity: 0
+  LastDamageForce: 0
+  TakeCollisionDamage: 0
+  CollisionDamage: 5
+--- !u!65 &7806708694214539504
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3926429882593137913}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07458019, y: 0.35924304, z: 0.077157974}
+  m_Center: {x: -0.0019741058, y: 0.17962152, z: -0.0021867752}
+--- !u!135 &1724307073824447163
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3926429882593137913}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11332965
+  m_Center: {x: 0, y: 0.12882137, z: 0}

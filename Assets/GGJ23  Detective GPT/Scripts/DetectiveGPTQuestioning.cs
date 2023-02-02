@@ -80,6 +80,7 @@ namespace DetectiveGPT
 		public List<AnswerData> answers = new List<AnswerData>();
 		
 		public AudioClip timerCountingSound;
+		public LogManager logManager;
 		
 		int id = 0;
 		
@@ -88,6 +89,7 @@ namespace DetectiveGPT
 			detectiveAudioSource = this.GetComponent<AudioSource>();
 			speechManager = GameObject.FindObjectOfType<SpeechManager>();
 			logger = GameObject.FindObjectOfType<ActionLogger>();
+			logManager = this.GetComponent<LogManager>();
 		}
 		
 		public QuetionData currentQuestionType;
@@ -95,6 +97,7 @@ namespace DetectiveGPT
 		private void OnEnable()
 		{
 			PhotonNetwork.AddCallbackTarget(this);
+			logManager.DisableAll();
 		}
 	
 		private void OnDisable()
@@ -115,10 +118,16 @@ namespace DetectiveGPT
 			
 			//prep logger
 			logger.Clear();
+			logManager.SetLoggersFromQuestion(currentQuestionType);
 			
 			//set timer
 			if(questions[id].time >= 0)
 				StartCoroutine(getDataFromLogAfterTime(questions[id].time));
+			
+		}
+		
+		public void TurnOffAllLoggers()
+		{
 			
 		}
 		
@@ -150,7 +159,7 @@ namespace DetectiveGPT
 			{
 				speechManager.SpeakWithSDKPlugin(questions[id].concludeDescriptioon);
 				
-				delay = 4f;
+				delay = 5f;
 			}
 				
 			
