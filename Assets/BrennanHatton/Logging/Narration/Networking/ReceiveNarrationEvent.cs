@@ -12,6 +12,7 @@ namespace BrennanHatton.Networking.Events
 	public class ReceiveNarrationEvent : MonoBehaviour, IOnEventCallback
 	{
 		public SpeechManager speech;
+		public AudioSource waitTillStopSource;
 		
 		public UnityEvent onReceive; 
 		
@@ -40,10 +41,25 @@ namespace BrennanHatton.Networking.Events
 				int id = (int)data[0];
 				string narration = (string)data[1];
 				Debug.Log("narration: " + narration);
-				speech.SpeakWithSDKPlugin(narration);
+				StartCoroutine(playSpeechWhenAudioStops(narration));
 				
 				onReceive.Invoke();
 			}
+		}
+		
+		IEnumerator playSpeechWhenAudioStops(string narration)
+		{
+			if(waitTillStopSource != null)
+			{
+				while(waitTillStopSource.isPlaying)
+				{
+					yield return new WaitForEndOfFrame();
+	
+				}
+			}
+			
+			speech.SpeakWithSDKPlugin(narration);
+			
 		}
 	}
 

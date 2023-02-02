@@ -6,7 +6,7 @@ namespace BrennanHatton.Logging
 {
 	public class LogAnAction : MonoBehaviour
 	{
-		public LogAction log;
+		public LogAction log = new LogAction(false);
 		
 		public bool onStart;
 		
