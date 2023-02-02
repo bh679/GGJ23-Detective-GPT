@@ -18,8 +18,8 @@ TagManager:
   - Player
   - Grabbable
   - PlayerInvisible
+  - PlayerDamagable
   - LogTriggers
-  - 
   - 
   - 
   - 
