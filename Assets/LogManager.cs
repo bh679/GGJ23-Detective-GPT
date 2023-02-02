@@ -13,6 +13,7 @@ namespace BrennanHatton.Logging
 		public GrabberLogger[] grabbers = new GrabberLogger[0];
 		public RaycastWeaponLog[] weaponLogs = new RaycastWeaponLog[0];
 		public PlayerMovementLogger[] movementLogs = new PlayerMovementLogger[0];
+		public PointLogger[] pointLoggers = new PointLogger[0];
 		public GameObject[] gameObjects = new GameObject[0];
 		public QuetionData questionType;
 		
@@ -29,6 +30,9 @@ namespace BrennanHatton.Logging
 				
 			for(int i =0 ;i < movementLogs.Length; i++)
 				movementLogs[i].enabled = enabled;
+				
+			for(int i =0 ;i < pointLoggers.Length; i++)
+				pointLoggers[i].enabled = enabled;
 		
 			for(int i =0 ;i < gameObjects.Length; i++)
 				gameObjects[i].SetActive(enabled);
@@ -51,6 +55,7 @@ namespace BrennanHatton.Logging
 			logGroups[0].grabbers = GameObject.FindObjectsOfType<GrabberLogger>();
 			logGroups[0].weaponLogs = GameObject.FindObjectsOfType<RaycastWeaponLog>();
 			logGroups[0].movementLogs = GameObject.FindObjectsOfType<PlayerMovementLogger>();
+			logGroups[0].pointLoggers = GameObject.FindObjectsOfType<PointLogger>();
 			logGroups[0].questionType = QuetionData.General;
 			logGroups[0].name = "General";
 			
@@ -81,6 +86,7 @@ namespace BrennanHatton.Logging
 			logGroups[3] = new LogGroups();
 			logGroups[3].questionType = QuetionData.Point;
 			logGroups[3].name = "Point";
+			logGroups[3].pointLoggers = logGroups[0].pointLoggers;
 			
 			
 		}
