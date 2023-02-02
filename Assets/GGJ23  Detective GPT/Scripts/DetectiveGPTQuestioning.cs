@@ -72,7 +72,7 @@ namespace DetectiveGPT
 	
 	public class DetectiveGPTQuestioning : MonoBehaviour, IOnEventCallback
 	{
-		public AudioSource source;
+		public AudioSource detectiveAudioSource, soundFXAudioSound;
 		public SpeechManager speechManager;
 		public ActionLogger logger;
 		public int questionsToAsk = 1;
@@ -85,7 +85,7 @@ namespace DetectiveGPT
 		
 		void Reset()
 		{
-			source = this.GetComponent<AudioSource>();
+			detectiveAudioSource = this.GetComponent<AudioSource>();
 			speechManager = GameObject.FindObjectOfType<SpeechManager>();
 			logger = GameObject.FindObjectOfType<ActionLogger>();
 		}
@@ -106,7 +106,7 @@ namespace DetectiveGPT
 		{
 			//play audio
 			if(questions[id].askQuestionClip)
-				source.PlayOneShot(questions[id].askQuestionClip);
+				detectiveAudioSource.PlayOneShot(questions[id].askQuestionClip);
 			else
 				speechManager.SpeakWithSDKPlugin(questions[id].descrption);
 				
@@ -125,14 +125,14 @@ namespace DetectiveGPT
 		IEnumerator getDataFromLogAfterTime(float time)
 		{
 			Debug.Log("getDataFromLogAfterTime");
-			while(source.isPlaying || speechManager.audioSource.isPlaying)
+			while(detectiveAudioSource.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForSeconds(1f);
 			
 			Debug.Log("Play " + timerCountingSound.name);
-			source.PlayOneShot(timerCountingSound);
+			soundFXAudioSound.PlayOneShot(timerCountingSound);
 			yield return new WaitForSeconds(time);
 			Debug.Log("Waited " + time);
-			source.Stop();
+			soundFXAudioSound.Stop();
 			
 			SubmitAnswer(logger.output,PhotonNetwork.LocalPlayer.NickName);
 				
@@ -145,7 +145,7 @@ namespace DetectiveGPT
 			
 			Debug.Log(answerData);
 			if(questions[id].concludeQuestoinClip)
-				source.PlayOneShot(questions[id].concludeQuestoinClip);
+				detectiveAudioSource.PlayOneShot(questions[id].concludeQuestoinClip);
 			else
 			{
 				speechManager.SpeakWithSDKPlugin(questions[id].concludeDescriptioon);
@@ -165,7 +165,7 @@ namespace DetectiveGPT
 		{
 			yield return new WaitForSeconds(delay);
 			
-			while(source.isPlaying || speechManager.audioSource.isPlaying)
+			while(detectiveAudioSource.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForFixedUpdate();
 			
 			id++;
