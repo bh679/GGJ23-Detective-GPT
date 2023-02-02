@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 namespace BrennanHatton.Logging
 {
@@ -8,11 +9,15 @@ namespace BrennanHatton.Logging
 	{
 		public LogAction log = new LogAction(false);
 		
-		public bool onStart;
+		
+		public bool onStart, usePhotonName = true;
 		
 	    // Start is called before the first frame update
 	    void Start()
-	    {
+		{
+			if(usePhotonName)
+				log.who = PhotonNetwork.LocalPlayer.NickName;
+				
 		    if(onStart)
 			    Log();
 	    }

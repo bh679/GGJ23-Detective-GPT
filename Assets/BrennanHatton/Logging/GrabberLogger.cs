@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BNG;
+using Photon.Pun;
 
 namespace BrennanHatton.Logging
 {
@@ -10,6 +11,7 @@ namespace BrennanHatton.Logging
 		public Grabber grabber;
 		public string handSide;
 		public Importance importance = Importance.Important;
+		public bool usePhotonName = true;
 		void Reset()
 		{
 			grabber = this.GetComponent<Grabber>();
@@ -26,6 +28,8 @@ namespace BrennanHatton.Logging
 		public void OnGrab(Grabbable grabbable) {
 			
 			LogAction log = new LogAction();
+			if(usePhotonName)
+				log.who = PhotonNetwork.LocalPlayer.NickName;
 			log.did = "Grabbed";
 			log.what = grabbable.name;
 			log.with = handSide;

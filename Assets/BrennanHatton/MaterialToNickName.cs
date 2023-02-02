@@ -8,7 +8,13 @@ namespace BrennanHatton.Networking
 {
 	public class MaterialToNickName : MonoBehaviour
 	{
+		public SetMaterial matset;
 		public string[] colorNames;
+		
+		void Start()
+		{
+			matset.onMatChange.AddListener(SetName);
+		}
 		
 		public void SetName(int id)
 		{

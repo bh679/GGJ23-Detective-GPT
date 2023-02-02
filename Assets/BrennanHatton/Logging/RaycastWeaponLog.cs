@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BNG;
+using Photon.Pun;
 
 namespace BrennanHatton.Logging
 {
@@ -10,7 +11,7 @@ namespace BrennanHatton.Logging
 		public RaycastWeapon weapon;
 		
 		public Importance importance = Importance.SlightlyImportant;
-		
+		public bool usePhotonName = true;
 		bool shotHit = false;
 		
 		void Reset()
@@ -25,18 +26,13 @@ namespace BrennanHatton.Logging
 		    weapon.onRaycastHitEvent.AddListener(LogShotHit);
 		    shotHit = false;
 	    }
-	
-	    // Update is called once per frame
-	    void Update()
-	    {
-	        
-	    }
 	    
 		public void LogShotHit(RaycastHit hit)
 		{
 			shotHit = true;
 			LogAction log = new LogAction();
-			log.who = "Player";
+			if(usePhotonName)
+				log.who = PhotonNetwork.LocalPlayer.NickName;
 			log.did = "Shot";
 			log.what = hit.transform.gameObject.name;
 			log.with = this.gameObject.name;

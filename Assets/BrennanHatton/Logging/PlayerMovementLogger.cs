@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Photon.Pun;
 
 namespace BrennanHatton.Logging
 {
@@ -26,6 +26,7 @@ namespace BrennanHatton.Logging
 		MovementState lastMovementStat;
 		public MovementState movementState;
 		public Importance importance = Importance.Unimportant;
+		public bool usePhotonName = true;
 		
 		void Reset()
 		{
@@ -90,6 +91,8 @@ namespace BrennanHatton.Logging
 			if(lastMovementStat != movementState)
 			{
 				LogAction log = new LogAction();
+				if(usePhotonName)
+					log.who = PhotonNetwork.LocalPlayer.NickName;
 				log.did = "Started";
 				log.what = movementState.ToString();
 				log.with = "";

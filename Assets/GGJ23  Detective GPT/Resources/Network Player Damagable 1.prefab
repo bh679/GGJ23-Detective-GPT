@@ -1389,6 +1389,41 @@ PrefabInstance:
       propertyPath: FacilitatorMaterials.Array.data[7]
       value: 
       objectReference: {fileID: 2100000, guid: 639e8f2a3447f464e86df33bd2bc69aa, type: 2}
+    - target: {fileID: 3230678059772775319, guid: c5eb6e55979943d499a6370ba5a84bf7,
+        type: 3}
+      propertyPath: onMatChange.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230678059772775319, guid: c5eb6e55979943d499a6370ba5a84bf7,
+        type: 3}
+      propertyPath: onMatChange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230678059772775319, guid: c5eb6e55979943d499a6370ba5a84bf7,
+        type: 3}
+      propertyPath: onMatChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8557126637770526267}
+    - target: {fileID: 3230678059772775319, guid: c5eb6e55979943d499a6370ba5a84bf7,
+        type: 3}
+      propertyPath: onMatChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230678059772775319, guid: c5eb6e55979943d499a6370ba5a84bf7,
+        type: 3}
+      propertyPath: onMatChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetName
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230678059772775319, guid: c5eb6e55979943d499a6370ba5a84bf7,
+        type: 3}
+      propertyPath: onMatChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BrennanHatton.Networking.MaterialToNickName, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230678059772775319, guid: c5eb6e55979943d499a6370ba5a84bf7,
+        type: 3}
+      propertyPath: onMatChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3323260962599551047, guid: c5eb6e55979943d499a6370ba5a84bf7,
         type: 3}
       propertyPath: m_Layer
@@ -1611,6 +1646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bdd9d2cda0b454ca7139620ff89c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  matset: {fileID: 888803032733282805}
   colorNames:
   - Green
   - Red

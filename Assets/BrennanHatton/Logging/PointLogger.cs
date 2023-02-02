@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using BrennanHatton.Networking;
-//using BNG;
+using Photon.Pun;
 
 namespace BrennanHatton.Logging
 {
@@ -25,6 +25,9 @@ namespace BrennanHatton.Logging
 		public float resetFrequencey = 5f;
 		
 		public LogAction log = new LogAction(false);
+		
+		
+		public bool usePhotonName = true;
 		BrennanHatton.Networking.NetworkPlayer lastPlayer;
 		
 		void Reset()
@@ -63,6 +66,8 @@ namespace BrennanHatton.Logging
 				if(player != null && lastPlayer != player)
 				{
 					lastPlayer = player;
+					if(usePhotonName)
+						log.who = PhotonNetwork.LocalPlayer.NickName;
 					log.what = player.PhotonView.Owner.NickName;
 					log.when = Time.time.ToString();;
 					Debug.Log("pointed at " + log.what);
