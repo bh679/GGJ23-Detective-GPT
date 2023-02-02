@@ -40,6 +40,8 @@ namespace BrennanHatton.Logging
 		public void OnRelease(Grabbable grabbable) {
 
 			LogAction log = new LogAction();
+			if(usePhotonName)
+				log.who = PhotonNetwork.LocalPlayer.NickName;
 			log.did = "Released";
 			log.what = grabbable.name;
 			log.with = handSide;

@@ -15,8 +15,6 @@ namespace BrennanHatton.Logging
 	    // Start is called before the first frame update
 	    void Start()
 		{
-			if(usePhotonName)
-				log.who = PhotonNetwork.LocalPlayer.NickName;
 				
 		    if(onStart)
 			    Log();
@@ -24,8 +22,12 @@ namespace BrennanHatton.Logging
 	    
 		public void Log()
 		{
-			if(this.enabled)
-				ActionLogger.Instance.Add(log);
+			if(!this.enabled)
+				return;
+				
+			if(usePhotonName)
+				log.who = PhotonNetwork.LocalPlayer.NickName;
+			ActionLogger.Instance.Add(log);
 		}
 	}
 }

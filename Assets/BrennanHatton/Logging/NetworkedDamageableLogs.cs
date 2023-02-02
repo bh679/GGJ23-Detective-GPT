@@ -11,7 +11,7 @@ namespace BrennanHatton.Logging
 		public DamageableEvents damageable;
 		public PhotonView player;
 		
-		public string targetName, localName = "Player";
+		public string targetName;
 		public Importance importance = Importance.Critical;
 		
 		void Reset()
@@ -24,17 +24,13 @@ namespace BrennanHatton.Logging
 	    // Start is called before the first frame update
 	    void Start()
 		{
-			//if(player != null)
-			//	targetName = player.Owner.NickName;
-				
-		    localName = PhotonNetwork.LocalPlayer.NickName;
 		    damageable.onDamagedDetails.AddListener(LogAndNetworkDamage);
 	    }
 	    
 		void LogAndNetworkDamage(float damageAmount, GameObject sender)
 		{
 			LogAction log = new LogAction();
-			log.who = localName;
+			log.who = PhotonNetwork.LocalPlayer.NickName;;
 			log.did = "delt " + damageAmount + " damage to " + (player==null?"":player.Owner.NickName+"'s ") + targetName;
 			log.with = sender.name;
 			log.importance = importance;

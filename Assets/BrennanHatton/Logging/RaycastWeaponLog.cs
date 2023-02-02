@@ -49,7 +49,10 @@ namespace BrennanHatton.Logging
 				return;
 			}
 			LogAction log = new LogAction();
-			log.who = "Player";
+			if(usePhotonName)
+				log.who = PhotonNetwork.LocalPlayer.NickName;
+			else
+				log.who = "Player";
 			log.did = "Shot";
 			log.what = "and hit nothing";
 			log.with = this.gameObject.name;
