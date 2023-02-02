@@ -9,7 +9,6 @@ namespace BrennanHatton.Logging
 
 	public class PointLogger : MonoBehaviour
 	{
-		//public RemoteGrabType PhysicsCheckType = RemoteGrabType.Trigger;
 
 		[Tooltip("If PhysicsCheckType = Trigger and this is true, an additonal raycast check will occur to check for obstacles in the way")]
 		public bool TriggerRequiresRaycast = true;
@@ -21,13 +20,11 @@ namespace BrennanHatton.Logging
 
 		public LayerMask RemoteGrabLayers = ~0;
 
-		// Grabber we can hand objects off to
-		//public GrabbablesInTrigger ParentGrabber;
-
 		private Collider _lastColliderHit = null;
 		
+		public float resetFrequencey = 5f;
 		
-		public LogAction log;
+		public LogAction log = new LogAction(false);
 		BrennanHatton.Networking.NetworkPlayer lastPlayer;
 		
 		void Reset()
@@ -39,29 +36,8 @@ namespace BrennanHatton.Logging
 			log.with = "their finger";
 		}
 
-		/*void Start() {
-			if(PhysicsCheckType == RemoteGrabType.Trigger && GetComponent<Collider>() == null) {
-				Debug.LogWarning("Remote Grabber set to 'Trigger', but no Trigger Collider was found. You may need to add a collider, or switch to a different physics check type.");
-			}
-
-			// Add a raycast check if we're using a trigger type. Trigger types don't check collision.
-			if (PhysicsCheckType == RemoteGrabType.Trigger && TriggerRequiresRaycast && ParentGrabber != null) {
-				ParentGrabber.RaycastRemoteGrabbables = true;
-			}
-		}*/
-
+		float timer= 0;
 		public virtual void Update() {
-			/*/if (PhysicsCheckType == RemoteGrabType.Raycast) {
-
-				RaycastHit hit;
-				if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, RaycastLength, RemoteGrabLayers)) {
-					ObjectHit(hit.collider);
-				}
-				else if (_lastColliderHit != null) {
-					RemovePreviousHitObject();
-				}
-			}
-			//else if (PhysicsCheckType == RemoteGrabType.Spherecast) {*/
 				RaycastHit hit;
 			if (Physics.SphereCast(transform.position, SphereCastRadius, transform.forward, out hit, SphereCastLength)) {
 					ObjectHit(hit.collider);
@@ -69,7 +45,13 @@ namespace BrennanHatton.Logging
 				else if (_lastColliderHit != null) {
 					RemovePreviousHitObject();
 				}
-			//}
+				
+			if(timer >= resetFrequencey)
+			{
+				timer = 0;
+				lastPlayer = null;
+			}
+			timer+=Time.deltaTime;
 		}
 
 		private void ObjectHit(Collider colliderHit) {
@@ -82,6 +64,8 @@ namespace BrennanHatton.Logging
 				{
 					lastPlayer = player;
 					log.what = player.PhotonView.Owner.NickName;
+					log.when = Time.time.ToString();;
+					Debug.Log("pointed at " + log.what);
 					ActionLogger.Instance.Add(log);
 				}
 				
@@ -98,55 +82,7 @@ namespace BrennanHatton.Logging
 
 
 			_lastColliderHit = null;
-		}/*
-
-		void OnTriggerEnter(Collider other) {
-            
-			// Skip check for other PhysicsCheckTypes
-			if (ParentGrabber == null || PhysicsCheckType != RemoteGrabType.Trigger) {
-				return;
-			}
-            
-			// Ignore Raycast Triggers
-			if(other.gameObject.layer == 2) {
-				return;
-			}
-
-			//  We will let this grabber know we have remote objects available           
-			Grabbable grabObject = other.GetComponent<Grabbable>();
-			if(grabObject != null && ParentGrabber != null) {
-				ParentGrabber.AddValidRemoteGrabbable(other, grabObject);
-				return;
-			}
-
-			// Check for Grabbable Child Object Last
-			GrabbableChild gc = other.GetComponent<GrabbableChild>();
-			if (gc != null && ParentGrabber != null) {
-				ParentGrabber.AddValidRemoteGrabbable(other, gc.ParentGrabbable);
-				return;
-			}
 		}
-
-		void OnTriggerExit(Collider other) {
-
-			// Skip check for other PhysicsCheckTypes
-			if (ParentGrabber == null || PhysicsCheckType != RemoteGrabType.Trigger) {
-				return;
-			}
-
-			Grabbable grabObject = other.GetComponent<Grabbable>();
-			if (grabObject != null && ParentGrabber != null) {
-				ParentGrabber.RemoveValidRemoteGrabbable(other, grabObject);
-				return;
-			}
-
-			// Check for Grabbable Child Object Last
-			GrabbableChild gc = other.GetComponent<GrabbableChild>();
-			if (gc != null && ParentGrabber != null) {
-				ParentGrabber.RemoveValidRemoteGrabbable(other, gc.ParentGrabbable);
-				return;
-			}
-		}*/
 	}
 	
 }
