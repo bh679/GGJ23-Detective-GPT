@@ -46,6 +46,8 @@ namespace BrennanHatton.Networking.Events
 		
 		IEnumerator changeSceneAfterTime(int bid, int delay)
 		{
+			changeScene = false;
+			
 			yield return new WaitForSeconds(delay);
 			
 			SceneManager.LoadScene(bid);
