@@ -8,17 +8,48 @@ namespace BrennanHatton.Networking
 {
 	public class MaterialToNickName : MonoBehaviour
 	{
-		public SetMaterial matset;
+		SetMaterial matset;
 		public string[] colorNames;
+		string OGname;
+		public bool expectAvatar = true;
 		
-		void Start()
+		public void SetOGName()
 		{
-			matset.onMatChange.AddListener(SetName);
+			OGname = PhotonNetwork.NickName;
+		}
+		
+		public void SetNickName()
+		{
+			SetOGName();
+			
+			StartCoroutine(setNickNameWhenRead());
+			
+		}
+		
+		
+		IEnumerator setNickNameWhenRead()
+		{
+			if(matset == null)
+			{
+				while(NetworkPlayerSpawner.localPlayer == null && expectAvatar)
+					yield return new WaitForSeconds(0.2f);
+				
+				if( NetworkPlayerSpawner.localPlayer != null)
+				{
+					matset = NetworkPlayerSpawner.localPlayer.gameObject.GetComponentInChildren<SetMaterial>();
+					
+					matset.onMatChange.AddListener(SetName);
+				}
+			}
+			
+			if(matset != null)
+				SetName(matset.MaterialId);
+				
 		}
 		
 		public void SetName(int id)
 		{
-			PhotonNetwork.NickName = colorNames[id] + " " + PhotonNetwork.NickName;
+			PhotonNetwork.NickName = colorNames[id] + " " + OGname;
 		}
 	}
 }

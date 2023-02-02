@@ -1646,7 +1646,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72bdd9d2cda0b454ca7139620ff89c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  matset: {fileID: 888803032733282805}
   colorNames:
   - Green
   - Red
