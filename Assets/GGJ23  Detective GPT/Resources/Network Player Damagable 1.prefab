@@ -79,7 +79,6 @@ MonoBehaviour:
   damageable: {fileID: 6293942903178451779}
   player: {fileID: 2032433918780612679}
   targetName: Head
-  localName: Player
   importance: 7
 --- !u!114 &6293942903178451779
 MonoBehaviour:
@@ -566,7 +565,6 @@ MonoBehaviour:
   damageable: {fileID: 7217744796035332571}
   player: {fileID: 2032433918780612679}
   targetName: Chest
-  localName: Player
   importance: 7
 --- !u!114 &7217744796035332571
 MonoBehaviour:
@@ -891,7 +889,6 @@ MonoBehaviour:
   damageable: {fileID: 1245064822492875380}
   player: {fileID: 2032433918780612679}
   targetName: Right Hand
-  localName: Player
   importance: 10
 --- !u!114 &1245064822492875380
 MonoBehaviour:
@@ -1150,7 +1147,6 @@ MonoBehaviour:
   damageable: {fileID: 8409901453603362172}
   player: {fileID: 2032433918780612679}
   targetName: Left Hand
-  localName: Player
   importance: 10
 --- !u!114 &8409901453603362172
 MonoBehaviour:
@@ -1655,6 +1651,7 @@ MonoBehaviour:
   - White
   - Orange
   - Blue
+  expectAvatar: 1
 --- !u!4 &3968783378596025698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1698972267751157504, guid: c5eb6e55979943d499a6370ba5a84bf7,
