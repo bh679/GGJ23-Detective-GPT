@@ -16,14 +16,14 @@ namespace DetectiveGPT
 		Actions = 2,
 		Location = 3,
 		General = 4,
-		Bool
+		Bool //remove
 	}
 	
 	public enum QuestionIDs
 	{
-		Reenactment = 0,
-		MurderWeapon = 1,
-		Accustation = 2,
+		Reenactment = 0,//remove
+		MurderWeapon = 1,//remove
+		Accustation = 2,//remove
 		CrimeOfPassion = 3,
 		DidTheySeeItComing = 4,
 		GruesomeCrime = 5,
@@ -33,17 +33,28 @@ namespace DetectiveGPT
 		PerpetratorWellLiked = 9,
 		PersonInNature = 10,
 		ReOffend = 11,
-		SmellyCrime = 12
+		SmellyCrime = 12,
+		TotalQuest = 13
 	}
 	
 	[System.Serializable]
 	public class Question
 	{
-		public QuestionIDs questionId;
+		public QuestionIDs questionId;//remove
 		public QuetionData dataType;
-		public TextAsset prompt;
+		public TextAsset prompt, negativePrompt;//remove neg
 		public string descrption, concludeDescriptioon;
-		//public AudioClip askQuestionClip, concludeQuestoinClip;
+		public float time = -1f;
+		
+		AudioSource source;
+	}
+	
+	[System.Serializable]
+	public class VoteQuestion
+	{
+		public QuestionIDs questionId;
+		public TextAsset prompt, negativePrompt;
+		public string descrption, concludeDescriptioon;
 		public float time = -1f;
 		
 		AudioSource source;
@@ -97,6 +108,7 @@ namespace DetectiveGPT
 		public ActionLogger logger;
 		public int questionsToAsk = 1;
 		public Question[] questions;
+		public Question[] voteQuestoins;
 		public List<AnswerData> answers = new List<AnswerData>();
 		
 		public AudioClip timerCountingSound;
@@ -144,11 +156,6 @@ namespace DetectiveGPT
 			
 		}
 		
-		public void TurnOffAllLoggers()
-		{
-			
-		}
-		
 		IEnumerator getDataFromLogAfterTime(float time)
 		{
 			Debug.Log("getDataFromLogAfterTime");
@@ -180,9 +187,14 @@ namespace DetectiveGPT
 			}
 				
 			
-			answers.Add(new AnswerData(questions[id],player, answerData));
+			if(questions[id].dataType == QuetionData.Bool)
+				PlayerCustomProperties.SetCustomProp<int>(questions[id].questionId.ToString(), (int)GestureManager.Instance.GetState());
+			else
+			{
+				answers.Add(new AnswerData(questions[id], player, answerData));
 			
-			DectectiveGPTSendEventManager.SendQuestionAnswerString(answers.Count-1,answerData);
+				DectectiveGPTSendEventManager.SendQuestionAnswerString(answers.Count-1,answerData);
+			}
 			
 			StartCoroutine(nextQuestion(delay));
 		}
@@ -224,5 +236,55 @@ namespace DetectiveGPT
 				
 			}
 		}
+		
+		Question GetQuestion(QuestionIDs id)
+		{
+			for(int i = 0; i < questions.Length; i++)
+			{
+				if(id == questions[i].questionId)
+					return questions[i];
+			}
+			
+			return null;
+		}
+		
+		bool GetVoteFor(QuestionIDs q)
+		{
+			int voteFor = 0, voteAgainst = 0;
+			
+			for(int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+			{
+				if(((ThumbState)PlayerCustomProperties.GetCustomProp<int>(PhotonNetwork.PlayerList[i], q.ToString())) == ThumbState.Up)
+					voteFor++;
+				else
+					voteAgainst++;
+			}
+			
+			return (voteFor >= voteAgainst);
+				
+		}
+		
+		public string GetBoolQuestionPrompts()
+		{
+			string output = "";
+			
+			for(int i = (int)QuestionIDs.CrimeOfPassion; i < (int)QuestionIDs.TotalQuest; i++)	
+			{
+				Question q = GetQuestion((QuestionIDs)i);
+				
+				if(q != null)
+				{
+					bool voteFor = GetVoteFor((QuestionIDs)i);
+					
+					if(voteFor)
+						output += q.prompt +"\n";
+					else
+						output += q.negativePrompt +"\n";
+				}
+			}
+			
+			return output;
+		}
+		
 	}
 }
