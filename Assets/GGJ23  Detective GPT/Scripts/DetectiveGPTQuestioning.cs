@@ -18,13 +18,21 @@ namespace DetectiveGPT
 		General = 4
 	}
 	
+	public enum QuestionIDs
+	{
+		Reenactment = 0,
+		MurderWeapon = 1,
+		Accustation = 2,
+	}
+	
 	[System.Serializable]
 	public class Question
 	{
+		public QuestionIDs questionId;
 		public QuetionData dataType;
 		public TextAsset prompt;
 		public string descrption, concludeDescriptioon;
-		public AudioClip askQuestionClip, concludeQuestoinClip;
+		//public AudioClip askQuestionClip, concludeQuestoinClip;
 		public float time = -1f;
 		
 		AudioSource source;
@@ -72,7 +80,8 @@ namespace DetectiveGPT
 	
 	public class DetectiveGPTQuestioning : MonoBehaviour, IOnEventCallback
 	{
-		public AudioSource detectiveAudioSource, soundFXAudioSound;
+		public AudioSource soundFXAudioSound;
+		public DetectiveGPTNarrator narrator;
 		public SpeechManager speechManager;
 		public ActionLogger logger;
 		public int questionsToAsk = 1;
@@ -86,7 +95,7 @@ namespace DetectiveGPT
 		
 		void Reset()
 		{
-			detectiveAudioSource = this.GetComponent<AudioSource>();
+			narrator = this.GetComponent<DetectiveGPTNarrator>();
 			speechManager = GameObject.FindObjectOfType<SpeechManager>();
 			logger = GameObject.FindObjectOfType<ActionLogger>();
 			logManager = this.GetComponent<LogManager>();
@@ -108,9 +117,7 @@ namespace DetectiveGPT
 		public void AskNextQuestion()
 		{
 			//play audio
-			if(questions[id].askQuestionClip)
-				detectiveAudioSource.PlayOneShot(questions[id].askQuestionClip);
-			else
+			if(!narrator.AskQuestion(questions[id].questionId))
 				speechManager.SpeakWithSDKPlugin(questions[id].descrption);
 				
 			//set type
@@ -134,7 +141,7 @@ namespace DetectiveGPT
 		IEnumerator getDataFromLogAfterTime(float time)
 		{
 			Debug.Log("getDataFromLogAfterTime");
-			while(detectiveAudioSource.isPlaying || speechManager.audioSource.isPlaying)
+			while(narrator.source.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForSeconds(1f);
 			
 			Debug.Log("Play " + timerCountingSound.name);
@@ -153,9 +160,8 @@ namespace DetectiveGPT
 			float delay = 0;
 			
 			Debug.Log(answerData);
-			if(questions[id].concludeQuestoinClip)
-				detectiveAudioSource.PlayOneShot(questions[id].concludeQuestoinClip);
-			else
+			//play audio
+			if(!narrator.ConcludeQuestion(questions[id].questionId))
 			{
 				speechManager.SpeakWithSDKPlugin(questions[id].concludeDescriptioon);
 				
@@ -174,7 +180,7 @@ namespace DetectiveGPT
 		{
 			yield return new WaitForSeconds(delay);
 			
-			while(detectiveAudioSource.isPlaying || speechManager.audioSource.isPlaying)
+			while(narrator.source.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForFixedUpdate();
 			
 			id++;

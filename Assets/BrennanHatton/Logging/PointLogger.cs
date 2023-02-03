@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BrennanHatton.Networking;
 using Photon.Pun;
+using DetectiveGPT;
 
 namespace BrennanHatton.Logging
 {
@@ -25,6 +26,7 @@ namespace BrennanHatton.Logging
 		public float resetFrequencey = 5f;
 		
 		public LogAction log = new LogAction(false);
+		public GameObject detective;
 		
 		
 		public bool usePhotonName = true;
@@ -61,17 +63,30 @@ namespace BrennanHatton.Logging
 			// Did our last item change?
 			if (_lastColliderHit != colliderHit) {
 				
-				BrennanHatton.Networking.NetworkPlayer player = colliderHit.GetComponentInParent<BrennanHatton.Networking.NetworkPlayer>();
-				
-				if(player != null && lastPlayer != player)
+				if(colliderHit.gameObject == detective)
 				{
-					lastPlayer = player;
+					lastPlayer = null;
 					if(usePhotonName)
 						log.who = PhotonNetwork.LocalPlayer.NickName;
-					log.what = player.PhotonView.Owner.NickName;
+					log.what = DetectiveGPTNarrator.Instance.GetNarratorName();
 					log.when = Time.time.ToString();;
-					Debug.Log("pointed at " + log.what);
+					//Debug.Log("pointed at " + log.what);
 					ActionLogger.Instance.Add(log);
+				}else{
+					
+				
+					BrennanHatton.Networking.NetworkPlayer player = colliderHit.GetComponentInParent<BrennanHatton.Networking.NetworkPlayer>();
+				
+					if((player != null && lastPlayer != player))
+					{
+						lastPlayer = player;
+						if(usePhotonName)
+							log.who = PhotonNetwork.LocalPlayer.NickName;
+						log.what = player.PhotonView.Owner.NickName;
+						log.when = Time.time.ToString();;
+						//Debug.Log("pointed at " + log.what);
+						ActionLogger.Instance.Add(log);
+					}
 				}
 				
 				
