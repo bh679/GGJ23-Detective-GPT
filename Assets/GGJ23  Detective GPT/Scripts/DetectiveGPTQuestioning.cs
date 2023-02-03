@@ -15,7 +15,8 @@ namespace DetectiveGPT
 		Point = 1,
 		Actions = 2,
 		Location = 3,
-		General = 4
+		General = 4,
+		Bool
 	}
 	
 	public enum QuestionIDs
@@ -23,6 +24,16 @@ namespace DetectiveGPT
 		Reenactment = 0,
 		MurderWeapon = 1,
 		Accustation = 2,
+		CrimeOfPassion = 3,
+		DidTheySeeItComing = 4,
+		GruesomeCrime = 5,
+		IsItObvious = 6,
+		TiltedLoverCrime = 7,
+		MaybeAnAccident = 8,
+		PerpetratorWellLiked = 9,
+		PersonInNature = 10,
+		ReOffend = 11,
+		SmellyCrime = 12
 	}
 	
 	[System.Serializable]

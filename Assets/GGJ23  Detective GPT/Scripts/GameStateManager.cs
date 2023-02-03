@@ -150,6 +150,11 @@ namespace DetectiveGPT
 		{
 			SetState(GameState.End);
 		}
+		
+		public void ResetPlayerProp()
+		{
+			PlayerCustomProperties.SetCustomProp<int>(state_PlayerProp,(int)GameState.PreMurder);
+		}
 	}
 		
 }

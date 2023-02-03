@@ -1,0 +1,100 @@
+Idea! Players are randomly assigned characters who have a single personality trait "hot-headed" "calculating" "mean-spirited" "deceitful" and each of these is described to ChatGPT before the game starts, then we see if ChatGPT is more prone to assigning a crime described by these events to one character over another. Then of course we make efforts to balance them if it turns out the ChatGPT is more likely to favor pinning the crime on a particular character.
+
+Note: What we show the player and what we actually feed into ChatGPT do not necessarily have to be the same thing.
+Other note: These get funnier the less severe the crime is.
+
+Was this a violent crime?
+Yes-
+GPT: This was a violent crime.
+Detective: This was a brutehl mehrder indeed!
+No-
+GPT: This was not a particularly violent murder.
+Detective: So it was a gentle murder? (On-tehr-reh-sanT).
+
+Was this a crime of passion?
+Yes-
+GPT: This was a crime of passion.
+Detective: Pehrhaps the pehrpetratehr had REVONGE on ze mind?
+No-
+GPT: This was a cold and calculated murder.
+Detective: I see. How long could ze mehrderher have been planning zis?
+
+
+Did the crime result in a distinctive odor?
+Yes-
+GPT: The crime resulted in a distinctive and pungeant odor.
+Detective: I see. Yes, I can smell eet now. Malohdohraan.
+No-
+GPT: There were no distinctive odors at the crime scene
+Detective: Hmn. Regardless- I smell a rat.
+
+Was this the act of a jilted lover?
+Yes-
+GPT: The crime was committed by a jilted lover.
+Detective: Hmn. Romance was not on ze menu tonight, but someone was serving up a razher violent special, hon hon.
+No-
+GPT: This crime was committed by someone content in their romantic affairs.
+Detective: I see! Yes, of course! Ze crime could only have been committed by someone extremely content in zeir romantic affairs.
+
+Did the victim see this crime coming?
+Yes-
+GPT: The victim must have known this was a long time coming.
+Detective: But of course. Ze victim had to know who would have done zis. It's written all over their face.
+GPT: This crime took the victim completely by surprise.
+Detective: This must have felt like a bad dream! A close friend! Ze last person you would expect! ZEY are ze perpetratehr!
+
+Was the victim well-liked by others?
+Yes- 
+GPT: Everyone loved the victim.
+Detective: "This victim was as a God among mortals. Beloved by everyone in equal measure. Of course."
+No- 
+GPT: No one really liked the victim.
+Detective: What you're telling me is that, if I may be franc, no one at all much liked ze victim.
+
+Was the perpetrator well-liked by others?
+Yes-
+GPT: The perpetrator was a pretty OK person despite their crimes.
+Detective: What you're telling me is, despite ze mehhhrrdeehhrr, the perpetreitehr was, say, un bonn pehrsonn
+No-
+GPT: The perpetrator was an outcast, discared by society.
+Detective: The perpetrator was not well liked. Even made fun of behind zeir back? In-tehr-reh-sant.
+
+Did the crime seem personal in nature?
+Yes-
+GPT: The crime was personal in nature. This was no random act.
+Detective: Oh la vache! This was a dispute between friends! Or lovehrs! 
+No-
+GPT: This was a cold, calculated crime, done purely for personal gain.
+Detective: I see! Zis was a cold, calculated crime! Done perhaps for money or powehr!
+
+Is the answer to who committed the crime obvious?
+Yes-
+GPT: The answer to who committed the crime is obvious.
+Detective: We all know who did it. In fact, there could be no other answer at all! I've been a fool!
+No-
+GPT: This crime isn't as simple as it appears.
+Detective: Mon dieu! It's ze perfect ckrime! A masterpiece of deception and evil!
+
+Will the perpetrator re-offend if given the chance?
+Yes-
+GPT: The perpetrator will re-offend if given the chance.
+Detective: Do not give the perpetrator the opportunity to commit a similar crime, they will take it. They have no mercy, no humanity.
+No-
+GPT: The perpetrator is unlikely to commit a crime like this ever again.
+Detective: This was a one-and-done crime. They plan to slink back into the folds of society but we won't let them.
+
+Is the scene of the crime gruesome to look at?
+Yes- 
+GPT: The scene of the crime is gruesome to look at.
+Detective: Do not let children or the eldery glance at the scene of the crime. This is a massachre.
+No-
+GPT: There was little evidence left at the scene of the crime.
+Detective: Ze scene of ze crime is so clean, in fact, zat one could DINE on eet!
+
+Could this have all been some sort of terrible accident?
+Yes- 
+GPT: This all could have been some kind of horrible accident.
+Detective: Perhaps this was but an unfortunate mistake! Some freak mishap... But what if it isn't.
+No- 
+GPT: This was no accident."
+Detective: No. No! Zis was no accident! In fact, zis was planned months in advance!

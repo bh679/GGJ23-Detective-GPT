@@ -9,7 +9,7 @@ namespace DetectiveGPT
 	public class QuestionAudioData
 	{
 		public QuestionIDs questionId;
-		public AudioClip Ask, Conclude;
+		public AudioClip Ask, Conclude, ConcludeNegative;
 	}
 	
 	[System.Serializable]
@@ -98,7 +98,7 @@ namespace DetectiveGPT
 			return narrator.name;
 		}
 		
-		bool PlayQuestion(QuestionIDs questionId, bool ask)
+		bool PlayQuestion(QuestionIDs questionId, bool ask, bool positive = false)
 		{
 			
 			QuestionAudioData qad = narrator.GetQuestion(questionId);
@@ -107,8 +107,10 @@ namespace DetectiveGPT
 			{
 				if(ask)
 					source.clip = qad.Ask;
-				else
+				else if(positive)
 					source.clip = qad.Conclude;
+				else
+					source.clip = qad.ConcludeNegative;
 				source.Play();
 				return true;
 			}
@@ -121,9 +123,9 @@ namespace DetectiveGPT
 			return PlayQuestion(questionId, true);
 		}
 		
-		public bool ConcludeQuestion(QuestionIDs questionId)
+		public bool ConcludeQuestion(QuestionIDs questionId, bool Positive = false)
 		{
-			return PlayQuestion(questionId, false);
+			return PlayQuestion(questionId, false, Positive);
 		}
 		
 	    // Start is called before the first frame update
