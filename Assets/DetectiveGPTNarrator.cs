@@ -19,6 +19,15 @@ namespace DetectiveGPT
 		public AudioClip Intro;
 		public QuestionAudioData[] Questions;
 		public AudioClip Conclusion, AIWin, AILose;
+		public GameObject[] models;
+		
+		public void EnableModel(bool enabled)
+		{
+			for(int i = 0; i < models.Length; i++)
+			{
+				models[i].SetActive(enabled);
+			}
+		}
 		
 		public Narrator()
 		{
@@ -120,9 +129,24 @@ namespace DetectiveGPT
 	    // Start is called before the first frame update
 	    void Start()
 	    {
-		    NarratorID = Random.Range(0,narrators.Length-1);
-		    narrator = narrators[NarratorID];
+		    PickRandomNarrator();
 	    }
+	    
+		public void PickRandomNarrator()
+		{
+				PickNarrator(Random.Range(0,narrators.Length-1));
+		}
+		
+		public void PickNarrator(int id)
+		{
+			NarratorID = id;
+			narrator = narrators[NarratorID];
+			
+			for(int i =0; i < narrators.Length; i++)
+				narrators[i].EnableModel(false);
+				
+			narrator.EnableModel(true);
+		}
 	
 	    // Update is called once per frame
 	    void Update()
