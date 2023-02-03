@@ -299,9 +299,9 @@ namespace DetectiveGPT
 				bool voteFor = GetVoteFor(voteQuestions[i].questionId);
 				
 				if(voteFor)
-					output += voteQuestions[i].yesPrompt +"\n";
+					output += "(10)" + voteQuestions[i].yesPrompt +"\n";
 				else
-					output += voteQuestions[i].noPrompt +"\n";
+					output += "(10)" + voteQuestions[i].noPrompt +"\n";
 				
 			}
 			
