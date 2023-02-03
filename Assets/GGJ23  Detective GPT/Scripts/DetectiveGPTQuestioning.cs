@@ -216,8 +216,9 @@ namespace DetectiveGPT
 		public void AskNextVoteQuestion()
 		{
 			//play audio
-			while(vid < voteQuestions.Length && !narrator.AskQuestion(voteQuestions[vid].questionId))
-				vid++;
+			narrator.AskQuestion(voteQuestions[vid].questionId);
+			//while(vid < voteQuestions.Length && !narrator.AskQuestion(voteQuestions[vid].questionId))
+			//	vid++;
 				
 			//prep logger
 			logger.Clear();
@@ -240,28 +241,6 @@ namespace DetectiveGPT
 			
 			StartCoroutine(nextQuestion(delay));
 		}
-		
-		/*IEnumerator nextVoteQuestion(float delay)
-		{
-			yield return new WaitForSeconds(delay);
-			
-			while(narrator.source.isPlaying)
-				yield return new WaitForFixedUpdate();
-			
-			qid++;
-			
-			if(qid >= questions.Length)
-			{
-				if(vid < questionsToAsk)
-					AskNextVoteQuestion();
-				else
-					GameStateManager.Instance.DrawConclusion();
-			}
-			else
-				AskNextQuestion();
-				
-			yield return null;
-		}*/
 	
 		public void OnEvent(EventData photonEvent)
 		{
@@ -311,24 +290,22 @@ namespace DetectiveGPT
 				
 		}
 		
-		public string GetBoolQuestionPrompts()
+		public string GetVoteQuestionPrompts()
 		{
 			string output = "";
 			
-			for(int i = (int)QuestionIDs.CrimeOfPassion; i < (int)QuestionIDs.TotalQuest; i++)	
+			for(int i = 0; i < voteQuestions.Length; i++)	
 			{
-				Question q = GetQuestion((QuestionIDs)i);
+				bool voteFor = GetVoteFor(voteQuestions[i].questionId);
 				
-				if(q != null)
-				{
-					bool voteFor = GetVoteFor((QuestionIDs)i);
-					
-					if(voteFor)
-						output += q.prompt +"\n";
-					else
-						output += q.negativePrompt +"\n";
-				}
+				if(voteFor)
+					output += voteQuestions[i].yesPrompt +"\n";
+				else
+					output += voteQuestions[i].noPrompt +"\n";
+				
 			}
+			
+			Debug.LogError(output);
 			
 			return output;
 		}

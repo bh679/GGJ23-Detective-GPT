@@ -36,6 +36,7 @@ namespace DetectiveGPT
 			
 			string promptStr = "";
 			
+			promptStr += "You are " + DetectiveGPTNarrator.Instance.GetNarratorName() + "\n\n";
 			promptStr += PersonalityPrompt.text + "\n\n";
 			promptStr += "The victim is " + Victim() + "\n\n";
 			promptStr += "The " + PhotonNetwork.PlayerList.Length + " suspects are:\n"+ListOfSuspects() + "\n\n";
@@ -46,8 +47,10 @@ namespace DetectiveGPT
 			{
 				promptStr += questions.answers[i].GetPromptData();
 			}
-			
 			promptStr += "\n\n";
+			
+			promptStr += questions.GetVoteQuestionPrompts() + "\n\n";
+			
 			promptStr += FixesPrompt.text + "\n\n";
 			promptStr += AcionItemPrompt.text + "\n\n";
 			
