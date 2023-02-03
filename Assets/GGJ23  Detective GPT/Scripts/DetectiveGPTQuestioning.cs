@@ -15,15 +15,14 @@ namespace DetectiveGPT
 		Point = 1,
 		Actions = 2,
 		Location = 3,
-		General = 4,
-		Bool //remove
+		General = 4
 	}
 	
 	public enum QuestionIDs
 	{
-		Reenactment = 0,//remove
-		MurderWeapon = 1,//remove
-		Accustation = 2,//remove
+		Reenactment = 0,
+		MurderWeapon = 1,
+		Accustation = 2,
 		CrimeOfPassion = 3,
 		DidTheySeeItComing = 4,
 		GruesomeCrime = 5,
@@ -45,19 +44,13 @@ namespace DetectiveGPT
 		public TextAsset prompt, negativePrompt;//remove neg
 		public string descrption, concludeDescriptioon;
 		public float time = -1f;
-		
-		AudioSource source;
 	}
 	
 	[System.Serializable]
 	public class VoteQuestion
 	{
 		public QuestionIDs questionId;
-		public TextAsset prompt, negativePrompt;
-		public string descrption, concludeDescriptioon;
-		public float time = -1f;
-		
-		AudioSource source;
+		public TextAsset yesPrompt, noPrompt;
 	}
 	
 	public class AnswerData
@@ -108,7 +101,7 @@ namespace DetectiveGPT
 		public ActionLogger logger;
 		public int questionsToAsk = 1;
 		public Question[] questions;
-		public Question[] voteQuestoins;
+		public VoteQuestion[] voteQuestions;
 		public List<AnswerData> answers = new List<AnswerData>();
 		
 		public AudioClip timerCountingSound;
@@ -135,6 +128,22 @@ namespace DetectiveGPT
 		private void OnDisable()
 		{
 			PhotonNetwork.RemoveCallbackTarget(this);
+		}
+		
+		public void AskNextVoteQuestion()
+		{
+			int i = 0;
+			//play audio
+			while(i < voteQuestions.Length && !narrator.AskQuestion(voteQuestions[id+i].questionId))
+				i++;
+				
+			//prep logger
+			logger.Clear();
+			logManager.DisableAll();
+			
+			//set timer
+			if(questions[id].time >= 0)
+				StartCoroutine(getDataFromLogAfterTime(questions[id].time));
 		}
 		
 		public void AskNextQuestion()
@@ -187,14 +196,14 @@ namespace DetectiveGPT
 			}
 				
 			
-			if(questions[id].dataType == QuetionData.Bool)
+			/*if(questions[id].dataType == QuetionData.Bool)
 				PlayerCustomProperties.SetCustomProp<int>(questions[id].questionId.ToString(), (int)GestureManager.Instance.GetState());
 			else
-			{
+			{*/
 				answers.Add(new AnswerData(questions[id], player, answerData));
 			
 				DectectiveGPTSendEventManager.SendQuestionAnswerString(answers.Count-1,answerData);
-			}
+			//}
 			
 			StartCoroutine(nextQuestion(delay));
 		}
@@ -208,8 +217,12 @@ namespace DetectiveGPT
 			
 			id++;
 			
-			if(id >= questionsToAsk)
+			if(id >= questions.Length)
+			{
+				if(id - questions.Length > questionsToAsk)
+					AskNextVoteQuestion();
 				GameStateManager.Instance.DrawConclusion();
+			}
 			else
 				AskNextQuestion();
 				

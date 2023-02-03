@@ -23,7 +23,7 @@ namespace BrennanHatton.Logging
 		
 		void Reset()
 		{
-				log = new LogAction();
+			log = new LogAction(false);
 				log.who = "";
 				log.did = "gave a";
 				log.what = "";
