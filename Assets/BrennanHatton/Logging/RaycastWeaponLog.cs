@@ -30,7 +30,7 @@ namespace BrennanHatton.Logging
 		public void LogShotHit(RaycastHit hit)
 		{
 			shotHit = true;
-			LogAction log = new LogAction();
+			LogAction log = new LogAction(true);
 			if(usePhotonName)
 				log.who = PhotonNetwork.LocalPlayer.NickName;
 			log.did = "Shot";
@@ -48,7 +48,7 @@ namespace BrennanHatton.Logging
 				shotHit = false;
 				return;
 			}
-			LogAction log = new LogAction();
+			LogAction log = new LogAction(true);
 			if(usePhotonName)
 				log.who = PhotonNetwork.LocalPlayer.NickName;
 			else

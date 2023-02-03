@@ -90,7 +90,7 @@ namespace BrennanHatton.Logging
 			//Debug.Log(movementState);
 			if(lastMovementStat != movementState)
 			{
-				LogAction log = new LogAction();
+				LogAction log = new LogAction(true);
 				if(usePhotonName)
 					log.who = PhotonNetwork.LocalPlayer.NickName;
 				log.did = "Started";

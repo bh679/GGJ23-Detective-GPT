@@ -29,7 +29,7 @@ namespace BrennanHatton.Logging
 	    
 		void LogAndNetworkDamage(float damageAmount, GameObject sender)
 		{
-			LogAction log = new LogAction();
+			LogAction log = new LogAction(true);
 			log.who = PhotonNetwork.LocalPlayer.NickName;;
 			log.did = "delt " + damageAmount + " damage to " + (player==null?"":player.Owner.NickName+"'s ") + targetName;
 			log.with = sender.name;

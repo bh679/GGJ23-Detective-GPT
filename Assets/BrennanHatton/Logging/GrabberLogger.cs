@@ -27,7 +27,7 @@ namespace BrennanHatton.Logging
 	
 		public void OnGrab(Grabbable grabbable) {
 			
-			LogAction log = new LogAction();
+			LogAction log = new LogAction(true);
 			if(usePhotonName)
 				log.who = PhotonNetwork.LocalPlayer.NickName;
 			log.did = "Grabbed";
@@ -39,7 +39,7 @@ namespace BrennanHatton.Logging
 
 		public void OnRelease(Grabbable grabbable) {
 
-			LogAction log = new LogAction();
+			LogAction log = new LogAction(true);
 			if(usePhotonName)
 				log.who = PhotonNetwork.LocalPlayer.NickName;
 			log.did = "Released";

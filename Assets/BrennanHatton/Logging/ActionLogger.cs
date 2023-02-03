@@ -35,9 +35,10 @@ namespace BrennanHatton.Logging
 		public string who = defaultName, did, what, with, when;
 		public Importance importance = Importance.SlightlyImportant;
 		
-		public LogAction()
+		public LogAction(float time)
 		{
-			when = Time.time.ToString();
+			//Debug.Log("time");
+			when = time.ToString();//Time.time.ToString();
 			when = when.Substring(0, when.LastIndexOf(".")+2);
 
 		}

@@ -43,7 +43,7 @@ namespace BrennanHatton.Logging
 				if(target == PhotonNetwork.LocalPlayer.ActorNumber)
 				{
 					Player who = NetworkManager.GetActorPlayer(id);
-					LogAction log = new LogAction();
+					LogAction log = new LogAction(true);
 					if(who == null)
 						log.who = "Disconnected Player";
 					else
