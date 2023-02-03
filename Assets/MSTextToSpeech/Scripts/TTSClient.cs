@@ -473,7 +473,6 @@ namespace CognitiveServicesTTS
         /// <returns></returns>
         public string ConvertVoiceNametoString(VoiceName voicename)
 	    {
-		    return "en-US-JennyNeural";
             switch (voicename)
             {
             case VoiceName.enUSJennyNeural:
@@ -605,6 +604,7 @@ namespace CognitiveServicesTTS
                 default:
 	            return "Microsoft Server Speech Text to Speech Voice (en-US, JessaRUS)";*/
             }
+		    return "en-US-JennyNeural";
         }
 
         public string GetVoiceLocale(VoiceName voicename)
