@@ -93,7 +93,7 @@ namespace DetectiveGPT
 		}
 	}
 	
-	public class DetectiveGPTQuestioning : MonoBehaviour, IOnEventCallback
+	public class DetectiveGPTQuestioning : MonoBehaviourPunCallbacks, IOnEventCallback
 	{
 		public AudioSource soundFXAudioSound;
 		public DetectiveGPTNarrator narrator;
@@ -102,6 +102,8 @@ namespace DetectiveGPT
 		public int questionsToAsk = 1;
 		public Question[] questions;
 		public VoteQuestion[] voteQuestions;
+		VoteQuestion[] voteQuestionsToAsk;
+		int[] voteQids;
 		public float voteTime = 5f;
 		public List<AnswerData> answers = new List<AnswerData>();
 		
@@ -124,11 +126,41 @@ namespace DetectiveGPT
 		{
 			PhotonNetwork.AddCallbackTarget(this);
 			logManager.DisableAll();
+			
+			base.OnEnable();
+		}
+		
+		public override void OnJoinedRoom()
+		{
+			if(PhotonNetwork.IsMasterClient)
+			{
+				voteQids = new int[questionsToAsk];
+				
+				for(int i = 0; i < voteQids.Length; i++)
+					voteQids[i] = Random.Range(0,voteQuestions.Length);
+				
+				
+				PlayerCustomProperties.SetCustomProp<int[]>("vids",voteQids);
+				//DectectiveGPTSendEventManager.SendVoteQuestionsEvent(voteQids);
+			
+			
+			
+			}else
+			{
+				voteQids = PlayerCustomProperties.GetCustomProp<int[]>(PhotonNetwork.MasterClient,"vids");
+				PlayerCustomProperties.SetCustomProp<int[]>("vids",voteQids);
+			}
+			
+			voteQuestionsToAsk = new VoteQuestion[voteQids.Length];
+			for(int i = 0; i < voteQids.Length; i++)
+				voteQuestionsToAsk[i] = voteQuestions[voteQids[i]];
 		}
 	
 		private void OnDisable()
 		{
 			PhotonNetwork.RemoveCallbackTarget(this);
+			
+			base.OnDisable();
 		}
 		
 		public void AskNextQuestion()
@@ -216,9 +248,7 @@ namespace DetectiveGPT
 		public void AskNextVoteQuestion()
 		{
 			//play audio
-			narrator.AskQuestion(voteQuestions[vid].questionId);
-			//while(vid < voteQuestions.Length && !narrator.AskQuestion(voteQuestions[vid].questionId))
-			//	vid++;
+			narrator.AskQuestion(voteQuestionsToAsk[vid].questionId);
 				
 			//prep logger
 			logger.Clear();
@@ -234,10 +264,10 @@ namespace DetectiveGPT
 			float delay = 0;
 			
 			//play audio
-			narrator.ConcludeQuestion(voteQuestions[vid].questionId);
+			narrator.ConcludeQuestion(voteQuestionsToAsk[vid].questionId);
 				
 			//save my vote
-			PlayerCustomProperties.SetCustomProp<int>(voteQuestions[vid].questionId.ToString(), (int)GestureManager.Instance.GetState());
+			PlayerCustomProperties.SetCustomProp<int>(voteQuestionsToAsk[vid].questionId.ToString(), (int)GestureManager.Instance.GetState());
 			
 			StartCoroutine(nextQuestion(delay));
 		}
@@ -253,14 +283,25 @@ namespace DetectiveGPT
 				int questionId = (int)data[1];
 				string answer= (string)data[2];
 				string player = PhotonCalls.GetPlayerName(pid);
-				//Debug.Log("RecieveDamageEvent id:" + id + " targetPlayerId:" + target+" damage:" +damage);
-				if(pid != PhotonNetwork.LocalPlayer.ActorNumber)
-				{
-					
-					answers[questionId].AddData(player, answer);
-				}
 				
-			}
+				if(pid != PhotonNetwork.LocalPlayer.ActorNumber)
+					answers[questionId].AddData(player, answer);
+				
+				
+			}/*else if(eventCode == DectectiveGPTSendEventManager.VoteQuestionsEventCode)
+			{
+				object[] data = (object[])photonEvent.CustomData;
+				int pid = (int)data[0];
+				int[] vids = (int[])data[1];
+				
+				PlayerCustomProperties.SetCustomProp<int[]>("vids",voteQids);
+				Debug.Log("vids receieved: " + vids.Length);
+				voteQuestionsToAsk = new VoteQuestion[vids.Length];
+				for(int i = 0; i < vids.Length; i++)
+					voteQuestionsToAsk[i] = voteQuestions[vids[i]];
+				
+				
+			}*/
 		}
 		
 		Question GetQuestion(QuestionIDs id)
@@ -294,14 +335,14 @@ namespace DetectiveGPT
 		{
 			string output = "";
 			
-			for(int i = 0; i < voteQuestions.Length; i++)	
+			for(int i = 0; i < voteQuestionsToAsk.Length; i++)	
 			{
-				bool voteFor = GetVoteFor(voteQuestions[i].questionId);
+				bool voteFor = GetVoteFor(voteQuestionsToAsk[i].questionId);
 				
 				if(voteFor)
-					output += "(10)" + voteQuestions[i].yesPrompt +"\n";
+					output += "(10)" + voteQuestionsToAsk[i].yesPrompt +"\n";
 				else
-					output += "(10)" + voteQuestions[i].noPrompt +"\n";
+					output += "(10)" + voteQuestionsToAsk[i].noPrompt +"\n";
 				
 			}
 			
