@@ -102,12 +102,13 @@ namespace DetectiveGPT
 		public int questionsToAsk = 1;
 		public Question[] questions;
 		public VoteQuestion[] voteQuestions;
+		public float voteTime = 5f;
 		public List<AnswerData> answers = new List<AnswerData>();
 		
 		public AudioClip timerCountingSound;
 		public LogManager logManager;
 		
-		int id = 0;
+		int qid = 0, vid = 0;
 		
 		void Reset()
 		{
@@ -130,42 +131,26 @@ namespace DetectiveGPT
 			PhotonNetwork.RemoveCallbackTarget(this);
 		}
 		
-		public void AskNextVoteQuestion()
-		{
-			int i = 0;
-			//play audio
-			while(i < voteQuestions.Length && !narrator.AskQuestion(voteQuestions[id+i].questionId))
-				i++;
-				
-			//prep logger
-			logger.Clear();
-			logManager.DisableAll();
-			
-			//set timer
-			if(questions[id].time >= 0)
-				StartCoroutine(getDataFromLogAfterTime(questions[id].time));
-		}
-		
 		public void AskNextQuestion()
 		{
 			//play audio
-			if(!narrator.AskQuestion(questions[id].questionId))
-				speechManager.SpeakWithSDKPlugin(questions[id].descrption);
+			if(!narrator.AskQuestion(questions[qid].questionId))
+				speechManager.SpeakWithSDKPlugin(questions[qid].descrption);
 				
 			//set type
-			currentQuestionType = questions[id].dataType;
+			currentQuestionType = questions[qid].dataType;
 			
 			//prep logger
 			logger.Clear();
 			logManager.SetLoggersFromQuestion(currentQuestionType);
 			
 			//set timer
-			if(questions[id].time >= 0)
-				StartCoroutine(getDataFromLogAfterTime(questions[id].time));
+			if(questions[qid].time >= 0)
+				StartCoroutine(getDataFromLogAfterTime(questions[qid].time, true));
 			
 		}
 		
-		IEnumerator getDataFromLogAfterTime(float time)
+		IEnumerator getDataFromLogAfterTime(float time, bool question)
 		{
 			Debug.Log("getDataFromLogAfterTime");
 			while(narrator.source.isPlaying || speechManager.audioSource.isPlaying)
@@ -177,8 +162,10 @@ namespace DetectiveGPT
 			Debug.Log("Waited " + time);
 			soundFXAudioSound.Stop();
 			
-			SubmitAnswer(logger.output,PhotonNetwork.LocalPlayer.NickName);
-				
+			if(question)
+				SubmitAnswer(logger.output,PhotonNetwork.LocalPlayer.NickName);
+			else
+				SubmitVote();
 			yield return null;
 		}
 		
@@ -188,22 +175,15 @@ namespace DetectiveGPT
 			
 			Debug.Log(answerData);
 			//play audio
-			if(!narrator.ConcludeQuestion(questions[id].questionId))
+			if(!narrator.ConcludeQuestion(questions[qid].questionId))
 			{
-				speechManager.SpeakWithSDKPlugin(questions[id].concludeDescriptioon);
+				speechManager.SpeakWithSDKPlugin(questions[qid].concludeDescriptioon);
 				
 				delay = 5f;
 			}
-				
-			
-			/*if(questions[id].dataType == QuetionData.Bool)
-				PlayerCustomProperties.SetCustomProp<int>(questions[id].questionId.ToString(), (int)GestureManager.Instance.GetState());
-			else
-			{*/
-				answers.Add(new AnswerData(questions[id], player, answerData));
+			answers.Add(new AnswerData(questions[qid], player, answerData));
 			
 				DectectiveGPTSendEventManager.SendQuestionAnswerString(answers.Count-1,answerData);
-			//}
 			
 			StartCoroutine(nextQuestion(delay));
 		}
@@ -215,19 +195,73 @@ namespace DetectiveGPT
 			while(narrator.source.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForFixedUpdate();
 			
-			id++;
+			qid++;
 			
-			if(id >= questions.Length)
+			if(qid >= questions.Length)
 			{
-				if(id - questions.Length > questionsToAsk)
+				if(qid > questions.Length)
+					vid++;
+				
+				if(vid < questionsToAsk)
 					AskNextVoteQuestion();
-				GameStateManager.Instance.DrawConclusion();
+				else
+					GameStateManager.Instance.DrawConclusion();
 			}
 			else
 				AskNextQuestion();
 				
 			yield return null;
 		}
+		
+		public void AskNextVoteQuestion()
+		{
+			//play audio
+			while(vid < voteQuestions.Length && !narrator.AskQuestion(voteQuestions[vid].questionId))
+				vid++;
+				
+			//prep logger
+			logger.Clear();
+			logManager.DisableAll();
+			
+			//set timer
+			if(voteTime >= 0)
+				StartCoroutine(getDataFromLogAfterTime(voteTime, false));
+		}
+		
+		public void SubmitVote()
+		{
+			float delay = 0;
+			
+			//play audio
+			narrator.ConcludeQuestion(voteQuestions[vid].questionId);
+				
+			//save my vote
+			PlayerCustomProperties.SetCustomProp<int>(voteQuestions[vid].questionId.ToString(), (int)GestureManager.Instance.GetState());
+			
+			StartCoroutine(nextQuestion(delay));
+		}
+		
+		/*IEnumerator nextVoteQuestion(float delay)
+		{
+			yield return new WaitForSeconds(delay);
+			
+			while(narrator.source.isPlaying)
+				yield return new WaitForFixedUpdate();
+			
+			qid++;
+			
+			if(qid >= questions.Length)
+			{
+				if(vid < questionsToAsk)
+					AskNextVoteQuestion();
+				else
+					GameStateManager.Instance.DrawConclusion();
+			}
+			else
+				AskNextQuestion();
+				
+			yield return null;
+		}*/
 	
 		public void OnEvent(EventData photonEvent)
 		{

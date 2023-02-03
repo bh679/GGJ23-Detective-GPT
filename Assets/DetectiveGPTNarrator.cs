@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace DetectiveGPT
 {
@@ -54,6 +55,7 @@ namespace DetectiveGPT
 		public int NarratorID;
 		Narrator narrator;
 		public AudioSource source;
+		public UnityEvent onIntroDone, onConclusionDone, onWinnerDone;
 		
 		public static DetectiveGPTNarrator Instance { get; private set; }
 		private void Awake() 
@@ -79,18 +81,32 @@ namespace DetectiveGPT
 		{
 			source.clip = narrator.Intro;
 			source.Play();
+			
+			StartCoroutine(playWhenDone(onIntroDone));
 		}
 		
 		public void PlayConclusion()
 		{
 			source.clip = narrator.Conclusion;
 			source.Play();
+			
+			StartCoroutine(playWhenDone(onConclusionDone));
 		}
 		
 		public void PlayWinner()
 		{
 			source.clip = narrator.AILose;
 			source.Play();
+			
+			StartCoroutine(playWhenDone(onWinnerDone));
+		}
+		
+		IEnumerator playWhenDone(UnityEvent eventToPlay)
+		{
+			while(source.isPlaying)
+				yield return new WaitForEndOfFrame();
+				
+			eventToPlay.Invoke();
 		}
 		
 		public string GetNarratorName()
@@ -123,7 +139,7 @@ namespace DetectiveGPT
 			return PlayQuestion(questionId, true);
 		}
 		
-		public bool ConcludeQuestion(QuestionIDs questionId, bool Positive = false)
+		public bool ConcludeQuestion(QuestionIDs questionId, bool Positive = true)
 		{
 			return PlayQuestion(questionId, false, Positive);
 		}
