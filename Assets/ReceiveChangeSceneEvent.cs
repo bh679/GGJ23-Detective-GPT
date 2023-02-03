@@ -14,7 +14,6 @@ namespace BrennanHatton.Networking.Events
 	{
 		public UnityEvent onReceiveChange = new UnityEvent();
 		public bool changeScene = true;
-		//public NetworkPlacerSpawner PlayerManager;
 		
 		private void OnEnable()
 		{

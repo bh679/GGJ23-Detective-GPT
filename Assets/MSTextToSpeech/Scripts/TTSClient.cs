@@ -289,7 +289,32 @@ namespace CognitiveServicesTTS
     /// </summary>
     public enum VoiceName
 	{
-		enUSJennyNeural,
+		enUSJennyNeural = -1,
+		enUSJennyAngry = 0,
+		enUSJennyWhisper = 1,
+		enUSAriaNeural = -2,
+		enUSAriaAngry = 2,
+		enUSAriaWhisper = 3,
+		enUSAriaUnfriendly = 4,
+		enUSAriaExcited = 5,
+		enUSDavisCheerful = 6,
+		TonyExcited = 7,
+		TonyWhispering = 8,
+		SaraAngry = 9,
+		SaraShouting= 10,
+		SaraUnfriendly = 11,
+		SaraWhispering = 12,
+		DavisAngry = 13,
+		DavisTerrified = 14,
+		JaneAngry = 15,
+		JaneCheerful = 16,
+		JaneExcited = 17,
+		JanSad = 18,
+		JanUnfriendly = 19,
+		JanWhispering = 20,
+		JasonAngry = 21,
+		JasonWhispering = 22,
+		Total = 23
 	/*enUS-AIGenerate1Neural1,4,5,6 (Male)
 		enUS-AIGenerate2Neural1,4,5,6 (Female)
 		enUS-AmberNeural4,5,6 (Female)
@@ -449,77 +474,57 @@ namespace CognitiveServicesTTS
         public string ConvertVoiceNametoString(VoiceName voicename)
 	    {
 		    return "en-US-JennyNeural";
+		    
             switch (voicename)
             {
-	            case VoiceName.enUSJennyNeural:
-		            return "en-US-JennyNeural";
-	            /*case VoiceName.enAUCatherine:
-	            return "Microsoft Server Speech Text to Speech Voice (en-AU, Catherine)";
-                case VoiceName.enAUHayleyRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (en-AU, HayleyRUS)";
-                case VoiceName.enCALinda:
-                    return "Microsoft Server Speech Text to Speech Voice (en-CA, Linda)";
-                case VoiceName.enCAHeatherRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (en-CA, HeatherRUS)";
-                case VoiceName.enGBSusanApollo:
-                    return "Microsoft Server Speech Text to Speech Voice (en-GB, Susan, Apollo)";
-                case VoiceName.enGBHazelRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (en-GB, HazelRUS)";
-                case VoiceName.enGBGeorgeApollo:
-                    return "Microsoft Server Speech Text to Speech Voice (en-GB, George, Apollo)";
-                case VoiceName.enIESean:
-                    return "Microsoft Server Speech Text to Speech Voice (en-IE, Sean)";
-                case VoiceName.enINHeeraApollo:
-                    return "Microsoft Server Speech Text to Speech Voice (en-IN, Heera, Apollo)";
-                case VoiceName.enINPriyaRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (en-IN, PriyaRUS)";
-                case VoiceName.enINRaviApollo:
-                    return "Microsoft Server Speech Text to Speech Voice (en-IN, Ravi, Apollo)";
-                case VoiceName.enUSZiraRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (en-US, ZiraRUS)";
-                case VoiceName.enUSJessaRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (en-US, JessaRUS)";
-                case VoiceName.enUSJessaNeural:
-                    return "Microsoft Server Speech Text to Speech Voice (en-US, JessaNeural)";
-                case VoiceName.enUSBenjaminRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (en-US, BenjaminRUS)";
-                case VoiceName.enUSGuyNeural:
-                    return "Microsoft Server Speech Text to Speech Voice (en-US, GuyNeural)";
-                case VoiceName.deATMichael:
-                    return "Microsoft Server Speech Text to Speech Voice (de-AT, Michael)";
-                case VoiceName.deCHKarsten:
-                    return "Microsoft Server Speech Text to Speech Voice (de-CH, Karsten)";
-                case VoiceName.deDEHedda:
-                    return "Microsoft Server Speech Text to Speech Voice (de-DE, Hedda)";
-                case VoiceName.deDEHeddaRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (de-DE, HeddaRUS)";
-                case VoiceName.deDEStefanApollo:
-                    return "Microsoft Server Speech Text to Speech Voice (de-DE, Stefan, Apollo)";
-                case VoiceName.deDEKatjaNeural:
-                    return "Microsoft Server Speech Text to Speech Voice (de-DE, KatjaNeural)";
-                case VoiceName.esESHelenaRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (es-ES, HelenaRUS)";
-                case VoiceName.esESLauraApollo:
-                    return "Microsoft Server Speech Text to Speech Voice (es-ES, Laura, Apollo)";
-                case VoiceName.esESPabloApollo:
-                    return "Microsoft Server Speech Text to Speech Voice (es-ES, Pablo, Apollo)";
-                case VoiceName.esMXHildaRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (es-MX, HildaRUS)";
-                case VoiceName.esMXRaulApollo:
-                    return "Microsoft Server Speech Text to Speech Voice (es-MX, Raul, Apollo)";
-                case VoiceName.frCACaroline:
-                    return "Microsoft Server Speech Text to Speech Voice (fr-CA, Caroline)";
-                case VoiceName.frCAHarmonieRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (fr-CA, HarmonieRUS)";
-                case VoiceName.frCHGuillaume:
-                    return "Microsoft Server Speech Text to Speech Voice (fr-CH, Guillaume)";
-                case VoiceName.frFRJulieApollo:
-                    return "Microsoft Server Speech Text to Speech Voice (fr-FR, Julie, Apollo)";
-                case VoiceName.frFRHortenseRUS:
-                    return "Microsoft Server Speech Text to Speech Voice (fr-FR, HortenseRUS)";
-                default:
-	            return "Microsoft Server Speech Text to Speech Voice (en-US, JessaRUS)";*/
+            case VoiceName.enUSJennyNeural:
+	            return "en-US-JennyNeural";
+            case VoiceName.enUSJennyAngry:
+	            return "en-US-AriaAngry";
+            case VoiceName.enUSJennyWhisper:
+	            return "en-US-JennyWhisper";
+            case VoiceName.enUSAriaNeural:
+	            return "en-US-AriaNeural";
+            case VoiceName.enUSAriaAngry:
+	            return "en-US-AriaAngry";
+            case VoiceName.enUSAriaExcited:
+	            return "en-US-AriaExcited";
+            case VoiceName.enUSDavisCheerful:
+	            return "en-US-DavisCheerful";
+            case VoiceName.TonyExcited:
+	            return "en-US-TonyExcited";
+            case VoiceName.TonyWhispering:
+	            return "en-US-TonyWhispering";
+            case VoiceName.SaraAngry:
+	            return "en-US-SaraAngry";
+            case VoiceName.SaraShouting:
+	            return "en-US-SaraShouting";
+            case VoiceName.SaraUnfriendly:
+	            return "en-US-SaraUnfriendly";
+            case VoiceName.SaraWhispering:
+	            return "en-US-SaraWhispering";
+            case VoiceName.DavisAngry:
+	            return "en-US-DavisAngry";
+            case VoiceName.DavisTerrified:
+	            return "en-US-DavisTerrified";
+            case VoiceName.JaneAngry:
+	            return "en-US-JaneAngry";
+            case VoiceName.JaneCheerful:
+	            return "en-US-JaneCheerful";
+            case VoiceName.JaneExcited:
+	            return "en-US-JaneExcited";
+            case VoiceName.JanSad:
+	            return "en-US-JaneSad";
+            case VoiceName.JanUnfriendly:
+	            return "en-US-JaneUnfriendly";
+            case VoiceName.JanWhispering:
+	            return "en-US-JaneWhispering";
+            case VoiceName.JasonAngry:
+	            return "en-US-JasonAngry";
+            case VoiceName.JasonWhispering:
+	            return "en-US-JasonWhispering";
             }
+		    return "en-US-JennyNeural";
         }
 
         public string GetVoiceLocale(VoiceName voicename)

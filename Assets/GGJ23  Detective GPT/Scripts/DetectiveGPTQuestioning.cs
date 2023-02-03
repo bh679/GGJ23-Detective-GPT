@@ -18,16 +18,39 @@ namespace DetectiveGPT
 		General = 4
 	}
 	
+	public enum QuestionIDs
+	{
+		Reenactment = 0,
+		MurderWeapon = 1,
+		Accustation = 2,
+		CrimeOfPassion = 3,
+		DidTheySeeItComing = 4,
+		GruesomeCrime = 5,
+		IsItObvious = 6,
+		TiltedLoverCrime = 7,
+		MaybeAnAccident = 8,
+		PerpetratorWellLiked = 9,
+		PersonInNature = 10,
+		ReOffend = 11,
+		SmellyCrime = 12,
+		TotalQuest = 13
+	}
+	
 	[System.Serializable]
 	public class Question
 	{
+		public QuestionIDs questionId;//remove
 		public QuetionData dataType;
-		public TextAsset prompt;
+		public TextAsset prompt, negativePrompt;//remove neg
 		public string descrption, concludeDescriptioon;
-		public AudioClip askQuestionClip, concludeQuestoinClip;
 		public float time = -1f;
-		
-		AudioSource source;
+	}
+	
+	[System.Serializable]
+	public class VoteQuestion
+	{
+		public QuestionIDs questionId;
+		public TextAsset yesPrompt, noPrompt;
 	}
 	
 	public class AnswerData
@@ -70,23 +93,28 @@ namespace DetectiveGPT
 		}
 	}
 	
-	public class DetectiveGPTQuestioning : MonoBehaviour, IOnEventCallback
+	public class DetectiveGPTQuestioning : MonoBehaviourPunCallbacks, IOnEventCallback
 	{
-		public AudioSource detectiveAudioSource, soundFXAudioSound;
+		public AudioSource soundFXAudioSound;
+		public DetectiveGPTNarrator narrator;
 		public SpeechManager speechManager;
 		public ActionLogger logger;
 		public int questionsToAsk = 1;
 		public Question[] questions;
+		public VoteQuestion[] voteQuestions;
+		VoteQuestion[] voteQuestionsToAsk;
+		int[] voteQids;
+		public float voteTime = 5f;
 		public List<AnswerData> answers = new List<AnswerData>();
 		
 		public AudioClip timerCountingSound;
 		public LogManager logManager;
 		
-		int id = 0;
+		int qid = 0, vid = 0;
 		
 		void Reset()
 		{
-			detectiveAudioSource = this.GetComponent<AudioSource>();
+			narrator = this.GetComponent<DetectiveGPTNarrator>();
 			speechManager = GameObject.FindObjectOfType<SpeechManager>();
 			logger = GameObject.FindObjectOfType<ActionLogger>();
 			logManager = this.GetComponent<LogManager>();
@@ -98,43 +126,66 @@ namespace DetectiveGPT
 		{
 			PhotonNetwork.AddCallbackTarget(this);
 			logManager.DisableAll();
+			
+			base.OnEnable();
+		}
+		
+		public override void OnJoinedRoom()
+		{
+			if(PhotonNetwork.IsMasterClient)
+			{
+				voteQids = new int[questionsToAsk];
+				
+				for(int i = 0; i < voteQids.Length; i++)
+					voteQids[i] = Random.Range(0,voteQuestions.Length);
+				
+				
+				PlayerCustomProperties.SetCustomProp<int[]>("vids",voteQids);
+				//DectectiveGPTSendEventManager.SendVoteQuestionsEvent(voteQids);
+			
+			
+			
+			}else
+			{
+				voteQids = PlayerCustomProperties.GetCustomProp<int[]>(PhotonNetwork.MasterClient,"vids");
+				PlayerCustomProperties.SetCustomProp<int[]>("vids",voteQids);
+			}
+			
+			voteQuestionsToAsk = new VoteQuestion[voteQids.Length];
+			for(int i = 0; i < voteQids.Length; i++)
+				voteQuestionsToAsk[i] = voteQuestions[voteQids[i]];
 		}
 	
 		private void OnDisable()
 		{
 			PhotonNetwork.RemoveCallbackTarget(this);
+			
+			base.OnDisable();
 		}
 		
 		public void AskNextQuestion()
 		{
 			//play audio
-			if(questions[id].askQuestionClip)
-				detectiveAudioSource.PlayOneShot(questions[id].askQuestionClip);
-			else
-				speechManager.SpeakWithSDKPlugin(questions[id].descrption);
+			if(!narrator.AskQuestion(questions[qid].questionId))
+				speechManager.SpeakWithSDKPlugin(questions[qid].descrption);
 				
 			//set type
-			currentQuestionType = questions[id].dataType;
+			currentQuestionType = questions[qid].dataType;
 			
 			//prep logger
 			logger.Clear();
 			logManager.SetLoggersFromQuestion(currentQuestionType);
 			
 			//set timer
-			if(questions[id].time >= 0)
-				StartCoroutine(getDataFromLogAfterTime(questions[id].time));
+			if(questions[qid].time >= 0)
+				StartCoroutine(getDataFromLogAfterTime(questions[qid].time, true));
 			
 		}
 		
-		public void TurnOffAllLoggers()
-		{
-			
-		}
-		
-		IEnumerator getDataFromLogAfterTime(float time)
+		IEnumerator getDataFromLogAfterTime(float time, bool question)
 		{
 			Debug.Log("getDataFromLogAfterTime");
-			while(detectiveAudioSource.isPlaying || speechManager.audioSource.isPlaying)
+			while(narrator.source.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForSeconds(1f);
 			
 			Debug.Log("Play " + timerCountingSound.name);
@@ -143,8 +194,10 @@ namespace DetectiveGPT
 			Debug.Log("Waited " + time);
 			soundFXAudioSound.Stop();
 			
-			SubmitAnswer(logger.output,PhotonNetwork.LocalPlayer.NickName);
-				
+			if(question)
+				SubmitAnswer(logger.output,PhotonNetwork.LocalPlayer.NickName);
+			else
+				SubmitVote();
 			yield return null;
 		}
 		
@@ -153,19 +206,16 @@ namespace DetectiveGPT
 			float delay = 0;
 			
 			Debug.Log(answerData);
-			if(questions[id].concludeQuestoinClip)
-				detectiveAudioSource.PlayOneShot(questions[id].concludeQuestoinClip);
-			else
+			//play audio
+			if(!narrator.ConcludeQuestion(questions[qid].questionId))
 			{
-				speechManager.SpeakWithSDKPlugin(questions[id].concludeDescriptioon);
+				speechManager.SpeakWithSDKPlugin(questions[qid].concludeDescriptioon);
 				
 				delay = 5f;
 			}
-				
+			answers.Add(new AnswerData(questions[qid], player, answerData));
 			
-			answers.Add(new AnswerData(questions[id],player, answerData));
-			
-			DectectiveGPTSendEventManager.SendQuestionAnswerString(answers.Count-1,answerData);
+				DectectiveGPTSendEventManager.SendQuestionAnswerString(answers.Count-1,answerData);
 			
 			StartCoroutine(nextQuestion(delay));
 		}
@@ -174,17 +224,52 @@ namespace DetectiveGPT
 		{
 			yield return new WaitForSeconds(delay);
 			
-			while(detectiveAudioSource.isPlaying || speechManager.audioSource.isPlaying)
+			while(narrator.source.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForFixedUpdate();
 			
-			id++;
+			qid++;
 			
-			if(id >= questionsToAsk)
-				GameStateManager.Instance.DrawConclusion();
+			if(qid >= questions.Length)
+			{
+				if(qid > questions.Length)
+					vid++;
+				
+				if(vid < questionsToAsk)
+					AskNextVoteQuestion();
+				else
+					GameStateManager.Instance.DrawConclusion();
+			}
 			else
 				AskNextQuestion();
 				
 			yield return null;
+		}
+		
+		public void AskNextVoteQuestion()
+		{
+			//play audio
+			narrator.AskQuestion(voteQuestionsToAsk[vid].questionId);
+				
+			//prep logger
+			logger.Clear();
+			logManager.DisableAll();
+			
+			//set timer
+			if(voteTime >= 0)
+				StartCoroutine(getDataFromLogAfterTime(voteTime, false));
+		}
+		
+		public void SubmitVote()
+		{
+			float delay = 0;
+			
+			//play audio
+			narrator.ConcludeQuestion(voteQuestionsToAsk[vid].questionId);
+				
+			//save my vote
+			PlayerCustomProperties.SetCustomProp<int>(voteQuestionsToAsk[vid].questionId.ToString(), (int)GestureManager.Instance.GetState());
+			
+			StartCoroutine(nextQuestion(delay));
 		}
 	
 		public void OnEvent(EventData photonEvent)
@@ -198,14 +283,73 @@ namespace DetectiveGPT
 				int questionId = (int)data[1];
 				string answer= (string)data[2];
 				string player = PhotonCalls.GetPlayerName(pid);
-				//Debug.Log("RecieveDamageEvent id:" + id + " targetPlayerId:" + target+" damage:" +damage);
+				
 				if(pid != PhotonNetwork.LocalPlayer.ActorNumber)
-				{
-					
 					answers[questionId].AddData(player, answer);
-				}
+				
+				
+			}/*else if(eventCode == DectectiveGPTSendEventManager.VoteQuestionsEventCode)
+			{
+				object[] data = (object[])photonEvent.CustomData;
+				int pid = (int)data[0];
+				int[] vids = (int[])data[1];
+				
+				PlayerCustomProperties.SetCustomProp<int[]>("vids",voteQids);
+				Debug.Log("vids receieved: " + vids.Length);
+				voteQuestionsToAsk = new VoteQuestion[vids.Length];
+				for(int i = 0; i < vids.Length; i++)
+					voteQuestionsToAsk[i] = voteQuestions[vids[i]];
+				
+				
+			}*/
+		}
+		
+		Question GetQuestion(QuestionIDs id)
+		{
+			for(int i = 0; i < questions.Length; i++)
+			{
+				if(id == questions[i].questionId)
+					return questions[i];
+			}
+			
+			return null;
+		}
+		
+		bool GetVoteFor(QuestionIDs q)
+		{
+			int voteFor = 0, voteAgainst = 0;
+			
+			for(int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
+			{
+				if(((ThumbState)PlayerCustomProperties.GetCustomProp<int>(PhotonNetwork.PlayerList[i], q.ToString())) == ThumbState.Up)
+					voteFor++;
+				else
+					voteAgainst++;
+			}
+			
+			return (voteFor >= voteAgainst);
+				
+		}
+		
+		public string GetVoteQuestionPrompts()
+		{
+			string output = "";
+			
+			for(int i = 0; i < voteQuestionsToAsk.Length; i++)	
+			{
+				bool voteFor = GetVoteFor(voteQuestionsToAsk[i].questionId);
+				
+				if(voteFor)
+					output += "(10)" + voteQuestionsToAsk[i].yesPrompt +"\n";
+				else
+					output += "(10)" + voteQuestionsToAsk[i].noPrompt +"\n";
 				
 			}
+			
+			Debug.LogError(output);
+			
+			return output;
 		}
+		
 	}
 }

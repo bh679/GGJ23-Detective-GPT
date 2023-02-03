@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BrennanHatton.Networking;
 using Photon.Pun;
+using DetectiveGPT;
 
 namespace BrennanHatton.Logging
 {
@@ -11,9 +12,9 @@ namespace BrennanHatton.Logging
 	{
 
 		[Tooltip("If PhysicsCheckType = Trigger and this is true, an additonal raycast check will occur to check for obstacles in the way")]
-		public bool TriggerRequiresRaycast = true;
+		//public bool TriggerRequiresRaycast = true;
 
-		public float RaycastLength = 20f;
+		//public float RaycastLength = 20f;
 
 		public float SphereCastLength = 20f;
 		public float SphereCastRadius = 0.05f;
@@ -25,6 +26,7 @@ namespace BrennanHatton.Logging
 		public float resetFrequencey = 5f;
 		
 		public LogAction log = new LogAction(false);
+		public GameObject detective;
 		
 		
 		public bool usePhotonName = true;
@@ -53,25 +55,46 @@ namespace BrennanHatton.Logging
 			{
 				timer = 0;
 				lastPlayer = null;
+				lastDetective = false;
 			}
 			timer+=Time.deltaTime;
 		}
 
+		bool lastDetective = false;
 		private void ObjectHit(Collider colliderHit) {
 			// Did our last item change?
 			if (_lastColliderHit != colliderHit) {
 				
-				BrennanHatton.Networking.NetworkPlayer player = colliderHit.GetComponentInParent<BrennanHatton.Networking.NetworkPlayer>();
-				
-				if(player != null && lastPlayer != player)
+				if(colliderHit.gameObject == detective)
 				{
-					lastPlayer = player;
-					if(usePhotonName)
-						log.who = PhotonNetwork.LocalPlayer.NickName;
-					log.what = player.PhotonView.Owner.NickName;
-					log.when = Time.time.ToString();;
-					Debug.Log("pointed at " + log.what);
-					ActionLogger.Instance.Add(log);
+					if(!lastDetective)
+					{
+						timer = 0;
+						lastPlayer = null;
+						if(usePhotonName)
+							log.who = PhotonNetwork.LocalPlayer.NickName;
+						log.what = DetectiveGPTNarrator.Instance.GetNarratorName();
+						log.when = Time.time.ToString();;
+						
+						ActionLogger.Instance.Add(log);
+						lastDetective = true;
+					}
+				}else
+				{
+					BrennanHatton.Networking.NetworkPlayer player = colliderHit.GetComponentInParent<BrennanHatton.Networking.NetworkPlayer>();
+				
+					if((player != null && lastPlayer != player))
+					{
+						timer = 0;
+						lastDetective = false;
+						lastPlayer = player;
+						if(usePhotonName)
+							log.who = PhotonNetwork.LocalPlayer.NickName;
+						log.what = player.PhotonView.Owner.NickName;
+						log.when = Time.time.ToString();;
+						
+						ActionLogger.Instance.Add(log);
+					}
 				}
 				
 				
