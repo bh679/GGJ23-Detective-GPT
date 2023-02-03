@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Photon.Pun;
+using BrennanHatton.Networking;
 
 namespace DetectiveGPT
 {
@@ -49,7 +51,7 @@ namespace DetectiveGPT
 		}
 	}
 	
-	public class DetectiveGPTNarrator : MonoBehaviour
+	public class DetectiveGPTNarrator : MonoBehaviourPunCallbacks
 	{
 		public Narrator[] narrators;
 		public int NarratorID;
@@ -75,6 +77,20 @@ namespace DetectiveGPT
 		void Reset()
 		{
 			source = this.GetComponent<AudioSource>();
+		}
+		
+		
+		
+		public override void OnJoinedRoom()
+		{
+			if(PhotonNetwork.IsMasterClient)
+			{
+				PickRandomNarrator();
+			
+			}else
+			{
+				PickNarrator(PlayerCustomProperties.GetCustomProp<int>(PhotonNetwork.MasterClient,"nid"));
+			}
 		}
 		
 		public void PlayIntro()
@@ -143,21 +159,16 @@ namespace DetectiveGPT
 		{
 			return PlayQuestion(questionId, false, Positive);
 		}
-		
-	    // Start is called before the first frame update
-	    void Start()
-	    {
-		    PickRandomNarrator();
-	    }
 	    
-		public void PickRandomNarrator()
+		void PickRandomNarrator()
 		{
-				PickNarrator(Random.Range(0,narrators.Length-1));
+			PickNarrator(Random.Range(0,narrators.Length));
 		}
 		
 		public void PickNarrator(int id)
 		{
 			NarratorID = id;
+			PlayerCustomProperties.SetCustomProp<int>("nid",NarratorID);
 			narrator = narrators[NarratorID];
 			
 			for(int i =0; i < narrators.Length; i++)
@@ -165,12 +176,6 @@ namespace DetectiveGPT
 				
 			narrator.EnableModel(true);
 		}
-	
-	    // Update is called once per frame
-	    void Update()
-	    {
-	        
-	    }
 	}
 
 }
