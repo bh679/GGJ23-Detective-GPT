@@ -10,6 +10,7 @@ namespace BrennanHatton.Networking
 	public class PhotonChangeServer : MonoBehaviourPunCallbacks
 	{
 		static bool isDefault = true;
+		public string defaultRegion;
 		public string target = "au";
 		public UnityEvent onChange;
 		public NetworkManager netManager;
@@ -18,14 +19,21 @@ namespace BrennanHatton.Networking
 		void Start()
 		{
 			defaultAutoReconnect = netManager.autoReconnect;
+			SetDefault();
+		}
+		
+		void SetDefault()
+		{
 			
-			if(PhotonNetwork.CloudRegion == target)
+			defaultRegion = PhotonNetwork.CloudRegion;
+			
+			if(defaultRegion == target)
 				target = "usw";
 		}
 		
-		public void ChangeToTarget(string targ = "")
+		public void ChangeToTarget(string targ = null)
 		{
-			if (targ != null)
+			if(!string.IsNullOrEmpty(targ))
 				target = targ;
 				
 			netManager.autoReconnect = false;
@@ -54,6 +62,11 @@ namespace BrennanHatton.Networking
 		
 		public override void OnJoinedRoom()
 		{
+			if(string.IsNullOrEmpty(defaultRegion))
+			{
+				SetDefault();
+			}
+			
 			netManager.autoReconnect = defaultAutoReconnect;
 			base.OnJoinedRoom();
 		}
