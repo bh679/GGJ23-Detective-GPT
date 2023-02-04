@@ -5,21 +5,36 @@ using BrennanHatton.UnityTools;
 
 namespace DetectiveGPT
 {
+	[System.Serializable]
+	public class AudioTrack 
+	{
+		public AudioClip clip;
+		public float relativeVolume = 0f, fadeInLength;
+		
+	}
 
 	public class MusicManager : MonoBehaviour
 	{
 		public AudioSource source;
 		public AudioSourceExt sourceExt;
-		public AudioClip preMurder, murder, investigateAsk, investigateTimer, conlcusion, win, lose, end;
+		public AudioTrack preMurder, murder, investigateAsk, investigateTimer, conlcusion, win, lose, end;
 		public GameStateManager manager;
 		public float firstQuestionFadeDelay = 5f;
+		float volume;
 		
 		int questions = 0;
 		
+		void Play(AudioTrack track)
+		{
+			source.clip = track.clip;
+			source.Play();
+			sourceExt.VolumeFadeToTarget(track.fadeInLength, volume + track.relativeVolume);
+		}
+		
 		void Start()
 		{
-			source.clip = preMurder;
-			source.Play();
+			volume = source.volume;
+			Play(preMurder);
 			
 			manager.onMurder.AddListener(()=>{Murder();});
 			manager.onInvestigate.AddListener(()=>{AskQuestion();});
@@ -29,53 +44,52 @@ namespace DetectiveGPT
 	    
 		public void Murder()
 		{
-			source.clip = murder;
-			source.Play();
+			Play(murder);
 		}
 	    
 		public void AskQuestion()
 		{
 			if(questions > 0)
+				Play(investigateAsk);
+			else
 			{
-				source.clip = investigateAsk;
-				source.Play();
-			}else
+				Debug.LogError(firstQuestionFadeDelay);
 				sourceExt.VolumeFadeToZero(firstQuestionFadeDelay);
+			}
 			
 			questions++;
 		}
 	    
 		public void WaitingForAnswer()
 		{
-			source.clip = investigateTimer;
-			source.Play();
+			Play(investigateTimer);
 		}
 			
 		public void DrawConclusion()
 		{
-			source.clip = conlcusion;
-			source.Play();
+			Play(conlcusion);
 		}
 			
 		public void Win()
 		{
-			source.clip = win;
-			source.Play();
+			Play(win);
+			
+			StartCoroutine(playAfterFinished(end));
 		}
 			
 		public void Lose()
 		{
-			source.clip = lose;
-			source.Play();
+			Play(lose);
+			
+			StartCoroutine(playAfterFinished(end));
 		}
 		
-		IEnumerator playAfterFinished(AudioClip clip)
+		IEnumerator playAfterFinished(AudioTrack track)
 		{
 			while(source.isPlaying)
 				yield return new WaitForEndOfFrame();
 				
-			source.clip = end;
-			source.Play();
+			Play(track);
 		}
 	}
 }

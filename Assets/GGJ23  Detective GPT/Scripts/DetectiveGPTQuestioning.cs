@@ -345,8 +345,6 @@ namespace DetectiveGPT
 				
 			}
 			
-			Debug.LogError(output);
-			
 			return output;
 		}
 		
