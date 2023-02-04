@@ -137,13 +137,12 @@ namespace DetectiveGPT
 				voteQids = new int[questionsToAsk];
 				
 				for(int i = 0; i < voteQids.Length; i++)
-					voteQids[i] = Random.Range(0,voteQuestions.Length);
-				
+				{
+					while(CheckVoteQuestionDuplicate(voteQids, voteQids[i]) == false && i < voteQuestions.Length)
+						voteQids[i] = Random.Range(0,voteQuestions.Length);
+				}
 				
 				PlayerCustomProperties.SetCustomProp<int[]>("vids",voteQids);
-				//DectectiveGPTSendEventManager.SendVoteQuestionsEvent(voteQids);
-			
-			
 			
 			}else
 			{
@@ -154,6 +153,16 @@ namespace DetectiveGPT
 			voteQuestionsToAsk = new VoteQuestion[voteQids.Length];
 			for(int i = 0; i < voteQids.Length; i++)
 				voteQuestionsToAsk[i] = voteQuestions[voteQids[i]];
+		}
+		
+		public bool CheckVoteQuestionDuplicate(int[] voteQids, int voteId)
+		{
+			for(int i = 0; i < voteQids.Length; i++)
+			{
+				if(voteQids[i] == voteId)
+					return true;
+			}
+			return false;
 		}
 	
 		private void OnDisable()
