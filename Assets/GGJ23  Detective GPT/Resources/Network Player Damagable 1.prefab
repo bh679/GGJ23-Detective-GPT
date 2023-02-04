@@ -1652,6 +1652,7 @@ MonoBehaviour:
   - Orange
   - Blue
   expectAvatar: 1
+  before: 0
 --- !u!4 &3968783378596025698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1698972267751157504, guid: c5eb6e55979943d499a6370ba5a84bf7,

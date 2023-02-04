@@ -14,9 +14,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2237759594221559301, guid: 89067536c9f97444c8dcf66c050ee8b1,
         type: 3}
+      propertyPath: onJoinedRoom.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237759594221559301, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onJoinedRoom.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237759594221559301, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
       propertyPath: onJoinedRoom.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3415564538917488680}
+    - target: {fileID: 2237759594221559301, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onJoinedRoom.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2237759594221559301, guid: 89067536c9f97444c8dcf66c050ee8b1,
         type: 3}
       propertyPath: onJoinedRoom.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -25,7 +40,612 @@ PrefabInstance:
     - target: {fileID: 2237759594221559301, guid: 89067536c9f97444c8dcf66c050ee8b1,
         type: 3}
       propertyPath: onJoinedRoom.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: EqualReality.Networking.PlayerSpawnPosition, VRIF PUN Assets
+      value: BrennanHatton.Networking.PlayerSpawnPosition, VRIF PUN Assets
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237759594221559301, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onJoinedRoom.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: useNoun
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.size
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[0]
+      value: Smith
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[1]
+      value: Williams
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[2]
+      value: Johnson
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[3]
+      value: Williams
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[4]
+      value: Jones
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[5]
+      value: Davis
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[6]
+      value: Garcia
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[7]
+      value: Rodriguez
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[8]
+      value: Martinez
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[9]
+      value: Hernandez
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[10]
+      value: Lopez
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[11]
+      value: Gonzalez
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[12]
+      value: Perez
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[13]
+      value: Taylor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[14]
+      value: Anderson
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[15]
+      value: Thomas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[16]
+      value: Jackson
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[17]
+      value: Harris
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[18]
+      value: Thompson
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[19]
+      value: Moore
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[20]
+      value: Young
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[21]
+      value: Allen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[22]
+      value: King
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[23]
+      value: Wright
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[24]
+      value: Scott
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[25]
+      value: Baker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[26]
+      value: Adams
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[27]
+      value: Nelson
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[28]
+      value: Carter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[29]
+      value: Mitchell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[30]
+      value: Perez
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[31]
+      value: Roberts
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[32]
+      value: Turner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[33]
+      value: Phillips
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[34]
+      value: Campbell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[35]
+      value: Parker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[36]
+      value: Evans
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[37]
+      value: Edwards
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[38]
+      value: Collins
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[39]
+      value: Stewart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[40]
+      value: Cooper
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[41]
+      value: Ramirez
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[42]
+      value: Ortiz
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[43]
+      value: Gomez
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[44]
+      value: Murray
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[45]
+      value: Freeman
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: noun.Array.data[46]
+      value: Wells
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.size
+      value: 63
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[0]
+      value: Caretaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[1]
+      value: Gardener
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[2]
+      value: Chef
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[3]
+      value: House Keeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[4]
+      value: Kitchen Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[5]
+      value: Dog Walker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[6]
+      value: 'Electrician '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[7]
+      value: Plumber
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[8]
+      value: Hair Stylist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[9]
+      value: Tennis Instructor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[10]
+      value: Butler
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[11]
+      value: Yoga Instructor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[12]
+      value: Butler
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[13]
+      value: Chauffeur
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[14]
+      value: Personal Assistant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[15]
+      value: Estate Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[16]
+      value: Security Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[17]
+      value: Groundskeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[18]
+      value: Steward
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[19]
+      value: Librarian
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[20]
+      value: Footman
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[21]
+      value: Nanny
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[22]
+      value: Laundress
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[23]
+      value: Valet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[24]
+      value: Sommelier
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[25]
+      value: Waitstaff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[26]
+      value: Cleaning Staff
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[27]
+      value: Musician
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[28]
+      value: Magician
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[29]
+      value: Artist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[30]
+      value: Writer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[31]
+      value: Poet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[32]
+      value: Philosopher
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[33]
+      value: Theologian
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[34]
+      value: Scholar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[35]
+      value: Scientist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[36]
+      value: Engineer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[37]
+      value: Stylist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[38]
+      value: Photographer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[39]
+      value: Filmmaker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[40]
+      value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[41]
+      value: Dancer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[42]
+      value: Choreographer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[43]
+      value: Athlete
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[44]
+      value: Coach
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[45]
+      value: Trainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[46]
+      value: Medic
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[47]
+      value: Nurse
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[48]
+      value: Therapist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[49]
+      value: Psychiatrist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[50]
+      value: Psychologist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[51]
+      value: Social Worker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[52]
+      value: Philanthropist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[53]
+      value: Entrepreneur
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[54]
+      value: Banker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[55]
+      value: Investor
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[56]
+      value: Broker
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[57]
+      value: Accountant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[58]
+      value: Tax Specialist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[59]
+      value: Economist
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[60]
+      value: Market Analyst
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[61]
+      value: Trader
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: adjective.Array.data[62]
+      value: Financial Advisor.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1741474053}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetNickName
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BrennanHatton.Networking.MaterialToNickName, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702887711748726518, guid: 89067536c9f97444c8dcf66c050ee8b1,
+        type: 3}
+      propertyPath: onChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8891991256556416250, guid: 89067536c9f97444c8dcf66c050ee8b1,
         type: 3}
@@ -95,6 +715,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8440479619398324013}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1737817720606704206 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7872120062072393059, guid: 89067536c9f97444c8dcf66c050ee8b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8440479619398324013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1741474053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737817720606704206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72bdd9d2cda0b454ca7139620ff89c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorNames:
+  - Yellow
+  - Red
+  - Purple
+  - Grey
+  - Pink
+  - White
+  - Orange
+  - Blue
+  expectAvatar: 1
+  before: 1
+--- !u!1 &5065142276560525405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3704663069450655600, guid: 89067536c9f97444c8dcf66c050ee8b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8440479619398324013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1471441658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065142276560525405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb605a05bc860f4686c4084c5061708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1471441662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065142276560525405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c37bac26b0fa149a75d604d2c7f1be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onReceiveChange:
+    m_PersistentCalls:
+      m_Calls: []
+  changeScene: 1
 --- !u!1001 &8440479621208659368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -367,7 +1050,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6504357455806979458, guid: e580f72b694980448882f6a7b03db2a2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e580f72b694980448882f6a7b03db2a2, type: 3}
 --- !u!114 &3415564538917488680 stripped
 MonoBehaviour:

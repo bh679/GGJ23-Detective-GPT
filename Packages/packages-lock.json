@@ -15,7 +15,7 @@
         "com.unity.textmeshpro": "3.0.6",
         "com.unity.inputsystem": "1.4.4"
       },
-      "hash": "6b7c259fefb1b66bd26fcfcc7d7520d6e81b617a"
+      "hash": "59583ca48b1f27a8c993d994990902373b0a5b34"
     },
     "com.brennanhatton.vrifpunassets": {
       "version": "https://github.com/bh679/VRIF-PUN-Assets.git",
@@ -25,7 +25,7 @@
         "com.unity.inputsystem": "1.4.4",
         "com.brennanhatton.unitytools": "1:0:1"
       },
-      "hash": "563e59dc00c522124437a632f5bf5604ae95b740"
+      "hash": "7b441d19190e642f97917e09caf7ab71ef2e3f11"
     },
     "com.unity.collab-proxy": {
       "version": "1.17.7",

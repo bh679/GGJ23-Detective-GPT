@@ -95,7 +95,7 @@ namespace DetectiveGPT
 		public void SetState(GameState newState)
 		{
 			gameState = newState;
-			Debug.LogError(gameState);
+			Debug.Log("<color=red>"+gameState+"</color>");
 			PlayerCustomProperties.SetCustomProp<int>(state_PlayerProp,(int)gameState);
 			
 			switch((int)newState)

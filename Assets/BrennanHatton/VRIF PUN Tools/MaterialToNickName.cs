@@ -12,6 +12,7 @@ namespace BrennanHatton.Networking
 		public string[] colorNames;
 		string OGname;
 		public bool expectAvatar = true;
+		public bool before = false;
 		
 		public void SetOGName()
 		{
@@ -49,7 +50,12 @@ namespace BrennanHatton.Networking
 		
 		public void SetName(int id)
 		{
-			PhotonNetwork.NickName = colorNames[id] + " " + OGname;
+			Debug.LogError("SetName:" + id);
+			
+			if(before)
+				PhotonNetwork.NickName = colorNames[id] + " " + OGname;
+			else
+				PhotonNetwork.NickName = OGname + colorNames[id];
 		}
 	}
 }
