@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BrennanHatton.UnityTools;
 
 namespace DetectiveGPT
 {
@@ -8,9 +9,12 @@ namespace DetectiveGPT
 	public class MusicManager : MonoBehaviour
 	{
 		public AudioSource source;
-		public AudioClip preMurder, murder, investigate, conlcusion, win, lose, end;
+		public AudioSourceExt sourceExt;
+		public AudioClip preMurder, murder, investigateAsk, investigateTimer, conlcusion, win, lose, end;
 		public GameStateManager manager;
+		public float firstQuestionFadeDelay = 5f;
 		
+		int questions = 0;
 		
 		void Start()
 		{
@@ -18,7 +22,7 @@ namespace DetectiveGPT
 			source.Play();
 			
 			manager.onMurder.AddListener(()=>{Murder();});
-			manager.onInvestigate.AddListener(()=>{StartInvestigation();});
+			manager.onInvestigate.AddListener(()=>{AskQuestion();});
 			manager.onDrawConclusion.AddListener(()=>{DrawConclusion();});
 			manager.onEnd.AddListener(()=>{Win();});
 		}
@@ -29,9 +33,21 @@ namespace DetectiveGPT
 			source.Play();
 		}
 	    
-		public void StartInvestigation()
+		public void AskQuestion()
 		{
-			source.clip = investigate;
+			if(questions > 0)
+			{
+				source.clip = investigateAsk;
+				source.Play();
+			}else
+				sourceExt.VolumeFadeToZero(firstQuestionFadeDelay);
+			
+			questions++;
+		}
+	    
+		public void WaitingForAnswer()
+		{
+			source.clip = investigateTimer;
 			source.Play();
 		}
 			
@@ -50,6 +66,15 @@ namespace DetectiveGPT
 		public void Lose()
 		{
 			source.clip = lose;
+			source.Play();
+		}
+		
+		IEnumerator playAfterFinished(AudioClip clip)
+		{
+			while(source.isPlaying)
+				yield return new WaitForEndOfFrame();
+				
+			source.clip = end;
 			source.Play();
 		}
 	}

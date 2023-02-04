@@ -95,7 +95,7 @@ namespace DetectiveGPT
 	
 	public class DetectiveGPTQuestioning : MonoBehaviourPunCallbacks, IOnEventCallback
 	{
-		public AudioSource soundFXAudioSound;
+		public MusicManager musicManager;
 		public DetectiveGPTNarrator narrator;
 		public SpeechManager speechManager;
 		public ActionLogger logger;
@@ -107,7 +107,7 @@ namespace DetectiveGPT
 		public float voteTime = 5f;
 		public List<AnswerData> answers = new List<AnswerData>();
 		
-		public AudioClip timerCountingSound;
+		//public AudioClip timerCountingSound;
 		public LogManager logManager;
 		
 		int qid = 0, vid = 0;
@@ -184,15 +184,14 @@ namespace DetectiveGPT
 		
 		IEnumerator getDataFromLogAfterTime(float time, bool question)
 		{
-			Debug.Log("getDataFromLogAfterTime");
 			while(narrator.source.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForSeconds(1f);
 			
-			Debug.Log("Play " + timerCountingSound.name);
-			soundFXAudioSound.PlayOneShot(timerCountingSound);
+			musicManager.WaitingForAnswer();
+				
 			yield return new WaitForSeconds(time);
-			Debug.Log("Waited " + time);
-			soundFXAudioSound.Stop();
+			
+			musicManager.AskQuestion();
 			
 			if(question)
 				SubmitAnswer(logger.output,PhotonNetwork.LocalPlayer.NickName);
