@@ -11,20 +11,20 @@ namespace DetectiveGPT
 	public class DectectiveGPTNarrative : MonoBehaviour
 	{
 		public DetectiveGPTQuestioning questions;
-		public SpeechManager speechManager;
+		//public SpeechManager speechManager;
 		public GPT3 gpt;
 		public TextAsset PersonalityPrompt, PreNotesPrompt, FixesPrompt, FormatingPrompt, AcionItemPrompt;
 		
 	    // Start is called before the first frame update
 	    void Start()
 	    {
-		    gpt.onResults.AddListener(
+		    /*gpt.onResults.AddListener(
 			    (interaction)=>{
 			    	speechManager.SpeakWithSDKPlugin(
 				    	interaction.GeneratedText
 			    	);
 			    }
-		    );
+		    );*/
 	    }
 	    
 		public void CreateNarrative()
