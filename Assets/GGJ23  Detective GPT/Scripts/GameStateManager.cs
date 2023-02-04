@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Realtime;
 using Photon.Pun;
 using BNG;
+using BrennanHatton.UnityTools;
 using BrennanHatton.Networking;
 using BrennanHatton.Networking.Events;
 using ExitGames.Client.Photon;
@@ -26,6 +27,7 @@ namespace DetectiveGPT
 		public PlayerSpawnPosition spawner;
 		public int purpetatorId, victimId;
 		const string state_PlayerProp = "GameState";
+		public SetMaterial corpse;
 		
 		public UnityEvent onPreMuder, onMurder, onInvestigate, onDrawConclusion, onEnd;
 		
@@ -87,6 +89,8 @@ namespace DetectiveGPT
 				if(gameState == GameState.PreMurder)
 				{
 					PlayerKilled(id);
+					corpse.gameObject.SetActive(true);
+					corpse.SetMaterialPlz(id);
 				}
 				
 			}
