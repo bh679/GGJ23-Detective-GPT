@@ -91,6 +91,7 @@ namespace DetectiveGPT
 					PlayerKilled(id);
 					corpse.gameObject.SetActive(true);
 					corpse.SetMaterialPlz(id);
+					corpse.disableFacilitatorMaterial();
 				}
 				
 			}
