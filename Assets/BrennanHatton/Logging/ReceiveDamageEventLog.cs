@@ -7,7 +7,7 @@ using Photon.Realtime;
 using Photon.Pun;
 using BNG;
 using BrennanHatton.Networking.Events;
-using EqualReality.Networking;
+using BrennanHatton.Networking;
 
 namespace BrennanHatton.Logging
 {
