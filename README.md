@@ -16,7 +16,9 @@ The Detective GPT uses its AI detective work to create a story based on the info
 
 Can you get it to the right conclusion? Can you get away with murder? How will the story unfold? Detective GPT will get to the "root" of it!
 
-https://globalgamejam.org/2023/games/detective-gpt-3
+Website: https://tim-randall.github.io/detectiveGPTweb/
+
+GGJ Page: https://globalgamejam.org/2023/games/detective-gpt-3
 
 Join the discord for the latest  <br />
 https://discord.gg/bd8KrVhd8u
