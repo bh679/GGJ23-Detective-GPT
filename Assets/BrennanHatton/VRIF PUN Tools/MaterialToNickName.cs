@@ -50,8 +50,6 @@ namespace BrennanHatton.Networking
 		
 		public void SetName(int id)
 		{
-			Debug.LogError("SetName:" + id);
-			
 			if(before)
 				PhotonNetwork.NickName = colorNames[id] + " " + OGname;
 			else
