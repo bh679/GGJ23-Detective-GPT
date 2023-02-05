@@ -7,6 +7,7 @@ using Photon.Realtime;
 using Photon.Pun;
 using BrennanHatton.Networking.Events;
 using TMPro;
+using BrennanHatton.Networking;
 
 namespace DetectiveGPT
 {
@@ -18,6 +19,8 @@ namespace DetectiveGPT
 		
 		public GameStateManager gameManager; 
 		public UnityEvent onReceive; 
+		public MaterialToNickName colorNames;
+		public Cage cage;
 		
 		void Reset()
 		{
@@ -48,18 +51,32 @@ namespace DetectiveGPT
 				
 				if(idsToPlay == genId)
 				{
-					gameManager.convictedId = calcId(narration);
+					cage.response = narration;
+					
+					gameManager.convictedId = calcId(GetColor(narration));
 					onReceive.Invoke();
 				}
 			}
 		}
 		
+		string GetColor(string response)
+		{
+			for(int i = 0; i < colorNames.colorNames.Length; i++)
+			{
+				if(response.Contains(colorNames.colorNames[i]))
+				{
+					return colorNames.colorNames[i];
+				}
+			}
+			
+			return "";
+		}
+		
 		int calcId(string color)
 		{
-			color = color.Replace(" ", "");
-			color = color.Replace("\n", "");
-			Debug.Log(color);
-			
+			if(color == "")
+				return -1;
+				
 			for(int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
 			{
 				if(PhotonNetwork.PlayerList[i].NickName.Substring(0,PhotonNetwork.PlayerList[i].NickName.IndexOf(" ")).Contains(color))
