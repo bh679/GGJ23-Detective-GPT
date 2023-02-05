@@ -45,6 +45,7 @@ namespace BrennanHatton.Networking
 		public void ChangeToDefault()
 		{
 			netManager.autoReconnect = true;
+			netManager.reconnectDelay = 0f;
 			PhotonNetwork.Disconnect();
 			onChange.Invoke();
 		}

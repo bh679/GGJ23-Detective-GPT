@@ -60,9 +60,11 @@ namespace DetectiveGPT
 			
 			base.OnJoinedRoom();
 			
-			//check state of other players
-			if(PhotonNetwork.PlayerList.Length >1 && (int)PhotonNetwork.PlayerList[0].CustomProperties[state_PlayerProp] >= 1)
-				SetState((GameState)((int)PhotonNetwork.PlayerList[0].CustomProperties[state_PlayerProp]));
+			//check if not master client
+			if(PhotonNetwork.IsMasterClient == false 
+				//and if master client has the right properties
+				&& (int)PhotonNetwork.MasterClient.CustomProperties[state_PlayerProp] >= 1)
+				SetState((GameState)((int)PhotonNetwork.MasterClient.CustomProperties[state_PlayerProp]));
 			else
 				SetState(GameState.PreMurder);
 		}

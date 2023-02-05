@@ -14,6 +14,8 @@ namespace BrennanHatton.Networking.Events
 	{
 		public UnityEvent onReceiveChange = new UnityEvent();
 		public bool changeScene = true;
+		public NetworkManager netmanager;
+		public float reconnectDelay;
 		
 		private void OnEnable()
 		{
@@ -49,6 +51,13 @@ namespace BrennanHatton.Networking.Events
 			
 			yield return new WaitForSeconds(delay);
 			
+			if(netmanager != null) 
+			{
+				netmanager.autoReconnect = true;
+				netmanager.reconnectDelay = reconnectDelay;
+			}
+			PhotonNetwork.Disconnect();
+			yield return new WaitForSeconds(reconnectDelay*0.9f);
 			SceneManager.LoadScene(bid);
 		}
 	}

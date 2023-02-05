@@ -146,11 +146,19 @@ namespace DetectiveGPT
 				}
 				
 				PlayerCustomProperties.SetCustomProp<int[]>("vids",voteQids);
+				PlayerCustomProperties.SetCustomProp<int>("qid",qid);
 			
 			}else
 			{
 				voteQids = PlayerCustomProperties.GetCustomProp<int[]>(PhotonNetwork.MasterClient,"vids");
 				PlayerCustomProperties.SetCustomProp<int[]>("vids",voteQids);
+				
+				qid = PlayerCustomProperties.GetCustomProp<int>(PhotonNetwork.MasterClient,"qid");
+				
+				if(qid >= questions.Length)
+					vid = qid - questions.Length;
+					
+				PlayerCustomProperties.SetCustomProp<int>("qid",qid);
 			}
 			
 			voteQuestionsToAsk = new VoteQuestion[voteQids.Length];
@@ -244,11 +252,15 @@ namespace DetectiveGPT
 				yield return new WaitForFixedUpdate();
 			
 			qid++;
+			PlayerCustomProperties.SetCustomProp<int>("qid",qid);
 			
 			if(qid >= questions.Length)
 			{
 				if(qid > questions.Length)
+				{
+					
 					vid++;
+				}
 				
 				if(vid < questionsToAsk)
 					AskNextVoteQuestion();
