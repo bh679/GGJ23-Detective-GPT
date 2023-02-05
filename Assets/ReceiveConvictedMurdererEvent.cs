@@ -53,7 +53,8 @@ namespace DetectiveGPT
 				{
 					cage.response = narration;
 					
-					gameManager.convictedId = calcId(GetColor(narration));
+					gameManager.convictedId = calcId(GetColor(narration),narration);
+					Debug.Log(gameManager.convictedId);
 					onReceive.Invoke();
 				}
 			}
@@ -64,7 +65,7 @@ namespace DetectiveGPT
 			Debug.Log(response);
 			for(int i = 0; i < colorNames.colorNames.Length; i++)
 			{
-				if(response.Contains(colorNames.colorNames[i]))
+				if(response.ToLower().Contains(colorNames.colorNames[i].ToLower()))
 				{
 					return colorNames.colorNames[i];
 				}
@@ -73,16 +74,26 @@ namespace DetectiveGPT
 			return "";
 		}
 		
-		int calcId(string color)
+		int calcId(string color, string repsonse)
 		{
-			Debug.Log(color);
+			
 			if(color == "")
-				return -1;
+			{
+				color = repsonse;
+				color = color.Replace(" ", "");
+				color = color.Replace("\n", "");
+			}
+			
+			if(color.ToLower() == "gray")
+				color = "grey";
+			Debug.Log(color);
 				
 			for(int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
 			{
-				if(PhotonNetwork.PlayerList[i].NickName.Substring(0,PhotonNetwork.PlayerList[i].NickName.IndexOf(" ")).Contains(color))
-					return i;
+				if(PhotonNetwork.PlayerList[i].NickName.ToLower().Contains(color.ToLower()))
+					return PhotonNetwork.PlayerList[i].ActorNumber;
+					
+				Debug.Log(PhotonNetwork.PlayerList[i].NickName.ToLower() + "does not contain " + color);
 			}
 			
 			return -1;

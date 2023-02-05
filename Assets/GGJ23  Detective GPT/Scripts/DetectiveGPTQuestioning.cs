@@ -248,6 +248,9 @@ namespace DetectiveGPT
 		{
 			yield return new WaitForSeconds(delay);
 			
+			if(quickMode)
+				narrator.source.Stop();
+			
 			while(narrator.source.isPlaying || speechManager.audioSource.isPlaying)
 				yield return new WaitForFixedUpdate();
 			
@@ -375,6 +378,17 @@ namespace DetectiveGPT
 			}
 			
 			return output;
+		}
+		
+		bool quickMode = false;
+		public void QuickMode()
+		{
+			quickMode = true;
+			voteTime = 0f;
+			for(int i = 0; i < questions.Length; i++)
+			{
+				questions[i].time = 0;
+			}
 		}
 		
 	}
