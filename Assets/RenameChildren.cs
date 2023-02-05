@@ -7,6 +7,7 @@ public class RenameChildren : MonoBehaviour
 	
 	void Reset()
 	{
+		RenameAndChild(this.transform);
 	}
 	
 	public void RenameAndChild(Transform trans)
