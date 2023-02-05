@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 9073408001795752548}
   - component: {fileID: 9065343924516890964}
   - component: {fileID: 7901679525929445136}
+  - component: {fileID: 8241709301852638602}
   - component: {fileID: 4178449041833515431}
   m_Layer: 0
   m_Name: SM_Prop_Picture_Frame_01
@@ -298,6 +299,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8241709301852638602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9050598281780113314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821cfb7c3eab3764bbb57d764c6e26d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoggerText: {fileID: 0}
+  Damage: 25
+  ColliderRigidbody: {fileID: 0}
+  MinForce: 5
+  LastRelativeVelocity: 0
+  LastDamageForce: 0
+  TakeCollisionDamage: 0
+  CollisionDamage: 5
 --- !u!114 &4178449041833515431
 MonoBehaviour:
   m_ObjectHideFlags: 0

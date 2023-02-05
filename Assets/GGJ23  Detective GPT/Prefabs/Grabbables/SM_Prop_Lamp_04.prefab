@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 9133157722529318822}
   - component: {fileID: 5896645612319551399}
   - component: {fileID: 6188623443723309526}
+  - component: {fileID: 2818291406638307154}
   - component: {fileID: 4781613072835640634}
   m_Layer: 0
   m_Name: SM_Prop_Lamp_04
@@ -207,7 +208,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 1
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 5896645612319551399}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -293,6 +295,26 @@ MonoBehaviour:
   onSnapZoneExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2818291406638307154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3883571979063126322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821cfb7c3eab3764bbb57d764c6e26d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoggerText: {fileID: 0}
+  Damage: 50
+  ColliderRigidbody: {fileID: 0}
+  MinForce: 10
+  LastRelativeVelocity: 0
+  LastDamageForce: 0
+  TakeCollisionDamage: 0
+  CollisionDamage: 5
 --- !u!114 &4781613072835640634
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1655276382784868781}
   - component: {fileID: 7766595288100552690}
   - component: {fileID: 4474294571523947618}
+  - component: {fileID: 4744209214357822651}
   m_Layer: 0
   m_Name: SM_Prop_Candle_Stand_02
   m_TagString: Untagged
@@ -207,7 +208,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 1
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 1655276382784868781}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -307,3 +309,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbableEvents: {fileID: 7766595288100552690}
   rb: {fileID: 4355346654972674756}
+--- !u!114 &4744209214357822651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4357061059896312583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821cfb7c3eab3764bbb57d764c6e26d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoggerText: {fileID: 0}
+  Damage: 25
+  ColliderRigidbody: {fileID: 0}
+  MinForce: 5
+  LastRelativeVelocity: 0
+  LastDamageForce: 0
+  TakeCollisionDamage: 0
+  CollisionDamage: 5
