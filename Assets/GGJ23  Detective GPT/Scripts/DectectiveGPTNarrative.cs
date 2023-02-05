@@ -13,7 +13,8 @@ namespace DetectiveGPT
 		public DetectiveGPTQuestioning questions;
 		//public SpeechManager speechManager;
 		public GPT3 gpt;
-		public TextAsset PersonalityPrompt, PreNotesPrompt, FixesPrompt, FormatingPrompt, AcionItemPrompt;
+		public TextAsset PersonalityPrompt, PreNotesPrompt, FixesPrompt, FormatingPrompt, AcionItemPrompt, checkConviction, punishment;
+		public bool requireMasterClient = true;
 		
 	    // Start is called before the first frame update
 	    void Start()
@@ -29,10 +30,8 @@ namespace DetectiveGPT
 	    
 		public void CreateNarrative()
 		{
-			Debug.Log(PhotonNetwork.IsMasterClient);
-			if(!PhotonNetwork.IsMasterClient)
+			if(requireMasterClient && !PhotonNetwork.IsMasterClient)
 				return;
-			Debug.Log("CreateNarrative");
 			
 			string promptStr = "";
 			
@@ -77,6 +76,29 @@ namespace DetectiveGPT
 			}
 			
 			return output;
+		}
+		
+		//need to send id of openai call
+		public void RunWhoDidIt()
+		{
+			if(requireMasterClient && !PhotonNetwork.IsMasterClient)
+				return;
+				
+			string promptStr = checkConviction.text + "\n\n";
+			promptStr += gpt.interactions[0].generatedText;
+				
+			gpt.Execute(promptStr);
+		}
+		
+		public void RunPunishment()
+		{
+			
+			if(requireMasterClient && !PhotonNetwork.IsMasterClient)
+				return;
+			
+			string promptStr = punishment.text;	
+				
+			gpt.Execute(promptStr);
 		}
 	}
 

@@ -25,7 +25,7 @@ namespace DetectiveGPT
 	public class GameStateManager : MonoBehaviourPunCallbacks, IOnEventCallback
 	{
 		public PlayerSpawnPosition spawner;
-		public int purpetatorId, victimId;
+		public int purpetatorId, victimId, convictedId;
 		const string state_PlayerProp = "GameState";
 		public SetMaterial corpse;
 		

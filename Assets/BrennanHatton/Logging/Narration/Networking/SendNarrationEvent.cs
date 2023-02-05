@@ -35,16 +35,16 @@ namespace BrennanHatton.Networking.Events
 				if(gpt.interactions.Count != interactionsNumber)
 				{
 					Debug.Log("Preparing to send narration");
-					SendNarrationEventPlz(gpt.interactions[gpt.interactions.Count-1].generatedText);
+					SendNarrationEventPlz(gpt.interactions[gpt.interactions.Count-1].generatedText, gpt.interactions.Count-1);
 			    	
 					interactionsNumber = gpt.interactions.Count;
 				}
 			}
 		}
 			
-		public void SendNarrationEventPlz(string text)
+		public void SendNarrationEventPlz(string text, int id)
 		{
-			SendNarrationEventManager.SendNarrationTextEvent(text);
+			SendNarrationEventManager.SendNarrationTextEvent(text, id);
 		}
 	
 	}

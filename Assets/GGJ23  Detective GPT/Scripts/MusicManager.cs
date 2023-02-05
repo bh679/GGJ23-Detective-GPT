@@ -26,6 +26,7 @@ namespace DetectiveGPT
 		
 		void Play(AudioTrack track)
 		{
+			source.Stop();
 			source.clip = track.clip;
 			source.Play();
 			sourceExt.VolumeFadeToTarget(track.fadeInLength, volume + track.relativeVolume);
@@ -74,14 +75,21 @@ namespace DetectiveGPT
 		{
 			Play(win);
 			
-			StartCoroutine(playAfterFinished(end));
+			StartCoroutine(playAfteClipLength(win.clip, end));
 		}
 			
 		public void Lose()
 		{
 			Play(lose);
 			
-			StartCoroutine(playAfterFinished(end));
+			StartCoroutine(playAfteClipLength(lose.clip, end));
+		}
+		
+		IEnumerator playAfteClipLength(AudioClip clip, AudioTrack track)
+		{
+			yield return new WaitForSeconds(clip.length);
+				
+			Play(track);
 		}
 		
 		IEnumerator playAfterFinished(AudioTrack track)

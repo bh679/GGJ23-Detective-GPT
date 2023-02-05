@@ -58,6 +58,7 @@ namespace BrennanHatton.AI
 		public TextAsset apiKeytext;
 
 		string apiKey = null;
+		public bool IsRunning{ get{  return isRunning; } }
 		bool isRunning = false;
 		
 		public InteractionEvent onExecute = new InteractionEvent(), onResults = new InteractionEvent();

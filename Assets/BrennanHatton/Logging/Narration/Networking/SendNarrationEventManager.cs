@@ -26,10 +26,10 @@ namespace BrennanHatton.Networking.Events
 		}
 		
 		
-		public static void SendNarrationTextEvent(string narration)
+		public static void SendNarrationTextEvent(string narration, int id)
 		{
 			Debug.Log("SendNarrationTextEvent id:" + PhotonNetwork.LocalPlayer.ActorNumber + " narration:" + narration);
-			object[] content = new object[] { PhotonNetwork.LocalPlayer.ActorNumber, narration }; // Array contains the target position and the IDs of the selected units
+			object[] content = new object[] { PhotonNetwork.LocalPlayer.ActorNumber, narration, id }; // Array contains the target position and the IDs of the selected units
 			RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All }; // You would have to set the Receivers to All in order to receive this event on the local client as well
 			PhotonNetwork.RaiseEvent(NarrationTextEventCode, content, raiseEventOptions, SendOptions.SendReliable);
 		}
