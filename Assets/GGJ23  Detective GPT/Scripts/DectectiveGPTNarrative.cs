@@ -53,7 +53,7 @@ namespace DetectiveGPT
 			promptStr += FixesPrompt.text + "\n\n";
 			promptStr += AcionItemPrompt.text + "\n\n";
 			
-			Debug.Log(promptStr);
+			//Debug.Log(promptStr);
 			
 			gpt.Execute(promptStr);
 		}

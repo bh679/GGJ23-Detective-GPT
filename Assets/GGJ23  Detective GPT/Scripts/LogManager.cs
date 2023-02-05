@@ -19,6 +19,7 @@ namespace BrennanHatton.Logging
 		
 		public void Enable(bool enabled)
 		{
+			
 			for(int i =0 ;i < logActions.Length; i++)
 				logActions[i].enabled = enabled;
 			
@@ -36,6 +37,16 @@ namespace BrennanHatton.Logging
 		
 			for(int i =0 ;i < gameObjects.Length; i++)
 				gameObjects[i].SetActive(enabled);
+			
+		}
+		
+		public void Point()
+		{
+			if(pointLoggers[0].enabled == true)
+			{
+				for(int i =0 ;i < pointLoggers.Length; i++)
+					pointLoggers[i].CheckNow();
+			}
 			
 		}
 		
@@ -107,7 +118,15 @@ namespace BrennanHatton.Logging
 					logGroups[i].Enable(true);
 			}
 			
-			
+		}
+		
+		public void CheckForPoint()
+		{
+			for(int i = 0; i < logGroups.Length; i++)
+			{
+				if(logGroups[i].questionType == QuetionData.Point)
+					logGroups[i].Point();
+			}
 		}
 	}
 }

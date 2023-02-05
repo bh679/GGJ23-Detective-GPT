@@ -59,6 +59,18 @@ namespace BrennanHatton.Logging
 			}
 			timer+=Time.deltaTime;
 		}
+		
+		public void CheckNow()
+		{
+			Debug.Log(_lastColliderHit.gameObject.name);
+			
+			if(usePhotonName)
+				log.who = PhotonNetwork.LocalPlayer.NickName;
+			log.what = _lastColliderHit.gameObject.name;
+			log.when = Time.time.ToString();;
+							
+			ActionLogger.Instance.Add(log);
+		}
 
 		bool lastDetective = false;
 		private void ObjectHit(Collider colliderHit) {
@@ -83,20 +95,22 @@ namespace BrennanHatton.Logging
 				{
 					BrennanHatton.Networking.NetworkPlayer player = colliderHit.GetComponentInParent<BrennanHatton.Networking.NetworkPlayer>();
 				
-					if((player != null && lastPlayer != player))
+					if(player != null)
 					{
-						timer = 0;
-						lastDetective = false;
-						lastPlayer = player;
-						if(usePhotonName)
-							log.who = PhotonNetwork.LocalPlayer.NickName;
-						log.what = player.PhotonView.Owner.NickName;
-						log.when = Time.time.ToString();;
-						
-						ActionLogger.Instance.Add(log);
+						if(lastPlayer != player)
+						{
+							timer = 0;
+							lastDetective = false;
+							lastPlayer = player;
+							if(usePhotonName)
+								log.who = PhotonNetwork.LocalPlayer.NickName;
+							log.what = player.PhotonView.Owner.NickName;
+							log.when = Time.time.ToString();;
+							
+							ActionLogger.Instance.Add(log);
+						}
 					}
 				}
-				
 				
 				RemovePreviousHitObject();
 			}

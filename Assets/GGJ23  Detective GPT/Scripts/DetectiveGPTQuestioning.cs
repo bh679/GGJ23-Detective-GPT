@@ -208,6 +208,8 @@ namespace DetectiveGPT
 			
 			musicManager.AskQuestion();
 			
+			logManager.CheckForPoint();
+			
 			if(question)
 				SubmitAnswer(logger.output,PhotonNetwork.LocalPlayer.NickName);
 			else
