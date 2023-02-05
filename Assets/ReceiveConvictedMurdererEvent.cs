@@ -91,7 +91,7 @@ namespace DetectiveGPT
 			for(int i = 0; i < PhotonNetwork.PlayerList.Length; i++)
 			{
 				if(PhotonNetwork.PlayerList[i].NickName.ToLower().Contains(color.ToLower()))
-					return i;
+					return PhotonNetwork.PlayerList[i].ActorNumber;
 					
 				Debug.Log(PhotonNetwork.PlayerList[i].NickName.ToLower() + "does not contain " + color);
 			}
