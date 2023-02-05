@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 51998
+  controlID: 60069
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,10 +46,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 637
+    x: 306
     y: 73
-    width: 410
-    height: 519
+    width: 805
+    height: 393
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 410, y: 498}
+  m_TargetSize: {x: 805, y: 372}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -68,17 +68,17 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
-  m_Stats: 0
+  m_Stats: 1
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -205
-    m_HBaseRangeMax: 205
-    m_VBaseRangeMin: -249
-    m_VBaseRangeMax: 249
+    m_HBaseRangeMin: -402.5
+    m_HBaseRangeMax: 402.5
+    m_VBaseRangeMin: -186
+    m_VBaseRangeMax: 186
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -96,23 +96,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 410
-      height: 498
+      width: 805
+      height: 372
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 205, y: 249}
+    m_Translation: {x: 402.5, y: 186}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -205
-      y: -249
-      width: 410
-      height: 498
+      x: -402.5
+      y: -186
+      width: 805
+      height: 372
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 410, y: 519}
+  m_LastWindowPixelSize: {x: 805, y: 393}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -137,12 +137,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1049
+    width: 1113
     height: 947
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 51999
+  controlID: 60070
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,12 +163,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1049
-    height: 540
+    width: 1113
+    height: 414
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 52000
+  controlID: 60071
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,8 +186,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 319
-    height: 540
+    width: 178
+    height: 414
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
@@ -218,8 +218,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 318
-    height: 519
+    width: 177
+    height: 393
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -227,9 +227,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9424f2ff1aa9feff1ea9feff22a9feffeeacfeff08aefeff88b6feffd6b7feffd8b7feffccb9feffa4c0feffe28affffe88affffec8affff008dffff068dffff0a8dffff1a8dffff1e8dffff28fbfffff4ffffff60610000c862000062640000f0640000ac6e0000b27800006c800000ac800000a4850000708a0000f08a0000248b000062a600000ea8000058ac0000a4b9000048cd0000d8d10000
+      m_SelectedIDs: 6c8000000a690000
+      m_LastClickedID: 26890
+      m_ExpandedIDs: f8dbf0ff9424f2ffd09bfeff1aa9feff1ea9feff22a9feffeeacfeff08aefeff88b6feffd6b7feffd8b7feffccb9feffa4c0feffe28affffe88affffec8affff008dffff068dffff0a8dffff1a8dffff1e8dffff28fbfffff4ffffff60610000c862000062640000fa760000b2780000ac800000a4850000708a0000f08a0000248b000036a5000062a600000ea80000f2af0000a4b90000feca0000d8d1000022d2000082a252004e515300
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -268,10 +268,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 319
+    x: 178
     y: 0
-    width: 318
-    height: 540
+    width: 128
+    height: 414
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 8}
@@ -301,10 +301,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 319
+    x: 178
     y: 73
-    width: 316
-    height: 519
+    width: 126
+    height: 393
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -326,7 +326,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: -141, y: 149}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffsetDelta: {x: 15, y: 0}
       snapCorner: 1
       id: unity-grid-and-snap-toolbar
       index: 1
@@ -380,9 +380,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -111, y: 86}
+      snapOffset: {x: -111, y: -123}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 3
       id: Orientation
       index: 0
       layout: 4
@@ -539,9 +539,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -9.603103, y: 0.054847002, z: -18.743734}
+    m_Target: {x: -10.209733, y: 2.2213023, z: -21.50476}
     speed: 2
-    m_Value: {x: -9.603103, y: 0.054847002, z: -18.743734}
+    m_Value: {x: -10.209733, y: 2.2213023, z: -21.50476}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -588,13 +588,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.15302283, y: 0.8417126, z: -0.4298061, w: -0.291115}
+    m_Target: {x: -0.15803456, y: 0.15114056, z: -0.020574918, w: -0.9762914}
     speed: 2
-    m_Value: {x: -0.15291755, y: 0.84113353, z: -0.4295104, w: -0.2909147}
+    m_Value: {x: -0.15803456, y: 0.15114057, z: -0.02057492, w: -0.9762914}
   m_Size:
-    m_Target: 2.3130302
+    m_Target: 1.3385648
     speed: 2
-    m_Value: 2.3130302
+    m_Value: 1.3385648
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -663,10 +663,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 637
+    x: 306
     y: 0
-    width: 412
-    height: 540
+    width: 807
+    height: 414
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 2}
@@ -684,23 +684,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: FGConsole
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 540
-    width: 1049
-    height: 407
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
+    y: 414
+    width: 1113
+    height: 533
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 1
+  m_Selected: 2
   m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
@@ -724,9 +724,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 613
-    width: 1048
-    height: 386
+    y: 687
+    width: 1467
+    height: 312
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -742,7 +742,7 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 0
+    m_SearchArea: 1
     m_Folders:
     - Assets
     m_Globs: []
@@ -812,8 +812,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7629f9ff
-    m_LastClickedInstanceID: -448138
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -864,9 +864,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 613
-    width: 1048
-    height: 386
+    y: 351
+    width: 554
+    height: 648
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -893,9 +893,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 321
-    width: 833
-    height: 678
+    y: 487
+    width: 1112
+    height: 512
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -915,9 +915,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1049
+    x: 1113
     y: 0
-    width: 871
+    width: 807
     height: 947
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -932,8 +932,11 @@ MonoBehaviour:
   - {fileID: 22}
   - {fileID: 23}
   - {fileID: 24}
+  - {fileID: 25}
+  - {fileID: 26}
+  - {fileID: 27}
   m_Selected: 0
-  m_LastSelected: 3
+  m_LastSelected: 11
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -955,9 +958,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1049
+    x: 1113
     y: 73
-    width: 870
+    width: 806
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -966,7 +969,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 372
+    m_CachedPref: -372
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -996,9 +999,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1049
+    x: 1675
     y: 73
-    width: 870
+    width: 244
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1007,123 +1010,123 @@ MonoBehaviour:
   targetAsset: {fileID: 11500000, guid: 3764438cee2cf3943a6fb971b044482c, type: 3}
   targetAssetGuid: 3764438cee2cf3943a6fb971b044482c
   textEditor:
-    scrollPosition: {x: 0, y: 910}
+    scrollPosition: {x: 0, y: 1803}
     scrollPositionLine: 47
     scrollPositionOffset: 17
     searchString: 
     caretPosition:
-      virtualColumn: 12
-      column: 12
-      characterIndex: 3
-      line: 77
+      virtualColumn: 13
+      column: 13
+      characterIndex: 4
+      line: 58
     _selectionStartPosition:
-      virtualColumn: 20
-      column: 20
-      characterIndex: 20
-      line: 77
-    hasSelection: 1
+      virtualColumn: 0
+      column: 0
+      characterIndex: 0
+      line: 0
+    hasSelection: 0
     hiddenLinesStart: 
     hiddenLinesCount: 
     lineNumbersOffset: 0
     yLineOffsets:
-    - 19
     - 38
-    - 57
-    - 76
     - 95
     - 114
-    - 133
     - 152
-    - 171
     - 190
-    - 209
     - 228
     - 247
-    - 266
-    - 285
     - 304
     - 323
-    - 342
-    - 361
     - 380
     - 399
-    - 418
     - 437
     - 456
     - 475
-    - 494
-    - 513
-    - 532
     - 551
     - 570
-    - 589
     - 608
     - 627
     - 646
-    - 665
-    - 684
     - 703
-    - 722
-    - 741
     - 760
-    - 779
-    - 798
     - 817
-    - 836
     - 855
     - 874
-    - 893
     - 912
     - 931
     - 950
     - 969
     - 988
-    - 1007
     - 1026
     - 1045
-    - 1064
-    - 1083
-    - 1102
     - 1121
     - 1140
     - 1159
-    - 1178
     - 1197
     - 1216
-    - 1235
-    - 1254
-    - 1273
     - 1292
     - 1311
     - 1330
-    - 1349
-    - 1368
-    - 1387
     - 1406
     - 1425
-    - 1444
-    - 1463
     - 1482
     - 1501
-    - 1520
-    - 1539
-    - 1558
-    - 1577
     - 1615
     - 1634
-    - 1653
-    - 1672
-    - 1691
-    - 1710
     - 1729
-    - 1748
-    - 1767
     - 1786
+    - 1843
+    - 1900
+    - 2014
+    - 2033
+    - 2090
+    - 2109
+    - 2166
+    - 2204
+    - 2299
+    - 2356
+    - 2375
+    - 2394
+    - 2413
+    - 2432
+    - 2489
+    - 2508
+    - 2546
+    - 2641
+    - 2660
+    - 2736
+    - 2755
+    - 2812
+    - 2831
+    - 2850
+    - 2869
+    - 2907
+    - 2926
+    - 2945
+    - 2983
+    - 3002
+    - 3040
+    - 3078
+    - 3116
+    - 3135
+    - 3230
+    - 3249
+    - 3420
+    - 3458
+    - 3477
+    - 3496
+    - 3534
+    - 3553
+    - 3572
+    - 3591
+    - 3610
+    - 3629
     codeViewRect:
       serializedVersion: 2
       x: 36
-      y: 910
-      width: 814
+      y: 1803
+      width: 188
       height: 865
     tokenTooltip: {fileID: 0}
     argumentsHint: {fileID: 0}
@@ -1337,9 +1340,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1049
+    x: 555
     y: 73
-    width: 870
+    width: 1364
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1353,16 +1356,16 @@ MonoBehaviour:
     scrollPositionOffset: 17
     searchString: 
     caretPosition:
-      virtualColumn: 29
-      column: 29
-      characterIndex: 17
-      line: 37
+      virtualColumn: 66
+      column: 66
+      characterIndex: 54
+      line: 33
     _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
+      virtualColumn: 50
+      column: 50
+      characterIndex: 38
+      line: 33
+    hasSelection: 1
     hiddenLinesStart: 
     hiddenLinesCount: 
     lineNumbersOffset: 0
@@ -1399,6 +1402,7 @@ MonoBehaviour:
     - 570
     - 589
     - 608
+    - 627
     - 646
     - 665
     - 684
@@ -1415,6 +1419,7 @@ MonoBehaviour:
     - 893
     - 912
     - 931
+    - 950
     - 969
     - 988
     - 1007
@@ -1428,8 +1433,8 @@ MonoBehaviour:
       serializedVersion: 2
       x: 36
       y: 245
-      width: 814
-      height: 865
+      width: 1308
+      height: 880
     tokenTooltip: {fileID: 0}
     argumentsHint: {fileID: 0}
     collapsedRegions: []
@@ -4825,9 +4830,9 @@ MonoBehaviour:
     m_Tooltip: in GGJ23  Detective GPT/Scripts/
   m_Pos:
     serializedVersion: 2
-    x: 1049
+    x: 838
     y: 73
-    width: 870
+    width: 1081
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -4836,8 +4841,8 @@ MonoBehaviour:
   targetAsset: {fileID: 11500000, guid: a88fde5f7072c874882d5d64ce8ff8ab, type: 3}
   targetAssetGuid: a88fde5f7072c874882d5d64ce8ff8ab
   textEditor:
-    scrollPosition: {x: 0, y: 890}
-    scrollPositionLine: 45
+    scrollPosition: {x: 0, y: 1213}
+    scrollPositionLine: 63
     scrollPositionOffset: 16
     searchString: 
     caretPosition:
@@ -4851,232 +4856,6 @@ MonoBehaviour:
       characterIndex: 0
       line: 0
     hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets:
-    - 19
-    - 38
-    - 57
-    - 76
-    - 95
-    - 114
-    - 133
-    - 152
-    - 171
-    - 190
-    - 209
-    - 228
-    - 247
-    - 266
-    - 285
-    - 304
-    - 323
-    - 342
-    - 361
-    - 380
-    - 399
-    - 418
-    - 437
-    - 456
-    - 475
-    - 494
-    - 513
-    - 532
-    - 551
-    - 570
-    - 589
-    - 627
-    - 646
-    - 665
-    - 684
-    - 703
-    - 722
-    - 741
-    - 760
-    - 779
-    - 798
-    - 817
-    - 836
-    - 855
-    - 874
-    - 893
-    - 912
-    - 931
-    - 950
-    - 969
-    - 988
-    - 1007
-    - 1026
-    - 1045
-    - 1064
-    - 1083
-    - 1102
-    - 1121
-    - 1140
-    - 1159
-    - 1178
-    - 1197
-    - 1216
-    - 1254
-    - 1292
-    - 1311
-    - 1330
-    - 1349
-    - 1368
-    - 1387
-    - 1406
-    - 1425
-    - 1444
-    - 1463
-    - 1482
-    - 1501
-    - 1520
-    - 1539
-    - 1558
-    - 1577
-    - 1596
-    - 1615
-    - 1634
-    - 1653
-    - 1672
-    - 1691
-    - 1710
-    - 1729
-    - 1748
-    - 1767
-    - 1786
-    - 1805
-    - 1824
-    - 1843
-    - 1862
-    - 1881
-    - 1900
-    - 1919
-    - 1938
-    - 1957
-    - 1976
-    - 1995
-    - 2014
-    - 2052
-    - 2071
-    - 2090
-    - 2109
-    - 2128
-    - 2147
-    - 2166
-    - 2185
-    - 2204
-    - 2223
-    - 2242
-    - 2261
-    - 2280
-    - 2299
-    - 2318
-    - 2337
-    - 2356
-    - 2375
-    - 2394
-    - 2413
-    - 2432
-    - 2451
-    - 2470
-    - 2489
-    - 2508
-    - 2527
-    - 2546
-    - 2565
-    - 2584
-    - 2603
-    - 2641
-    - 2660
-    - 2698
-    - 2717
-    - 2736
-    - 2755
-    - 2774
-    - 2793
-    - 2812
-    - 2831
-    - 2850
-    - 2869
-    - 2888
-    - 2907
-    - 2926
-    - 2945
-    - 2964
-    - 2983
-    - 3002
-    - 3021
-    - 3040
-    - 3059
-    - 3078
-    - 3097
-    - 3116
-    - 3135
-    - 3154
-    - 3192
-    - 3211
-    - 3230
-    - 3249
-    - 3268
-    - 3287
-    - 3306
-    codeViewRect:
-      serializedVersion: 2
-      x: 46
-      y: 890
-      width: 804
-      height: 865
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &22
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: DetectiveGPTQuestioning.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in GGJ23  Detective GPT/Scripts/
-  m_Pos:
-    serializedVersion: 2
-    x: 1049
-    y: 73
-    width: 870
-    height: 926
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  targetAsset: {fileID: 11500000, guid: 669da827a2e2186408c6db47208d333a, type: 3}
-  targetAssetGuid: 669da827a2e2186408c6db47208d333a
-  textEditor:
-    scrollPosition: {x: 0, y: 3930}
-    scrollPositionLine: 201
-    scrollPositionOffset: 16
-    searchString: 
-    caretPosition:
-      virtualColumn: 12
-      column: 12
-      characterIndex: 3
-      line: 223
-    _selectionStartPosition:
-      virtualColumn: 34
-      column: 34
-      characterIndex: 25
-      line: 223
-    hasSelection: 1
     hiddenLinesStart: 
     hiddenLinesCount: 
     lineNumbersOffset: 0
@@ -5144,9 +4923,7 @@ MonoBehaviour:
     - 1159
     - 1178
     - 1197
-    - 1216
     - 1235
-    - 1254
     - 1273
     - 1292
     - 1311
@@ -5176,6 +4953,7 @@ MonoBehaviour:
     - 1767
     - 1786
     - 1805
+    - 1824
     - 1843
     - 1862
     - 1881
@@ -5217,13 +4995,13 @@ MonoBehaviour:
     - 2565
     - 2584
     - 2603
-    - 2622
     - 2641
     - 2660
     - 2679
     - 2698
     - 2717
     - 2736
+    - 2755
     - 2774
     - 2793
     - 2812
@@ -5232,6 +5010,7 @@ MonoBehaviour:
     - 2869
     - 2888
     - 2907
+    - 2926
     - 2945
     - 2964
     - 2983
@@ -5241,220 +5020,446 @@ MonoBehaviour:
     - 3059
     - 3078
     - 3097
+    - 3116
     - 3135
     - 3154
     - 3173
     - 3192
     - 3211
     - 3230
+    codeViewRect:
+      serializedVersion: 2
+      x: 46
+      y: 1213
+      width: 1015
+      height: 865
+    tokenTooltip: {fileID: 0}
+    argumentsHint: {fileID: 0}
+    collapsedRegions: []
+--- !u!114 &22
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: DetectiveGPTQuestioning.cs
+    m_Image: {fileID: 0}
+    m_Tooltip: in GGJ23  Detective GPT/Scripts/
+  m_Pos:
+    serializedVersion: 2
+    x: 1696
+    y: 73
+    width: 223
+    height: 926
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  targetAsset: {fileID: 11500000, guid: 669da827a2e2186408c6db47208d333a, type: 3}
+  targetAssetGuid: 669da827a2e2186408c6db47208d333a
+  textEditor:
+    scrollPosition: {x: 0, y: 13768}
+    scrollPositionLine: 280
+    scrollPositionOffset: 12
+    searchString: 
+    caretPosition:
+      virtualColumn: 0
+      column: 0
+      characterIndex: 0
+      line: 293
+    _selectionStartPosition:
+      virtualColumn: 0
+      column: 0
+      characterIndex: 0
+      line: 292
+    hasSelection: 1
+    hiddenLinesStart: 
+    hiddenLinesCount: 
+    lineNumbersOffset: 0
+    yLineOffsets:
+    - 38
+    - 95
+    - 133
+    - 171
+    - 209
+    - 247
+    - 304
+    - 361
+    - 380
+    - 418
+    - 437
+    - 475
+    - 494
+    - 532
+    - 570
+    - 608
+    - 646
+    - 684
+    - 703
+    - 722
+    - 760
+    - 779
+    - 836
+    - 893
+    - 950
+    - 1007
+    - 1064
+    - 1121
+    - 1178
+    - 1235
+    - 1292
+    - 1349
+    - 1406
+    - 1444
+    - 1501
+    - 1539
+    - 1558
+    - 1577
+    - 1615
+    - 1653
+    - 1672
+    - 1748
+    - 1805
+    - 1900
+    - 1995
+    - 2052
+    - 2071
+    - 2090
+    - 2128
+    - 2185
+    - 2204
+    - 2261
+    - 2337
+    - 2356
+    - 2375
+    - 2432
+    - 2451
+    - 2546
+    - 2622
+    - 2679
+    - 2698
+    - 2793
+    - 2812
+    - 2850
+    - 2907
+    - 2964
+    - 2983
+    - 3002
+    - 3078
+    - 3097
+    - 3154
+    - 3211
+    - 3230
     - 3249
-    - 3268
-    - 3287
     - 3306
     - 3325
-    - 3344
-    - 3363
-    - 3382
     - 3401
-    - 3420
-    - 3439
-    - 3458
     - 3477
     - 3496
-    - 3515
     - 3534
     - 3553
     - 3572
-    - 3591
-    - 3610
-    - 3629
-    - 3648
     - 3667
     - 3686
-    - 3705
-    - 3724
     - 3743
     - 3762
-    - 3781
-    - 3819
     - 3838
     - 3857
-    - 3876
-    - 3895
-    - 3914
-    - 3952
     - 3971
     - 3990
     - 4009
-    - 4028
     - 4047
     - 4066
     - 4085
     - 4104
-    - 4123
-    - 4142
-    - 4161
-    - 4180
-    - 4199
-    - 4218
-    - 4237
     - 4256
     - 4275
-    - 4294
-    - 4313
     - 4332
-    - 4351
-    - 4370
     - 4389
-    - 4408
-    - 4427
-    - 4465
-    - 4484
+    - 4446
     - 4503
-    - 4522
-    - 4541
-    - 4560
-    - 4598
-    - 4617
+    - 4579
     - 4636
-    - 4655
-    - 4674
     - 4693
-    - 4712
-    - 4731
-    - 4750
-    - 4788
+    - 4769
     - 4807
-    - 4826
-    - 4845
     - 4864
-    - 4883
-    - 4902
-    - 4921
-    - 4940
     - 4959
     - 4978
-    - 4997
-    - 5016
-    - 5035
     - 5054
-    - 5073
-    - 5092
     - 5111
     - 5130
-    - 5149
     - 5168
     - 5187
-    - 5206
     - 5225
     - 5244
-    - 5263
-    - 5282
-    - 5301
-    - 5320
     - 5339
-    - 5358
-    - 5377
-    - 5396
-    - 5415
-    - 5434
     - 5453
-    - 5472
-    - 5491
-    - 5510
-    - 5529
-    - 5548
     - 5567
-    - 5586
-    - 5624
-    - 5643
     - 5662
     - 5681
     - 5700
-    - 5719
-    - 5738
-    - 5757
     - 5776
-    - 5814
+    - 5795
     - 5833
     - 5852
-    - 5871
-    - 5890
-    - 5909
     - 5928
-    - 5947
-    - 5966
     - 5985
     - 6004
-    - 6023
     - 6061
     - 6080
     - 6099
-    - 6118
-    - 6137
     - 6156
     - 6175
-    - 6194
-    - 6213
     - 6232
     - 6251
-    - 6270
-    - 6289
-    - 6308
-    - 6327
     - 6346
-    - 6365
     - 6384
-    - 6403
-    - 6422
-    - 6441
     - 6460
-    - 6479
-    - 6498
     - 6517
-    - 6536
     - 6555
-    - 6574
-    - 6593
-    - 6612
     - 6631
-    - 6650
     - 6669
-    - 6707
-    - 6726
-    - 6745
-    - 6764
-    - 6783
-    - 6802
     - 6821
-    - 6840
-    - 6859
-    - 6878
-    - 6897
-    - 6916
     - 6935
-    - 6954
     - 6973
-    - 6992
     - 7011
-    - 7030
-    - 7049
-    - 7068
-    - 7087
     - 7106
     - 7125
-    - 7144
     - 7163
     - 7182
-    - 7201
-    - 7220
-    - 7239
-    - 7258
+    - 7334
+    - 7429
+    - 7448
+    - 7467
+    - 7581
+    - 7657
+    - 7752
+    - 7771
+    - 7790
+    - 7904
+    - 7923
+    - 7961
+    - 7999
+    - 8018
+    - 8094
+    - 8113
+    - 8208
+    - 8265
+    - 8284
+    - 8322
+    - 8341
+    - 8360
+    - 8417
+    - 8436
+    - 8512
+    - 8531
+    - 8588
+    - 8607
+    - 8626
+    - 8702
+    - 8721
+    - 8759
+    - 8854
+    - 8949
+    - 8987
+    - 9025
+    - 9101
+    - 9120
+    - 9158
+    - 9196
+    - 9310
+    - 9329
+    - 9367
+    - 9424
+    - 9519
+    - 9538
+    - 9557
+    - 9576
+    - 9671
+    - 9690
+    - 9823
+    - 9918
+    - 9937
+    - 10013
+    - 10051
+    - 10146
+    - 10165
+    - 10222
+    - 10241
+    - 10317
+    - 10336
+    - 10374
+    - 10488
+    - 10526
+    - 10564
+    - 10621
+    - 10640
+    - 10659
+    - 10773
+    - 10792
+    - 10849
+    - 10868
+    - 10925
+    - 10963
+    - 11058
+    - 11077
+    - 11210
+    - 11248
+    - 11286
+    - 11305
+    - 11419
+    - 11438
+    - 11552
+    - 11571
+    - 11647
+    - 11666
+    - 11685
+    - 11761
+    - 11780
+    - 11875
+    - 11894
+    - 12027
+    - 12122
+    - 12141
+    - 12179
+    - 12198
+    - 12274
+    - 12293
+    - 12369
+    - 12407
+    - 12445
+    - 12502
+    - 12578
+    - 12616
+    - 12730
+    - 12749
+    - 12787
+    - 12844
+    - 12882
+    - 12939
+    - 12958
+    - 12977
+    - 13053
+    - 13072
+    - 13110
+    - 13224
+    - 13262
+    - 13300
+    - 13338
+    - 13395
+    - 13414
+    - 13452
+    - 13490
+    - 13585
+    - 13604
+    - 13623
+    - 13680
+    - 13699
+    - 13756
+    - 13775
+    - 13813
+    - 13946
+    - 13984
+    - 14022
+    - 14250
+    - 14269
+    - 14345
+    - 14364
+    - 14383
+    - 14459
+    - 14478
+    - 14554
+    - 14573
+    - 14706
+    - 14725
+    - 14820
+    - 14877
+    - 14934
+    - 15010
+    - 15105
+    - 15143
+    - 15238
+    - 15333
+    - 15371
+    - 15409
+    - 15542
+    - 15561
+    - 15656
+    - 15713
+    - 15770
+    - 15808
+    - 15903
+    - 15979
+    - 16074
+    - 16150
+    - 16264
+    - 16302
+    - 16340
+    - 16359
+    - 16378
+    - 16397
+    - 16473
+    - 16492
+    - 16568
+    - 16587
+    - 16663
+    - 16720
+    - 16739
+    - 16758
+    - 16796
+    - 16815
+    - 16834
+    - 16891
+    - 16910
+    - 16986
+    - 17005
+    - 17100
+    - 17119
+    - 17328
+    - 17366
+    - 17404
+    - 17461
+    - 17480
+    - 17499
+    - 17575
+    - 17613
+    - 17632
+    - 17651
+    - 17727
+    - 17746
+    - 17803
+    - 17822
+    - 17917
+    - 17936
+    - 18050
+    - 18088
+    - 18126
+    - 18240
+    - 18278
+    - 18392
+    - 18430
+    - 18449
+    - 18468
+    - 18506
+    - 18525
+    - 18544
+    - 18563
+    - 18582
     codeViewRect:
       serializedVersion: 2
       x: 46
-      y: 3930
-      width: 804
+      y: 13768
+      width: 157
       height: 865
     tokenTooltip: {fileID: 0}
     argumentsHint: {fileID: 0}
@@ -5719,6 +5724,1165 @@ MonoBehaviour:
       y: 453
       width: 814
       height: 880
+    tokenTooltip: {fileID: 0}
+    argumentsHint: {fileID: 0}
+    collapsedRegions: []
+--- !u!114 &25
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: NetworkPlayerSpawner.cs
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 504
+    y: 73
+    width: 1415
+    height: 926
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  targetAsset: {fileID: 11500000, guid: 97c4e9fe743894a43aba83085607d6a0, type: 3}
+  targetAssetGuid: 97c4e9fe743894a43aba83085607d6a0
+  textEditor:
+    scrollPosition: {x: 0, y: 36}
+    scrollPositionLine: 1
+    scrollPositionOffset: 17
+    searchString: GetPlayerByActor
+    caretPosition:
+      virtualColumn: 45
+      column: 45
+      characterIndex: 39
+      line: 12
+    _selectionStartPosition:
+      virtualColumn: 0
+      column: 0
+      characterIndex: 0
+      line: 0
+    hasSelection: 0
+    hiddenLinesStart: 
+    hiddenLinesCount: 
+    lineNumbersOffset: 0
+    yLineOffsets:
+    - 19
+    - 38
+    - 57
+    - 76
+    - 95
+    - 114
+    - 133
+    - 152
+    - 171
+    - 190
+    - 209
+    - 228
+    - 247
+    - 266
+    - 285
+    - 304
+    - 323
+    - 342
+    - 361
+    - 380
+    - 399
+    - 418
+    - 437
+    - 456
+    - 475
+    - 494
+    - 513
+    - 532
+    - 551
+    - 570
+    - 589
+    - 608
+    - 627
+    - 646
+    - 665
+    - 684
+    - 703
+    - 722
+    - 741
+    - 760
+    - 779
+    - 798
+    - 817
+    - 836
+    - 855
+    - 874
+    - 893
+    - 912
+    codeViewRect:
+      serializedVersion: 2
+      x: 36
+      y: 36
+      width: 1359
+      height: 880
+    tokenTooltip: {fileID: 0}
+    argumentsHint: {fileID: 0}
+    collapsedRegions: []
+--- !u!114 &26
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: PlayerTeleport.cs
+    m_Image: {fileID: 0}
+    m_Tooltip: in BNG Framework/Scripts/Core/
+  m_Pos:
+    serializedVersion: 2
+    x: 1113
+    y: 73
+    width: 806
+    height: 926
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  targetAsset: {fileID: 11500000, guid: 855d72b36bb9d904e80e3c9e587f3d8c, type: 3}
+  targetAssetGuid: 855d72b36bb9d904e80e3c9e587f3d8c
+  textEditor:
+    scrollPosition: {x: 0, y: 13646}
+    scrollPositionLine: 625
+    scrollPositionOffset: 4
+    searchString: 
+    caretPosition:
+      virtualColumn: 89
+      column: 89
+      characterIndex: 89
+      line: 634
+    _selectionStartPosition:
+      virtualColumn: 0
+      column: 0
+      characterIndex: 0
+      line: 0
+    hasSelection: 0
+    hiddenLinesStart: 
+    hiddenLinesCount: 
+    lineNumbersOffset: 0
+    yLineOffsets:
+    - 19
+    - 38
+    - 57
+    - 76
+    - 95
+    - 114
+    - 133
+    - 152
+    - 171
+    - 190
+    - 209
+    - 228
+    - 247
+    - 266
+    - 285
+    - 304
+    - 323
+    - 342
+    - 361
+    - 399
+    - 418
+    - 437
+    - 456
+    - 475
+    - 494
+    - 532
+    - 551
+    - 570
+    - 608
+    - 627
+    - 646
+    - 684
+    - 703
+    - 722
+    - 741
+    - 798
+    - 817
+    - 836
+    - 855
+    - 893
+    - 912
+    - 931
+    - 969
+    - 988
+    - 1007
+    - 1045
+    - 1064
+    - 1083
+    - 1121
+    - 1140
+    - 1159
+    - 1178
+    - 1197
+    - 1216
+    - 1235
+    - 1273
+    - 1292
+    - 1311
+    - 1330
+    - 1368
+    - 1387
+    - 1406
+    - 1425
+    - 1463
+    - 1482
+    - 1501
+    - 1539
+    - 1558
+    - 1577
+    - 1615
+    - 1634
+    - 1653
+    - 1672
+    - 1691
+    - 1710
+    - 1729
+    - 1767
+    - 1786
+    - 1805
+    - 1843
+    - 1862
+    - 1881
+    - 1900
+    - 1919
+    - 1938
+    - 1957
+    - 1976
+    - 1995
+    - 2014
+    - 2033
+    - 2090
+    - 2109
+    - 2128
+    - 2147
+    - 2204
+    - 2242
+    - 2261
+    - 2280
+    - 2299
+    - 2318
+    - 2356
+    - 2375
+    - 2394
+    - 2413
+    - 2451
+    - 2470
+    - 2489
+    - 2508
+    - 2546
+    - 2565
+    - 2584
+    - 2603
+    - 2641
+    - 2660
+    - 2679
+    - 2698
+    - 2717
+    - 2736
+    - 2755
+    - 2793
+    - 2812
+    - 2831
+    - 2869
+    - 2888
+    - 2907
+    - 2926
+    - 2964
+    - 2983
+    - 3002
+    - 3021
+    - 3040
+    - 3059
+    - 3078
+    - 3097
+    - 3116
+    - 3135
+    - 3154
+    - 3173
+    - 3192
+    - 3211
+    - 3230
+    - 3249
+    - 3268
+    - 3287
+    - 3306
+    - 3325
+    - 3344
+    - 3363
+    - 3382
+    - 3401
+    - 3420
+    - 3439
+    - 3477
+    - 3496
+    - 3515
+    - 3534
+    - 3553
+    - 3572
+    - 3591
+    - 3610
+    - 3629
+    - 3648
+    - 3667
+    - 3686
+    - 3705
+    - 3743
+    - 3781
+    - 3819
+    - 3838
+    - 3857
+    - 3876
+    - 3895
+    - 3914
+    - 3933
+    - 3952
+    - 3971
+    - 3990
+    - 4009
+    - 4028
+    - 4047
+    - 4066
+    - 4085
+    - 4104
+    - 4123
+    - 4142
+    - 4161
+    - 4180
+    - 4199
+    - 4218
+    - 4237
+    - 4256
+    - 4275
+    - 4294
+    - 4313
+    - 4332
+    - 4351
+    - 4389
+    - 4427
+    - 4465
+    - 4484
+    - 4503
+    - 4522
+    - 4541
+    - 4560
+    - 4579
+    - 4598
+    - 4617
+    - 4636
+    - 4655
+    - 4674
+    - 4693
+    - 4712
+    - 4731
+    - 4750
+    - 4769
+    - 4788
+    - 4807
+    - 4826
+    - 4845
+    - 4864
+    - 4883
+    - 4902
+    - 4921
+    - 4940
+    - 4959
+    - 4978
+    - 4997
+    - 5016
+    - 5035
+    - 5054
+    - 5073
+    - 5092
+    - 5111
+    - 5130
+    - 5168
+    - 5187
+    - 5206
+    - 5225
+    - 5244
+    - 5263
+    - 5282
+    - 5301
+    - 5320
+    - 5339
+    - 5358
+    - 5377
+    - 5396
+    - 5415
+    - 5434
+    - 5453
+    - 5472
+    - 5491
+    - 5510
+    - 5529
+    - 5548
+    - 5567
+    - 5586
+    - 5605
+    - 5624
+    - 5643
+    - 5662
+    - 5681
+    - 5700
+    - 5719
+    - 5738
+    - 5757
+    - 5776
+    - 5795
+    - 5814
+    - 5833
+    - 5852
+    - 5871
+    - 5890
+    - 5928
+    - 5947
+    - 5966
+    - 5985
+    - 6004
+    - 6023
+    - 6042
+    - 6061
+    - 6080
+    - 6099
+    - 6118
+    - 6137
+    - 6156
+    - 6175
+    - 6194
+    - 6213
+    - 6232
+    - 6251
+    - 6270
+    - 6289
+    - 6308
+    - 6327
+    - 6346
+    - 6384
+    - 6403
+    - 6441
+    - 6460
+    - 6498
+    - 6517
+    - 6536
+    - 6555
+    - 6574
+    - 6593
+    - 6612
+    - 6631
+    - 6650
+    - 6669
+    - 6707
+    - 6745
+    - 6764
+    - 6783
+    - 6802
+    - 6821
+    - 6840
+    - 6878
+    - 6897
+    - 6916
+    - 6935
+    - 6954
+    - 6992
+    - 7030
+    - 7049
+    - 7087
+    - 7125
+    - 7144
+    - 7163
+    - 7182
+    - 7201
+    - 7239
+    - 7296
+    - 7315
+    - 7334
+    - 7372
+    - 7391
+    - 7410
+    - 7448
+    - 7486
+    - 7505
+    - 7524
+    - 7543
+    - 7562
+    - 7581
+    - 7600
+    - 7638
+    - 7657
+    - 7695
+    - 7714
+    - 7733
+    - 7752
+    - 7771
+    - 7790
+    - 7809
+    - 7828
+    - 7847
+    - 7866
+    - 7885
+    - 7904
+    - 7923
+    - 7942
+    - 7961
+    - 7980
+    - 7999
+    - 8018
+    - 8037
+    - 8056
+    - 8075
+    - 8113
+    - 8132
+    - 8151
+    - 8170
+    - 8189
+    - 8208
+    - 8227
+    - 8246
+    - 8265
+    - 8284
+    - 8303
+    - 8322
+    - 8341
+    - 8360
+    - 8379
+    - 8398
+    - 8417
+    - 8436
+    - 8455
+    - 8474
+    - 8493
+    - 8512
+    - 8531
+    - 8550
+    - 8569
+    - 8588
+    - 8607
+    - 8645
+    - 8664
+    - 8702
+    - 8721
+    - 8740
+    - 8778
+    - 8797
+    - 8854
+    - 8873
+    - 8892
+    - 8911
+    - 8930
+    - 8949
+    - 8987
+    - 9044
+    - 9063
+    - 9082
+    - 9101
+    - 9120
+    - 9139
+    - 9177
+    - 9196
+    - 9215
+    - 9234
+    - 9253
+    - 9272
+    - 9291
+    - 9310
+    - 9329
+    - 9348
+    - 9367
+    - 9386
+    - 9405
+    - 9424
+    - 9443
+    - 9462
+    - 9481
+    - 9500
+    - 9519
+    - 9538
+    - 9557
+    - 9576
+    - 9595
+    - 9614
+    - 9633
+    - 9652
+    - 9671
+    - 9690
+    - 9709
+    - 9728
+    - 9747
+    - 9785
+    - 9804
+    - 9823
+    - 9842
+    - 9880
+    - 9899
+    - 9918
+    - 9937
+    - 9975
+    - 9994
+    - 10013
+    - 10051
+    - 10070
+    - 10089
+    - 10108
+    - 10165
+    - 10184
+    - 10222
+    - 10279
+    - 10298
+    - 10336
+    - 10374
+    - 10393
+    - 10412
+    - 10450
+    - 10469
+    - 10488
+    - 10507
+    - 10526
+    - 10564
+    - 10583
+    - 10602
+    - 10621
+    - 10640
+    - 10659
+    - 10678
+    - 10697
+    - 10716
+    - 10735
+    - 10754
+    - 10773
+    - 10792
+    - 10811
+    - 10830
+    - 10868
+    - 10887
+    - 10906
+    - 10925
+    - 10963
+    - 10982
+    - 11020
+    - 11039
+    - 11077
+    - 11096
+    - 11134
+    - 11153
+    - 11172
+    - 11191
+    - 11210
+    - 11229
+    - 11248
+    - 11267
+    - 11286
+    - 11305
+    - 11343
+    - 11362
+    - 11381
+    - 11400
+    - 11419
+    - 11438
+    - 11457
+    - 11476
+    - 11495
+    - 11514
+    - 11533
+    - 11571
+    - 11590
+    - 11609
+    - 11628
+    - 11647
+    - 11666
+    - 11685
+    - 11704
+    - 11723
+    - 11742
+    - 11761
+    - 11780
+    - 11799
+    - 11818
+    - 11837
+    - 11856
+    - 11875
+    - 11894
+    - 11913
+    - 11932
+    - 11951
+    - 11970
+    - 11989
+    - 12008
+    - 12027
+    - 12046
+    - 12065
+    - 12084
+    - 12103
+    - 12122
+    - 12141
+    - 12160
+    - 12179
+    - 12198
+    - 12217
+    - 12236
+    - 12255
+    - 12274
+    - 12293
+    - 12331
+    - 12350
+    - 12369
+    - 12388
+    - 12407
+    - 12426
+    - 12445
+    - 12464
+    - 12483
+    - 12502
+    - 12521
+    - 12540
+    - 12559
+    - 12578
+    - 12597
+    - 12616
+    - 12635
+    - 12654
+    - 12692
+    - 12730
+    - 12749
+    - 12768
+    - 12787
+    - 12806
+    - 12825
+    - 12863
+    - 12882
+    - 12901
+    - 12920
+    - 12939
+    - 12958
+    - 12977
+    - 13015
+    - 13034
+    - 13053
+    - 13072
+    - 13091
+    - 13110
+    - 13129
+    - 13148
+    - 13167
+    - 13186
+    - 13205
+    - 13243
+    - 13262
+    - 13281
+    - 13300
+    - 13319
+    - 13338
+    - 13357
+    - 13376
+    - 13395
+    - 13414
+    - 13433
+    - 13452
+    - 13471
+    - 13490
+    - 13509
+    - 13528
+    - 13547
+    - 13566
+    - 13585
+    - 13604
+    - 13642
+    - 13661
+    - 13680
+    - 13699
+    - 13718
+    - 13756
+    - 13775
+    - 13794
+    - 13813
+    - 13832
+    - 13870
+    - 13889
+    - 13908
+    - 13927
+    - 13946
+    - 13965
+    - 13984
+    - 14003
+    - 14022
+    - 14041
+    - 14060
+    - 14079
+    - 14098
+    - 14117
+    - 14136
+    - 14174
+    - 14212
+    - 14231
+    - 14250
+    - 14269
+    - 14288
+    - 14326
+    - 14345
+    - 14364
+    - 14383
+    - 14402
+    - 14421
+    - 14440
+    - 14478
+    - 14497
+    - 14516
+    - 14535
+    - 14554
+    - 14611
+    - 14630
+    - 14649
+    - 14668
+    - 14687
+    - 14706
+    - 14744
+    - 14763
+    - 14782
+    - 14820
+    - 14839
+    - 14858
+    - 14877
+    - 14896
+    - 14915
+    - 14934
+    - 14953
+    - 14972
+    - 14991
+    - 15010
+    - 15029
+    - 15048
+    - 15067
+    - 15086
+    - 15124
+    - 15143
+    - 15162
+    - 15181
+    - 15200
+    - 15219
+    - 15238
+    - 15257
+    - 15276
+    - 15295
+    - 15314
+    - 15333
+    - 15352
+    - 15371
+    - 15390
+    - 15409
+    - 15428
+    - 15447
+    - 15466
+    - 15485
+    - 15504
+    - 15542
+    - 15561
+    - 15580
+    - 15599
+    - 15637
+    - 15656
+    - 15675
+    - 15694
+    - 15713
+    codeViewRect:
+      serializedVersion: 2
+      x: 46
+      y: 13646
+      width: 740
+      height: 865
+    tokenTooltip: {fileID: 0}
+    argumentsHint: {fileID: 0}
+    collapsedRegions: []
+--- !u!114 &27
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: PlayerSetActive.cs
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1113
+    y: 73
+    width: 806
+    height: 926
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  targetAsset: {fileID: 11500000, guid: 5fcef117f62fd6a4ea9dc7f4b19520de, type: 3}
+  targetAssetGuid: 5fcef117f62fd6a4ea9dc7f4b19520de
+  textEditor:
+    scrollPosition: {x: 0, y: 3105}
+    scrollPositionLine: 151
+    scrollPositionOffset: 27
+    searchString: 
+    caretPosition:
+      virtualColumn: 12
+      column: 12
+      characterIndex: 3
+      line: 170
+    _selectionStartPosition:
+      virtualColumn: 117
+      column: 117
+      characterIndex: 108
+      line: 170
+    hasSelection: 1
+    hiddenLinesStart: 
+    hiddenLinesCount: 
+    lineNumbersOffset: 0
+    yLineOffsets:
+    - 19
+    - 38
+    - 57
+    - 76
+    - 95
+    - 114
+    - 133
+    - 152
+    - 171
+    - 190
+    - 209
+    - 228
+    - 247
+    - 266
+    - 285
+    - 304
+    - 323
+    - 342
+    - 361
+    - 380
+    - 399
+    - 437
+    - 456
+    - 494
+    - 513
+    - 532
+    - 551
+    - 570
+    - 589
+    - 608
+    - 627
+    - 646
+    - 665
+    - 684
+    - 703
+    - 722
+    - 741
+    - 760
+    - 779
+    - 798
+    - 817
+    - 836
+    - 855
+    - 874
+    - 893
+    - 912
+    - 931
+    - 950
+    - 988
+    - 1007
+    - 1045
+    - 1064
+    - 1121
+    - 1140
+    - 1159
+    - 1178
+    - 1197
+    - 1216
+    - 1235
+    - 1254
+    - 1273
+    - 1292
+    - 1311
+    - 1330
+    - 1349
+    - 1368
+    - 1387
+    - 1406
+    - 1425
+    - 1444
+    - 1463
+    - 1482
+    - 1501
+    - 1520
+    - 1539
+    - 1558
+    - 1577
+    - 1596
+    - 1615
+    - 1634
+    - 1653
+    - 1672
+    - 1691
+    - 1710
+    - 1729
+    - 1748
+    - 1767
+    - 1786
+    - 1805
+    - 1824
+    - 1843
+    - 1862
+    - 1881
+    - 1900
+    - 1938
+    - 1957
+    - 1976
+    - 1995
+    - 2014
+    - 2033
+    - 2052
+    - 2071
+    - 2090
+    - 2109
+    - 2128
+    - 2147
+    - 2166
+    - 2185
+    - 2204
+    - 2223
+    - 2242
+    - 2261
+    - 2280
+    - 2299
+    - 2318
+    - 2337
+    - 2356
+    - 2413
+    - 2432
+    - 2451
+    - 2470
+    - 2489
+    - 2508
+    - 2527
+    - 2546
+    - 2565
+    - 2584
+    - 2603
+    - 2622
+    - 2660
+    - 2679
+    - 2698
+    - 2717
+    - 2736
+    - 2755
+    - 2774
+    - 2793
+    - 2812
+    - 2831
+    - 2850
+    - 2869
+    - 2888
+    - 2907
+    - 2926
+    - 2945
+    - 2964
+    - 2983
+    - 3021
+    - 3040
+    - 3059
+    - 3078
+    - 3116
+    - 3135
+    - 3154
+    - 3192
+    - 3211
+    - 3268
+    - 3287
+    - 3306
+    - 3325
+    - 3344
+    - 3363
+    - 3382
+    - 3401
+    - 3420
+    - 3439
+    - 3458
+    - 3477
+    - 3515
+    - 3534
+    - 3572
+    - 3591
+    - 3610
+    - 3629
+    - 3648
+    - 3667
+    - 3705
+    - 3724
+    - 3743
+    - 3762
+    - 3781
+    - 3800
+    - 3819
+    - 3838
+    - 3857
+    - 3876
+    - 3895
+    - 3914
+    - 3933
+    - 3952
+    - 3971
+    - 3990
+    - 4009
+    - 4028
+    - 4047
+    - 4066
+    - 4085
+    - 4104
+    - 4123
+    - 4142
+    - 4161
+    - 4180
+    - 4199
+    - 4218
+    - 4237
+    - 4256
+    - 4275
+    - 4313
+    - 4332
+    - 4351
+    - 4370
+    - 4389
+    - 4408
+    codeViewRect:
+      serializedVersion: 2
+      x: 46
+      y: 3105
+      width: 740
+      height: 865
     tokenTooltip: {fileID: 0}
     argumentsHint: {fileID: 0}
     collapsedRegions: []
