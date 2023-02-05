@@ -13,6 +13,7 @@ namespace DetectiveGPT
 		public GameObject Detective;
 		public string response;
 		public DetectiveGPTNarrator DGPT;
+		public AudioSource boomSource;
 		
 		void Reset()
 		{
@@ -40,6 +41,7 @@ namespace DetectiveGPT
 				return;
 			}
 			
+			boomSource.Play();
 			this.transform.position = new Vector3(
 				conviceted.position.x, 
 				transform.position.y,
