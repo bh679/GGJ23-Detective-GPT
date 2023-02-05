@@ -51,7 +51,7 @@ namespace BrennanHatton.Logging
 				
 				lastState = state;
 			}
-	    }
+		}
 	    
 		
 	}
