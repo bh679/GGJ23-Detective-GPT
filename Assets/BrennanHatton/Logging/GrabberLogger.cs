@@ -57,23 +57,29 @@ namespace BrennanHatton.Logging
 			log.importance = importance;
 			ActionLogger.Instance.Add(log);
 		}
-
+		
+		VelocityLogs highesetMinLog ;
 		public void OnRelease(Grabbable grabbable) {
-
+			
+			getVelocityLog();
+			
 			LogAction log = new LogAction(true);
 			if(usePhotonName)
 				log.who = PhotonNetwork.LocalPlayer.NickName;
-			log.did =  getVelocityLog();
+			log.did =  highesetMinLog.log;
 			log.what = grabbable.name;
 			log.with = handSide;
-			log.importance = importance;
+			log.importance = (Importance)((int)importance + (int)highesetMinLog.relativeImportance);
 			
 			ActionLogger.Instance.Add(log);
 		}
 	    
-		string getVelocityLog()
+		VelocityLogs getVelocityLog()
 		{
-			VelocityLogs highesetMinLog = null;
+			Debug.Log(grabber.GetGrabberAveragedVelocity().magnitude);
+			
+			float magVelocity = grabber.GetGrabberAveragedVelocity().magnitude;
+			highesetMinLog = null;
 			
 			for(int i = 0;i < velocityLogs.Count; i++)
 			{
@@ -81,15 +87,12 @@ namespace BrennanHatton.Logging
 					highesetMinLog = velocityLogs[i];
 				else
 				{
-					if(highesetMinLog.velocityMin < velocityLogs[i].velocityMin)
+					if(magVelocity >= velocityLogs[i].velocityMin && highesetMinLog.velocityMin < velocityLogs[i].velocityMin)
 						highesetMinLog = velocityLogs[i];
 				}
 			}
 			
-			if(highesetMinLog != null)
-				return highesetMinLog.log;
-				
-			return "";
+			return highesetMinLog;
 		}
 	}
 	
