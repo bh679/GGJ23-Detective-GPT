@@ -47,7 +47,7 @@ namespace DetectiveGPT
 				int id = (int)data[0];
 				string narration = (string)data[1];
 				int genId = (int)data[2];
-				Debug.Log("Murderer Color: " + narration);
+				Debug.Log("<color=red>Murderer Color: " + narration+"</color>");
 				
 				if(idsToPlay == genId)
 				{
@@ -61,6 +61,7 @@ namespace DetectiveGPT
 		
 		string GetColor(string response)
 		{
+			Debug.Log(response);
 			for(int i = 0; i < colorNames.colorNames.Length; i++)
 			{
 				if(response.Contains(colorNames.colorNames[i]))
@@ -74,6 +75,7 @@ namespace DetectiveGPT
 		
 		int calcId(string color)
 		{
+			Debug.Log(color);
 			if(color == "")
 				return -1;
 				

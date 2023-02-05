@@ -28,7 +28,7 @@ namespace DetectiveGPT
 		{
 			
 			Transform conviceted;
-			if(gameManager.convictedId > 0)
+			if(gameManager.convictedId >= 0)
 			{
 				conviceted = NetworkPlayerSpawner.GetPlayerByActor(gameManager.convictedId).transform;
 			}else if(response.Contains(DGPT.GetNarratorName()))
