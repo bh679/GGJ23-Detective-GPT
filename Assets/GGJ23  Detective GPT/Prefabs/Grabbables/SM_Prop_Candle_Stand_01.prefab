@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1440156735123575696}
   - component: {fileID: 6185121326120235135}
   - component: {fileID: 7897103140060485043}
+  - component: {fileID: 6992203597197498863}
   - component: {fileID: 7204163955053872634}
   - component: {fileID: 628251621809484781}
   m_Layer: 0
@@ -228,6 +229,26 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 1
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &6992203597197498863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7298131663462175039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821cfb7c3eab3764bbb57d764c6e26d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoggerText: {fileID: 0}
+  Damage: 25
+  ColliderRigidbody: {fileID: 0}
+  MinForce: 5
+  LastRelativeVelocity: 0
+  LastDamageForce: 0
+  TakeCollisionDamage: 0
+  CollisionDamage: 5
 --- !u!114 &7204163955053872634
 MonoBehaviour:
   m_ObjectHideFlags: 0

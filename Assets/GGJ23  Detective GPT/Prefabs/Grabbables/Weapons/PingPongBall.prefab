@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 3240656083934868549}
   - component: {fileID: 3240656083934868548}
   - component: {fileID: 3240656083934868546}
+  - component: {fileID: 6222539945917551929}
   - component: {fileID: 3240656083934868545}
   - component: {fileID: 7879061366282684619}
   - component: {fileID: 7879061366282684616}
@@ -351,6 +352,26 @@ MonoBehaviour:
   VibrateFrequency: 0.3
   VibrateAmplitude: 0.1
   VibrateDuration: 0.1
+--- !u!114 &6222539945917551929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3240656083934868927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821cfb7c3eab3764bbb57d764c6e26d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoggerText: {fileID: 0}
+  Damage: 0.1
+  ColliderRigidbody: {fileID: 0}
+  MinForce: 5
+  LastRelativeVelocity: 0
+  LastDamageForce: 0
+  TakeCollisionDamage: 0
+  CollisionDamage: 5
 --- !u!114 &3240656083934868545
 MonoBehaviour:
   m_ObjectHideFlags: 0
