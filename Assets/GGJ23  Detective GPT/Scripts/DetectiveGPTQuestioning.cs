@@ -137,8 +137,11 @@ namespace DetectiveGPT
 				voteQids = new int[questionsToAsk];
 				
 				for(int i = 0; i < voteQids.Length; i++)
+					voteQids[i] = -1;
+				
+				for(int i = 0; i < voteQids.Length; i++)
 				{
-					while(CheckVoteQuestionDuplicate(voteQids, voteQids[i]) == false && i < voteQuestions.Length)
+					while(CheckVoteQuestionDuplicate(voteQids, voteQids[i], i) && i < voteQuestions.Length)
 						voteQids[i] = Random.Range(0,voteQuestions.Length);
 				}
 				
@@ -155,11 +158,14 @@ namespace DetectiveGPT
 				voteQuestionsToAsk[i] = voteQuestions[voteQids[i]];
 		}
 		
-		public bool CheckVoteQuestionDuplicate(int[] voteQids, int voteId)
+		public bool CheckVoteQuestionDuplicate(int[] voteQids, int voteId, int exception)
 		{
+			if(voteId == -1)
+				return true;
+			
 			for(int i = 0; i < voteQids.Length; i++)
 			{
-				if(voteQids[i] == voteId)
+				if(i != exception && voteQids[i] == voteId)
 					return true;
 			}
 			return false;
