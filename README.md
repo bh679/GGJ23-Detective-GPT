@@ -23,13 +23,13 @@ The all-knowing ai is always right, even when its wrong.<br />
  - [Google Drive: Oculus Quest](https://drive.google.com/drive/folders/17-44bLbAO07-fiLAMy23haLw4sVXC7Qr?usp=share_link)
  - [Google Drive: Windows Flatscreen](https://drive.google.com/drive/folders/1LtNZRFeVXAgcSXCVRS1q5PRxwngAcVJZ?usp=share_link)
 
+[Join the discord](https://discord.gg/bd8KrVhd8u) to coordinate a game with the developers and community  <br />
+
 ## Links
 Website: https://tim-randall.github.io/detectiveGPTweb/ <br />
 GGJ Page: https://globalgamejam.org/2023/games/detective-gpt-3<br />
 SideQuest: (coming soon)<br />
-
-Join the discord for the latest  <br />
-https://discord.gg/bd8KrVhd8u
+Discord: https://discord.gg/bd8KrVhd8u  <br />
 
 
 #### Team Pet Vacuum 
