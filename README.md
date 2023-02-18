@@ -1,22 +1,22 @@
 # GGJ: Detective GPT
 
-A VR murder mystery party game where the AI decides who is guilty!
+A VR murder mystery party game where the AI decides who is guilty!< br />
 
-The game starts when one of the players murder another.
-In comes, Detective Gerald-Patrick-Thompson!
+The game starts when one of the players murder another.< br />
+In comes, Detective Gerald-Patrick-Thompson!< br />
 
-Provide the ai DetectiveGPT evidence to point it towards who to convict.
-Who will be convicted for the dastardly crime? 
-What will the punishment be?
-Can you get it to the right conclusion?
-Can you get away with murder?
-Can you get away with frame someone else?
-How will the story unfold? 
+Provide the ai DetectiveGPT evidence to point it towards who to convict.< br />
+Who will be convicted for the dastardly crime? < br />
+What will the punishment be?< br />
+Can you get it to the right conclusion?< br />
+Can you get away with murder?< br />
+Can you get away with frame someone else?< br />
+How will the story unfold? < br />
 
 
-The Detective GPT uses its AI detective work to create a story based on the information it has collected, to deduce who it thinks the murder is, and how it all unfolded.
-The all-knowing ai is always right, even when its wrong.
-"Yours are human brains, and thus prone to human error! I am only capable of hilarious robot error!"
+The Detective GPT uses its AI detective work to create a story based on the information it has collected, to deduce who it thinks the murder is, and how it all unfolded.< br />
+The all-knowing ai is always right, even when its wrong.< br />
+<i>"Yours are human brains, and thus prone to human error! I am only capable of hilarious robot error!"</i>< br />
 
 # Download Now
 
