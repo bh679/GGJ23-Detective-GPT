@@ -20,7 +20,7 @@ The all-knowing ai is always right, even when its wrong.
 
 # Download Now
 
- - [Google Drive: Oculus Quest])(https://drive.google.com/drive/folders/17-44bLbAO07-fiLAMy23haLw4sVXC7Qr?usp=share_link)
+ - [Google Drive: Oculus Quest](https://drive.google.com/drive/folders/17-44bLbAO07-fiLAMy23haLw4sVXC7Qr?usp=share_link)
  - [Google Drive: Windows Flatscreen](https://drive.google.com/drive/folders/1LtNZRFeVXAgcSXCVRS1q5PRxwngAcVJZ?usp=share_link)
 
 ## Links
