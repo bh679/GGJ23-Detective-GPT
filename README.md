@@ -47,6 +47,7 @@ Discord: https://discord.gg/bd8KrVhd8u  <br />
 [BNG VRIF 1.82](https://assetstore.unity.com/packages/templates/systems/vr-interaction-framework-161066) (paid - import yourself)   <br />
 [Synty Polygon Horror Mansion](https://assetstore.unity.com/packages/3d/environments/fantasy/polygon-horror-mansion-low-poly-3d-art-by-synty-213346) (paid) <br />
 [RPG Character Mecanim Animation Pack](https://assetstore.unity.com/packages/3d/animations/rpg-character-mecanim-animation-pack-63772) (paid) <br />
+[Mobile Controller Package](https://assetstore.unity.com/packages/templates/systems/mobile-controller-system-161533) (paid) <br />
 
 ## Setup Guide <br />
  - Clone
