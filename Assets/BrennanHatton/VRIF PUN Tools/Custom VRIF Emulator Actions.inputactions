@@ -229,6 +229,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4e9b896f-8a69-4502-8583-89295c66d798",
+                    "path": "<Touchscreen>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "303ba459-8e39-4319-83aa-284b12b6a36a",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",

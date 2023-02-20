@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Pet Vacuum
-  productName: Dectective GPT
+  companyName: PetVacuum
+  productName: DectectiveGPT
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -213,7 +213,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.PetVacuum.DectectiveGPT
-    Standalone: com.Pet-Vacuum.Dectective-GPT
+    Standalone: com.PetVacuum.DectectiveGPT
   buildNumber:
     Standalone: 0
     iPhone: 0
@@ -861,7 +861,7 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
-    Build: 0
+    Build: 1
     Collab: 0
     Game Performance: 0
     Purchasing: 0
