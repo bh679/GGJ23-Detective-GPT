@@ -15,17 +15,18 @@
         "com.unity.textmeshpro": "3.0.6",
         "com.unity.inputsystem": "1.4.4"
       },
-      "hash": "59583ca48b1f27a8c993d994990902373b0a5b34"
+      "hash": "348105118411b0bfd020c8421c548c8b9d78d929"
     },
     "com.brennanhatton.vrifpunassets": {
       "version": "https://github.com/bh679/VRIF-PUN-Assets.git",
       "depth": 0,
       "source": "git",
       "dependencies": {
+        "com.unity.textmeshpro": "3.0.6",
         "com.unity.inputsystem": "1.4.4",
         "com.brennanhatton.unitytools": "1:0:1"
       },
-      "hash": "7b441d19190e642f97917e09caf7ab71ef2e3f11"
+      "hash": "dd13a49b410c6109eafbd28720f24d985931b642"
     },
     "com.unity.collab-proxy": {
       "version": "1.17.7",
