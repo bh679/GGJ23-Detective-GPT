@@ -38,7 +38,7 @@ Discord: https://discord.gg/bd8KrVhd8u  <br />
 - [Tim Christie](https://github.com/timchristie)  - Comic and Game Designer<br />
 - [Clemant Chan](https://github.com/ClemAuschan)  - All Things Sound<br />
 - Tim Randall  - Website Developer<br />
-- Dale Keaveny - Music Composor<br />
+- [Dale Keaveny](https://github.com/LordBeardsteak) - Music Composor<br />
 
 # Open Source Project Guide
 
