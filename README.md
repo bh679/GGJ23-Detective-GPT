@@ -52,16 +52,16 @@ Discord: https://discord.gg/bd8KrVhd8u  <br />
  - Clone
  - Rename ``BNG Framework1`` to ``BNG Framework``
  - Open in Unity (Enter safe mode)
- - Import [BNG VRIF](https://assetstore.unity.com/packages/templates/systems/vr-interaction-framework-161066) (without project settings, yes to updating scripts)
+ - Import [BNG VRIF](https://assetstore.unity.com/packages/templates/systems/vr-interaction-framework-161066) (without project settings, yes to updating scripts - [Docs](https://wiki.beardedninjagames.com/en/Overview/InstallationGuide))
  - Get private keys ([open ai](https://beta.openai.com/account/api-keys), [ms cog](https://azure.microsoft.com/en-us/products/cognitive-services/text-to-speech/), [PUN](https://www.photonengine.com/pun))
  - Import [Synty Polygon Horror Mansion](https://assetstore.unity.com/packages/3d/environments/fantasy/polygon-horror-mansion-low-poly-3d-art-by-synty-213346)
  - Import [RPG Character Mecanim Animation Pack](https://assetstore.unity.com/packages/3d/animations/rpg-character-mecanim-animation-pack-63772) (but wihtout the Editor folder or ``Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack\Demo Elements\Code\GUIControls.cs``) <br />
-1 - Import VRIF
+
 After cloning the project and opening in Unity, you may be asked to 'enter safe mode'. Do this.
 You will need to import VRIF.
 Make sure you have purchased VRIF from the link above
 
-Before importing VRIF - consider importing it to a new project and following the guide for updating a new project on [the VRIF documentation](https://wiki.beardedninjagames.com/en/Overview/InstallationGuide) to avoid replacing system settings, or unselect "Project Settings" in the Import Unity pacakge manager.
+Before importing VRIF - consider importing it to a new project and following the guide for updating a new project on  to avoid replacing system settings, or unselect "Project Settings" in the Import Unity pacakge manager.
 
 To import VRIF, do so from the assets store page or
 Windows -> Package Manager -> Packages: My Assets -> Search: `VRIF` -> Download/Import (make sure you are using version 1.82)
@@ -71,8 +71,13 @@ Script Update Consent
  - Yes, for these and other files that might be found later. 
 
 2 - Get Private Keys
-Make sure you have the Photon Ap ID in the
-Setup Discord Webhooks. Either contact Brennan to download private Unity Package, or follow instructions in Assets/BrennanHatton/Discord/README.txt to create your own
+If youre part of the team, get this from Brennan.
+If youre setting up your own copy,
+ - [Setup Photon App ID](https://doc.photonengine.com/realtime/current/getting-started/obtain-your-app-id#:~:text=The%20App%20ID%20is%20a,ID%20just%20click%20on%20it.)
+ - Discord WebHooks
+ - [OpenAI GPT API](https://platform.openai.com/account/api-keys)
+ - [Microsoft Cognative Services](https://azure.microsoft.com/en-us/products/cognitive-services/text-to-speech/) (for text to speech)
+ 
 
 ## Pre-Installed <br />
 [PUN 2](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922) (free)<br />
