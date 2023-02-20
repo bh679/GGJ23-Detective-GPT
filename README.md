@@ -33,12 +33,12 @@ Discord: https://discord.gg/bd8KrVhd8u  <br />
 
 
 #### Team Pet Vacuum 
-- Brennan Hatton  <br />
-- Wilson Taylor  <br />
-- Tim Christie  <br />
-- Clemant Chan  <br />
-- Tim Randall  <br />
-- Dale Keaveny <br />
+- [Brennan Hatton](https://github.com/bh679) - Project Lead, Lead Programmer & Implmentation  <br />
+- Wilson Taylor  - Narrative Lead & DectiveGPT Voice Actor<br />
+- Tim Christie  - Comic and Game Designer<br />
+- Clemant Chan  - All Things Sound<br />
+- Tim Randall  - Website Developer<br />
+- Dale Keaveny - Music Composor<br />
 
 # Open Source Project Guide
 
