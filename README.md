@@ -1,27 +1,35 @@
 # GGJ: Detective GPT
 
-This year for the global game jam, we are building a Social AI-VR  Game called Detective GPT. 
+A VR murder mystery party game where the AI decides who is guilty!<br />
 
-A VR murder mystery party game where players must interact with an AI detective in order to influence them closer to, or further away from, the truth of who committed a dastardly crime! 
+The game starts when one of the players murder another.<br />
+In comes, Detective Gerald-Patrick-Thompson!<br />
 
-Players are placed in a room together with lots of objects to play with, and the game starts when one player killers another.
+Provide the ai DetectiveGPT evidence to point it towards who to convict.<br />
+Who will be convicted for the dastardly crime? <br />
+What will the punishment be?<br />
+Can you get it to the right conclusion?<br />
+Can you get away with murder?<br />
+Can you get away with frame someone else?<br />
+How will the story unfold? <br />
 
-In comes, Detective Gerald Patrick Thompson!
 
-Without text or speech but by handing the detective items. It's not whether you know who's innocent, it's whether it does!
+The Detective GPT uses its AI detective work to create a story based on the information it has collected, to deduce who it thinks the murder is, and how it all unfolded.<br />
+The all-knowing ai is always right, even when its wrong.<br />
+<i>"Yours are human brains, and thus prone to human error! I am only capable of hilarious robot error!"</i><br />
 
-The Detective GPT uses its AI detective work to create a story based on the information it has collected, to deduce who it thinks the murder is, and how it all unfolded.
+# Download Now
 
-"Yours are human brains, and thus prone to human error! I am only capable of hilarious robot error!"
+ - [Google Drive: Oculus Quest](https://drive.google.com/drive/folders/17-44bLbAO07-fiLAMy23haLw4sVXC7Qr?usp=share_link)
+ - [Google Drive: Windows Flatscreen](https://drive.google.com/drive/folders/1LtNZRFeVXAgcSXCVRS1q5PRxwngAcVJZ?usp=share_link)
 
-Can you get it to the right conclusion? Can you get away with murder? How will the story unfold? Detective GPT will get to the "root" of it!
+[Join the discord](https://discord.gg/bd8KrVhd8u) to coordinate a game with the developers and community  <br />
 
-Website: https://tim-randall.github.io/detectiveGPTweb/
-GGJ Page: https://globalgamejam.org/2023/games/detective-gpt-3
-SideQuest: (coming soon)
-
-Join the discord for the latest  <br />
-https://discord.gg/bd8KrVhd8u
+## Links
+Website: https://tim-randall.github.io/detectiveGPTweb/ <br />
+GGJ Page: https://globalgamejam.org/2023/games/detective-gpt-3<br />
+SideQuest: (coming soon)<br />
+Discord: https://discord.gg/bd8KrVhd8u  <br />
 
 
 #### Team Pet Vacuum 
@@ -31,6 +39,8 @@ https://discord.gg/bd8KrVhd8u
 - Clemant Chan  <br />
 - Tim Randall  <br />
 - Dale Keaveny <br />
+
+# Open Source Project Guide
 
 ## Requirements:
 [Unity 2021.3.16/f1](https://unity3d.com/unity/whats-new/2021.3.15) (free)   <br />
