@@ -73,7 +73,7 @@ Script Update Consent
 2 - Get Private Keys
 If youre part of the team, get the unity pack for the below from Brennan.
 If youre setting up your own copy, you'll need:
- - Photon App ID[guide](https://doc.photonengine.com/realtime/current/getting-started/obtain-your-app-id#:~:text=The%20App%20ID%20is%20a,ID%20just%20click%20on%20it.)
+ - Photon App ID ([guide](https://doc.photonengine.com/realtime/current/getting-started/obtain-your-app-id#:~:text=The%20App%20ID%20is%20a,ID%20just%20click%20on%20it.))
  - Discord WebHooks ([guide](https://discordjs.guide/popular-topics/webhooks.html#what-is-a-webhook))
  - [OpenAI GPT API](https://platform.openai.com/account/api-keys)
  - [Microsoft Cognative Services](https://azure.microsoft.com/en-us/products/cognitive-services/text-to-speech/) (for text to speech)
