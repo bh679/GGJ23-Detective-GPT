@@ -80,9 +80,9 @@ If youre setting up your own copy, you'll need:
  
 
 ## Pre-Installed <br />
-[PUN 2](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922) (free)<br />
-[Photon Voice 2 - 2.50](https://assetstore.unity.com/packages/tools/audio/photon-voice-2-130518) (free)<br />
-[BrennanHattons Unity Toools](https://github.com/bh679/Unity-Tools) <br />
+[PUN 2](https://assetstore.unity.com/packages/tools/network/pun-2-free-119922)<br />
+[Photon Voice 2 - 2.50](https://assetstore.unity.com/packages/tools/audio/photon-voice-2-130518)<br />
+[BrennanHattons Unity Tools](https://github.com/bh679/Unity-Tools) <br />
 [BrennanHatton PUN Discord Webhook](https://github.com/bh679/Unity-Discord-Webhook-Tools) <br />
 [BrennanHatton VRIF PUN Assets](https://github.com/bh679/VRIF-PUN-Assets) <br />
 [Parallel Sync 1.5.1](https://github.com/VeriorPies/ParrelSync)  <br />
