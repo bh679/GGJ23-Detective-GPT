@@ -37,7 +37,7 @@ Discord: https://discord.gg/bd8KrVhd8u  <br />
 - Wilson Taylor  - Narrative Lead & DectiveGPT Voice Actor<br />
 - [Tim Christie](https://github.com/timchristie)  - Comic and Game Designer<br />
 - [Clemant Chan](https://github.com/ClemAuschan)  - All Things Sound<br />
-- Tim Randall  - Website Developer<br />
+- [Tim Randall](https://github.com/Tim-Randall)  - Website Developer<br />
 - [Dale Keaveny](https://github.com/LordBeardsteak) - Music Composor<br />
 
 # Open Source Project Guide
