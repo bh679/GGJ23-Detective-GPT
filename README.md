@@ -5,7 +5,7 @@ A VR murder mystery party game where the AI decides who is guilty!<br />
 The game starts when one of the players murder another.<br />
 In comes, Detective Gerald-Patrick-Thompson!<br />
 
-Provide the ai DetectiveGPT evidence to point it towards who to convict.<br />
+Provide the ai evidence to point it towards who to convict.<br />
 Who will be convicted for the dastardly crime? <br />
 What will the punishment be?<br />
 Can you get it to the right conclusion?<br />
