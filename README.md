@@ -69,7 +69,7 @@ Windows -> Package Manager -> Packages: My Assets -> Search: `VRIF` -> Download/
 Script Update Consent
  - Yes, for these and other files that might be found later. 
 
-2 - Get Private Keys
+### Get Private Keys
 If youre part of the team, get the unity pack for the below from Brennan.
 If youre setting up your own copy, you'll need:
  - Photon App ID ([guide](https://doc.photonengine.com/realtime/current/getting-started/obtain-your-app-id#:~:text=The%20App%20ID%20is%20a,ID%20just%20click%20on%20it.))
