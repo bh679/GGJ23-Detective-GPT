@@ -56,7 +56,7 @@ Discord: https://discord.gg/bd8KrVhd8u  <br />
  - Import [Synty Polygon Horror Mansion](https://assetstore.unity.com/packages/3d/environments/fantasy/polygon-horror-mansion-low-poly-3d-art-by-synty-213346)
  - Import [RPG Character Mecanim Animation Pack](https://assetstore.unity.com/packages/3d/animations/rpg-character-mecanim-animation-pack-63772), but without:
     - the ``Editor folder``
-    - ``Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack\Demo Elements\Code\GUIControls.cs``) <br />
+    - ``Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack\Demo Elements\Code\GUIControls.cs`` <br />
 
 After cloning the project and opening in Unity, you may be asked to 'enter safe mode'. Do this.
 You will need to import VRIF.
