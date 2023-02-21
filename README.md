@@ -58,7 +58,8 @@ Discord: https://discord.gg/bd8KrVhd8u  <br />
  - Import [RPG Character Mecanim Animation Pack](https://assetstore.unity.com/packages/3d/animations/rpg-character-mecanim-animation-pack-63772), but without:
     - the ``Editor folder``
     - ``Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack\Demo Elements\Code\GUIControls.cs`` <br />
- - Import [CleanFlatIcons](https://assetstore.unity.com/packages/2d/gui/icons/clean-flat-icons-98117)
+ - Import [CleanFlatIcons](https://assetstore.unity.com/packages/2d/gui/icons/clean-flat-icons-98117) (Just png_128)
+<img width="349" alt="Screenshot 2023-02-21 at 7 28 10 pm" src="https://user-images.githubusercontent.com/2542558/220289598-491cbc34-de12-4baa-b041-3090dee8320d.png">
 
 After cloning the project and opening in Unity, you may be asked to 'enter safe mode'. Do this.
 You will need to import VRIF.
